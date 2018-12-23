@@ -63,10 +63,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\camera\cameraController.cs" />
     <Compile Include="Assets\Scripts\gameplay\buttonFunctions.cs" />
+    <Compile Include="Assets\Scripts\gameplay\data\customRainmakerEvent.cs" />
     <Compile Include="Assets\Scripts\gameplay\data\dataCont.cs" />
     <Compile Include="Assets\Scripts\gameplay\data\dataGet.cs" />
     <Compile Include="Assets\Scripts\gameplay\data\dataUpdate.cs" />
     <Compile Include="Assets\Scripts\gameplay\data\timekeeper.cs" />
+    <Compile Include="Assets\Scripts\gameplay\data\weatherGet.cs" />
+    <Compile Include="Assets\Scripts\gameplay\data\weatherSimulator.cs" />
+    <Compile Include="Assets\Scripts\gameplay\data\weatherTimer.cs" />
     <Compile Include="Assets\Scripts\gameplay\GameMgr.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\characteristics.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\plantstate.cs" />
@@ -77,8 +81,6 @@
     <Compile Include="Assets\Scripts\generalMethods.cs" />
     <Compile Include="Assets\Scripts\index\authenticate.cs" />
     <Compile Include="Assets\Scripts\player\pInteractions.cs" />
-    <None Include="Assets\Resources\Credits\Credits.txt" />
-    <None Include="Assets\Resources\Database\Database Credentials.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Unity/NewFarmingSimulator/Farming Simulator/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
