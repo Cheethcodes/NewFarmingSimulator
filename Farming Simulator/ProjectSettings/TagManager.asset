@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - soil
+  - grass
+  - building
+  - plant
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - background
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - ground
+  - plants
+  - menu
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 215346883
+    locked: 0
+  - name: menu
+    uniqueID: 1464803099
+    locked: 0
+  - name: New Layer
+    uniqueID: 2262421999
+    locked: 0
+  - name: ground
+    uniqueID: 1085135751
+    locked: 0
+  - name: menu
+    uniqueID: 3005382823
+    locked: 0
