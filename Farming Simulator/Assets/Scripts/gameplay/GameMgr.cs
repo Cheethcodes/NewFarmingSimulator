@@ -37,9 +37,10 @@ public class GameMgr : MonoBehaviour {
     private float initialY = 200.0f;
 
     // Offset of the specified object to be instantiated in the sequence (x -= 0.9, y -= 0.5)
-    private float offsetX = 0.9f;
+    private float offsetX = 1f;
     private float offsetY = 0.5f;
-
+    private Transform grass;
+    private SpriteRenderer render;
     // New position of the instantiated tile
     private float newX;
     private float newY;
@@ -53,24 +54,26 @@ public class GameMgr : MonoBehaviour {
         // Populate world space with tile sprites in an X x Y axis 
         for (int x = 0; x < 200; x++)
         {
-            initialX += (offsetX * x);
+            initialX += (offsetX + 1);
 
             for (int y = 1; y < 201; y++)
             {
-                newY = initialY - (offsetY * (y-1));
-
+                newY = initialY - (offsetY + (y-1));
                 // If current tile is even
                 if (y % 2 == 0)
                 {
-                    newX = initialX + 0.9f;
-
-                    Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
+                    newX = initialX + 1f;
+                    grass = Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
+                    render = grass.GetComponent<SpriteRenderer>();
+                    render.sortingOrder = y - 1;
                 }
 
                 // If current tile is odd
                 else
                 {
-                    Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
+                    grass = Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
+                    render = grass.GetComponent<SpriteRenderer>();
+                    render.sortingOrder = y - 1;
                 }
             }
         }
