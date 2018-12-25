@@ -68,9 +68,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextStageImage:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: ac01af067bfac014da67302fbcedfb47, type: 3}
+  - {fileID: 21300000, guid: 8e1c698de84ab0e41af7981aea28a33e, type: 3}
+  - {fileID: 21300000, guid: 9d599e34b16a8b64d8b33e500e0c12e1, type: 3}
+  - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 90
   plantName: pumpkin
 --- !u!212 &212166474906340738

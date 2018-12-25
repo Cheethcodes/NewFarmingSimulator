@@ -273,6 +273,9 @@
     <Reference Include="Unity.Locator">
       <HintPath>F:/Unity/Editor/Data/Managed/Unity.Locator.dll</HintPath>
     </Reference>
+    <Reference Include="Facebook.Unity.Settings">
+      <HintPath>D:/Unity/NewFarmingSimulator/Farming Simulator/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>F:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>

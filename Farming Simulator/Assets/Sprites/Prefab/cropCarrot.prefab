@@ -54,9 +54,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextStageImage:
-  - {fileID: 21300002, guid: 6da52fff668a19f4895215eb29e98bd8, type: 3}
-  - {fileID: 21300004, guid: 6da52fff668a19f4895215eb29e98bd8, type: 3}
-  - {fileID: 21300006, guid: 6da52fff668a19f4895215eb29e98bd8, type: 3}
+  - {fileID: 21300222, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300224, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300226, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 4
   plantName: carrot
 --- !u!114 &114784248158015804
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 1085135751
   m_SortingLayer: 4
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 6da52fff668a19f4895215eb29e98bd8, type: 3}
+  m_Sprite: {fileID: 21300220, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
