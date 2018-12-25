@@ -4,9 +4,9 @@
  * Date Created: December 20, 2018
  * Source: 
  * 
- * Modified by: Gabriel Hansley Suarez
- * Date Modified: December 20, 2018
- * Last Date Modified: December 20, 2018
+ * Modified by: Antonio Lorenzo G. Hecali
+ * Date Modified: December 24, 2018
+ * Last Date Modified: December 24, 2018
  * 
  * Contributors:
  * 
@@ -41,6 +41,7 @@ public class GameMgr : MonoBehaviour {
     private float offsetY = 0.5f;
     private Transform grass;
     private SpriteRenderer render;
+
     // New position of the instantiated tile
     private float newX;
     private float newY;
