@@ -55,11 +55,11 @@ public class dataUpdate : MonoBehaviour {
 
         // Session data
         sessionTime = timekeeper.currentsessionTime;
-        sessionPts = 250;
+        sessionPts = pInteractions.temp_scoreValue;
 
         // New data (total)
         newTime = timekeeper.totaltime;
-        newPoints = sessionPts + authenticate.IGpts;  //====================================================== TO BE UPDATED
+        newPoints = dataCont.scoreValue;
         newInteract = "tssss";                        //====================================================== TO BE UPDATED
         newMoney = dataCont.moneyValue;
         

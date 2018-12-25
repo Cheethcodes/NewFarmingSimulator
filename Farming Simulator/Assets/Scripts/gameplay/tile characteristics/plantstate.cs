@@ -32,7 +32,7 @@ public class plantstate : MonoBehaviour {
     *   4 - mature
     *   5 - decay
     *  Harvestable state is at stage 3 and 4 */
-    public static int growthStage;
+    public int growthStage;
     public Sprite[] nextStageImage;
 
     // TIME
@@ -62,13 +62,12 @@ public class plantstate : MonoBehaviour {
         growthTimeMature_3 = Mathf.Floor(growthTime / 4) * 3;
         growthTimeMature_4 = growthTime;
         growthTimeMature_5 = growthTime * 2;
-
     }
 
     // Update is called once per frame
     void Update () {
 
-        #region Get constantly updated variables
+        #region Declaration
 
         // Define plant timer
         timeLived = this.gameObject.GetComponent<plantTimer>().day;
@@ -78,18 +77,22 @@ public class plantstate : MonoBehaviour {
         if (timeLived == growthTimeMature_1)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[0];
+            growthStage = 1;
         }
         else if (timeLived == growthTimeMature_2)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[1];
+            growthStage = 2;
         }
         else if (timeLived == growthTimeMature_3)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[2];
+            growthStage = 3;
         }
         else if (timeLived == growthTimeMature_5)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[3];
+            growthStage = 4;
         }
     }
 

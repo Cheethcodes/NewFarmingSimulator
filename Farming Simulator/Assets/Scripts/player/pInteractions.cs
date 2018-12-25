@@ -27,7 +27,7 @@ public class pInteractions : MonoBehaviour {
 
     #region Score and Money
 
-    public static int temp_scoreValue;
+    public static int temp_scoreValue = 0;
 
     #endregion
 
@@ -36,9 +36,6 @@ public class pInteractions : MonoBehaviour {
     // Ground tile objects
     public GameObject[] groundTiles;
     public GameObject[] groundPlants;
-
-    // TileDefinition object
-    public TileDefinition TileDef;
 
     // Current action of the player
     public static string currentTool;
@@ -57,9 +54,9 @@ public class pInteractions : MonoBehaviour {
         currentTool = "action-None";
 
         // Initialize tile status
-        Type = TileDef.type;
-        isFarmable = TileDef.isFarmable;
-        isBuildable = TileDef.isBuildable;
+        Type = this.gameObject.GetComponent<TileDefinition>().type;
+        isFarmable = this.gameObject.GetComponent<TileDefinition>().isFarmable;
+        isBuildable = this.gameObject.GetComponent<TileDefinition>().isBuildable;
     }
 
     void OnMouseDown()
@@ -108,7 +105,7 @@ public class pInteractions : MonoBehaviour {
             case "Harvest":
                 if (Type == "plant")
                 {
-
+                    execHarvest();
                 }
                 else
                 {
@@ -144,10 +141,16 @@ public class pInteractions : MonoBehaviour {
                 execRecycle();
                 break;
 
+            case "Build":
+                execBuild();
+                break;
+
             default:
                 break;
         }
     }
+
+    #region Cultivate method
 
     // Player cultivates the tile
     void execCultivate()
@@ -161,9 +164,17 @@ public class pInteractions : MonoBehaviour {
 
         // Change state of the tile
         Type = "soil";
+
         isBuildable = false;
+        //this.gameObject.GetComponent<TileDefinition>().isBuildable = false;
+
         isFarmable = true;
+        //this.gameObject.GetComponent<TileDefinition>().isFarmable = true;
     }
+
+    #endregion
+
+    #region Plant method
 
     // Player plants an object on a tile
     void execPlant()
@@ -249,6 +260,10 @@ public class pInteractions : MonoBehaviour {
         }
     }
 
+    #endregion
+
+    #region Water emthod
+
     // Player waters the tile
     void execWater()
     {
@@ -261,6 +276,10 @@ public class pInteractions : MonoBehaviour {
             Debug.Log("No area for water to be applied.");
         }
     }
+
+    #endregion
+
+    #region Fertilize methods
 
     // Player fertilized the tile
     void execFertilize()
@@ -280,20 +299,161 @@ public class pInteractions : MonoBehaviour {
 
     }
 
+    #endregion
+
+    #region Harvest methods
+
     // Player harvests a tile
     void execHarvest()
     {
-        // Change state of the tile 
-        Type = "grass";
-        isBuildable = false;
-        isFarmable = false;
+        // Get parent
+        Transform parentContainer = this.gameObject.transform;
 
-        // Clears anything that the tile contains
-        foreach (Transform child in transform)
+        int harvestState = execHarvestStage(execHarvestState(execHarvestCount(parentContainer)), parentContainer);
+
+        if (harvestState == 3)
         {
-            GameObject.Destroy(child.gameObject);
+            foreach (Transform child in parentContainer)
+            {
+                if (child.tag == "plant")
+                {
+                    // Get plant name
+                    string plantName = child.GetComponent<plantstate>().plantName;
+
+                    // Carrot
+                    if (plantName == "carrot")
+                    {
+                        dataCont.moneyValue += 40;
+                        dataCont.scoreValue += 20;
+                        temp_scoreValue += 20;
+                    }
+
+                    // Onion
+                    else if (plantName == "onion")
+                    {
+                        dataCont.moneyValue += 70;
+                        dataCont.scoreValue += 30;
+                        temp_scoreValue += 30;
+                    }
+
+                    // Pumpkin
+                    else if (plantName == "pumpkin")
+                    {
+                        dataCont.moneyValue += 120;
+                        dataCont.scoreValue += 60;
+                        temp_scoreValue += 60;
+                    }
+
+                    // Radish
+                    else if (plantName == "radish")
+                    {
+                        dataCont.moneyValue += 40;
+                        dataCont.scoreValue += 20;
+                        temp_scoreValue += 20;
+                    }
+
+                    // Tomato
+                    else if (plantName == "tomato")
+                    {
+                        dataCont.moneyValue += 30;
+                        dataCont.scoreValue += 10;
+                        temp_scoreValue += 10;
+                    }
+
+                    // Watermelon
+                    else if (plantName == "watermelon")
+                    {
+                        dataCont.moneyValue += 150;
+                        dataCont.scoreValue += 70;
+                        temp_scoreValue += 70;
+                    }
+
+                }
+
+                // Destroy all objects contained within the parent object
+                GameObject.Destroy(child.gameObject);
+            }
+
+            // Change state of the tile 
+            Type = "grass";
+            isBuildable = false;
+            isFarmable = false;
+
+        }
+        else
+        {
+            Debug.Log("no plant or plant is not ready for harvest");
         }
     }
+
+    // Count how many game objects with "plat" tag exist in the current parent object
+    private int execHarvestCount(Transform parentContainer)
+    {
+        int counter = 0;
+
+        // Check if there is an object with tag "plant"
+        foreach (Transform child in parentContainer)
+        {
+            if (child.tag == "plant")
+                // Add 1 to counter if an object with tag "plant" is found within the parent
+                counter += 1;
+            else
+                counter += 0;
+        }
+
+        return counter;
+    }
+
+    // CHeck if the plant is ready for harvest
+    private bool execHarvestState(int x)
+    {
+        if (x == 1)
+            return true;
+        else
+            return false;
+    }
+
+    private int execHarvestStage(bool x, Transform parentContainer)
+    {
+        int growthStage = 0;
+
+        if (x == true)
+        {
+
+            foreach (Transform child in parentContainer)
+            {
+                if (child.tag == "plant")
+                {
+                    growthStage += child.gameObject.GetComponent<plantstate>().growthStage;
+                }
+                else
+                {
+                    growthStage = 0;
+                }
+            }
+
+            return growthStage;
+        }
+
+        else
+        {
+            return growthStage = 0;
+        }
+    }
+
+    #endregion
+
+    #region Build method
+
+    // When player builds a structure on a tile
+    void execBuild()
+    {
+
+    }
+
+    #endregion
+
+    #region Recycle method
 
     // Player recycles
     void execRecycle()
@@ -351,5 +511,7 @@ public class pInteractions : MonoBehaviour {
             Debug.Log("No destroyable or sellable object!");
         }
     }
+
+    #endregion
 
 }

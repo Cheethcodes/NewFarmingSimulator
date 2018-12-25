@@ -45,6 +45,7 @@ public class dataCont : MonoBehaviour {
     void Update()
     {
         moneyContainer.text = moneyValue.ToString();
+        scoreContainer.text = scoreValue.ToString();
     }
 
 }

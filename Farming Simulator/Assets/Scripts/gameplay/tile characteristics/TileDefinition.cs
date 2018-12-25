@@ -30,7 +30,7 @@ public class TileDefinition : MonoBehaviour {
     void Start()
     {
         type = "grass";
-        isBuildable = false;
+        isBuildable = true;
         isFarmable = false;
     }
 

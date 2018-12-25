@@ -38,10 +38,14 @@ public class soilstate : MonoBehaviour {
 
     void Update()
     {
-        decayWater = Random.Range(0.01f, 0.5f);
+        #region Declaration
+
+        decayWater = Random.Range(0.01f, 0.2f);
         decayFertilizer_Nitrogen = Random.Range(0.0001f, 0.0005f);
         decayFertilizer_Potassium = Random.Range(0.0001f, 0.0005f);
         decayFertilizer_Phosphorus = Random.Range(0.0001f, 0.0005f);
+
+        #endregion
 
         if (amountWater > 0)
         {
