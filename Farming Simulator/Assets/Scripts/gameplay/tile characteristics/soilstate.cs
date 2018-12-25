@@ -31,16 +31,36 @@ public class soilstate : MonoBehaviour {
     public float amountFertilizer_Phosphorus;
 
     // Decay speed of each soil component variable
-    float decayWater = 0.04f;
-    float decayFertilizer_Nitrogen = 0.01f;
-    float decayFertilizer_Potassium = 0.01f;
-    float decayFertilizer_Phosphorus = 0.01f;
+    float decayWater;
+    float decayFertilizer_Nitrogen;
+    float decayFertilizer_Potassium;
+    float decayFertilizer_Phosphorus;
 
     void Update()
     {
+        decayWater = Random.Range(0.01f, 0.5f);
+        decayFertilizer_Nitrogen = Random.Range(0.0001f, 0.0005f);
+        decayFertilizer_Potassium = Random.Range(0.0001f, 0.0005f);
+        decayFertilizer_Phosphorus = Random.Range(0.0001f, 0.0005f);
+
         if (amountWater > 0)
         {
             amountWater -= Time.deltaTime * decayWater;
+        }
+
+        if (amountFertilizer_Nitorgen > 0)
+        {
+            amountFertilizer_Nitorgen -= Time.deltaTime * decayFertilizer_Nitrogen;
+        }
+
+        if (amountFertilizer_Phosphorus > 0)
+        {
+            amountFertilizer_Phosphorus -= Time.deltaTime * decayFertilizer_Phosphorus;
+        }
+
+        if (amountFertilizer_Potassium > 0)
+        {
+            amountFertilizer_Potassium -= Time.deltaTime * decayFertilizer_Potassium;
         }
     }
 

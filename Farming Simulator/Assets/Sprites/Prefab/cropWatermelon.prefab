@@ -54,9 +54,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextStageImage:
-  - {fileID: 21300000, guid: 98e1ca33f38c6bd43a51648c63e6f3bb, type: 3}
-  - {fileID: 21300000, guid: e0bb1f3d3301f9b4bbab7d2356183d26, type: 3}
-  - {fileID: 21300000, guid: 2ce19ab4c64e8f8499c3fca2cb71f514, type: 3}
+  - {fileID: 21300172, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300174, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300176, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 80
   plantName: watermelon
 --- !u!114 &114971735793555002
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_SortingLayerID: 1085135751
   m_SortingLayer: 4
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 8a71682f615becc41b7c054092d09985, type: 3}
+  m_Sprite: {fileID: 21300170, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

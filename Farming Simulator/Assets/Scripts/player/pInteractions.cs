@@ -155,6 +155,8 @@ public class pInteractions : MonoBehaviour {
         // Generates new farmable tile and makes it the child of the current tile clicked
         GameObject plot = Instantiate(groundTiles[1]);
         plot.transform.SetParent(this.gameObject.transform, false);
+        SpriteRenderer render = plot.GetComponent<SpriteRenderer>();
+        render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         dataCont.moneyValue -= 5;
 
         // Change state of the tile
@@ -171,30 +173,76 @@ public class pInteractions : MonoBehaviour {
         isBuildable = false;
         isFarmable = false;
 
+        // Carrot
         if (ncurrentTool[2] == "Carrot")
         {
+            // Corresponding sprite
             GameObject plant = Instantiate(groundPlants[0]);
             plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
             dataCont.moneyValue -= 15;
         }
-        else if (ncurrentTool[2] == "Watermelon")
-        {
-            GameObject plant = Instantiate(groundPlants[1]);
-            plant.transform.SetParent(this.gameObject.transform, false);
-            dataCont.moneyValue -= 30;
-        }
+
+        // Pumpkin
         else if (ncurrentTool[2] == "Pumpkin")
         {
-            GameObject plant = Instantiate(groundPlants[2]);
+            // Corresponding sprite
+            GameObject plant = Instantiate(groundPlants[1]);
             plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
             dataCont.moneyValue -= 50;
         }
+
+        // Radishes
+        else if (ncurrentTool[2] == "Radishes")
+        {
+            // Corresponding sprite
+            GameObject plant = Instantiate(groundPlants[2]);
+            plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
+            dataCont.moneyValue -= 15;
+        }
+
+        // Tomato
         else if (ncurrentTool[2] == "Tomato")
         {
+            // Corresponding sprite
             GameObject plant = Instantiate(groundPlants[3]);
             plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
             dataCont.moneyValue -= 10;
         }
+
+        // Watermelon
+        else if (ncurrentTool[2] == "Watermelon")
+        {
+            // Corresponding sprite
+            GameObject plant = Instantiate(groundPlants[4]);
+            plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
+            dataCont.moneyValue -= 30;
+        }
+
         else
         {
 
@@ -219,9 +267,9 @@ public class pInteractions : MonoBehaviour {
     {
         if (generalMethods.FindGameObjectInChildWithTag(this.gameObject, "soil") != null)
         {
-            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Nitorgen = 1;
-            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Phosphorus = 5;
-            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Potassium = 10;
+            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Nitorgen = 1.0000f;
+            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Phosphorus = 5.000f;
+            this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Potassium = 10.000f;
 
             dataCont.moneyValue -= 10;
         }
@@ -292,7 +340,7 @@ public class pInteractions : MonoBehaviour {
 
                 // If none of the above mentioned tags are present
                 else {
-                    Debug.Log("Objects not recyclable");
+                    Debug.Log("Objects not recyclable!");
                 }
             }
         }

@@ -54,9 +54,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextStageImage:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300172, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300174, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300176, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 50
   plantName: tomato
 --- !u!114 &114858507686217940

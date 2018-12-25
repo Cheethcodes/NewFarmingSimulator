@@ -89,9 +89,10 @@ MonoBehaviour:
   - {fileID: 0}
   groundPlants:
   - {fileID: 1800734783027682, guid: 86dae14059f856c498936e240ef8da3d, type: 2}
+  - {fileID: 1811615052668742, guid: 9751c040c0c0e174a91c374bfe60103f, type: 2}
+  - {fileID: 1171807760934126, guid: 8a64ea1c469a9d243bbd12b430498a18, type: 2}
+  - {fileID: 1707118441838264, guid: f84d9416dcd3738438165698bf8680d6, type: 2}
   - {fileID: 1058721638738068, guid: ac011db905f6dcc47a0fe44f02b5b8fc, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   TileDef: {fileID: 114691167890646430}
 --- !u!114 &114691167890646430
 MonoBehaviour:
