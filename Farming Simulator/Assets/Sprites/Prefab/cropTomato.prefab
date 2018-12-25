@@ -53,10 +53,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65251be5483b4b143969398558d850a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growthStage: 0
   nextStageImage:
-  - {fileID: 21300172, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
-  - {fileID: 21300174, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
-  - {fileID: 21300176, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300204, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300206, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300208, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 50
   plantName: tomato
@@ -109,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8a71682f615becc41b7c054092d09985, type: 3}
+  m_Sprite: {fileID: 21300216, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

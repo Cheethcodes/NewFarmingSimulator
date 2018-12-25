@@ -67,10 +67,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65251be5483b4b143969398558d850a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growthStage: 0
   nextStageImage:
-  - {fileID: 21300000, guid: ac01af067bfac014da67302fbcedfb47, type: 3}
-  - {fileID: 21300000, guid: 8e1c698de84ab0e41af7981aea28a33e, type: 3}
-  - {fileID: 21300000, guid: 9d599e34b16a8b64d8b33e500e0c12e1, type: 3}
+  - {fileID: 21300196, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300198, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
+  - {fileID: 21300200, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 90
   plantName: pumpkin
@@ -109,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 33583f55d2b0f4249bef442ac377e96b, type: 3}
+  m_Sprite: {fileID: 21300194, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

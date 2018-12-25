@@ -217,6 +217,30 @@ public class buttonFunctions : MonoBehaviour {
         animPlant.SetBool("slide", false);
     }
 
+    public void plantOnion()
+    {
+        pInteractions.currentTool = "action-Plant-Onion";
+        animPlant.SetBool("slide", false);
+    }
+
+    public void plantPumpkin()
+    {
+        pInteractions.currentTool = "action-Plant-Pumpkin";
+        animPlant.SetBool("slide", false);
+    }
+
+    public void plantRadish()
+    {
+        pInteractions.currentTool = "action-Plant-Radish";
+        animPlant.SetBool("slide", false);
+    }
+
+    public void plantTomato()
+    {
+        pInteractions.currentTool = "action-Plant-Tomato";
+        animPlant.SetBool("slide", false);
+    }
+
     public void plantWatermelon()
     {
         pInteractions.currentTool = "action-Plant-Watermelon";

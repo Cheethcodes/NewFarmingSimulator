@@ -198,11 +198,24 @@ public class pInteractions : MonoBehaviour {
             dataCont.moneyValue -= 15;
         }
 
+        // Onion
+        else if (ncurrentTool[2] == "Onion")
+        {
+            GameObject plant = Instantiate(groundPlants[1]);
+            plant.transform.SetParent(this.gameObject.transform, false);
+
+            SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
+            render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+            // Cost
+            dataCont.moneyValue -= 5;
+        }
+
         // Pumpkin
         else if (ncurrentTool[2] == "Pumpkin")
         {
             // Corresponding sprite
-            GameObject plant = Instantiate(groundPlants[1]);
+            GameObject plant = Instantiate(groundPlants[2]);
             plant.transform.SetParent(this.gameObject.transform, false);
 
             SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
@@ -216,7 +229,7 @@ public class pInteractions : MonoBehaviour {
         else if (ncurrentTool[2] == "Radishes")
         {
             // Corresponding sprite
-            GameObject plant = Instantiate(groundPlants[2]);
+            GameObject plant = Instantiate(groundPlants[3]);
             plant.transform.SetParent(this.gameObject.transform, false);
 
             SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
@@ -230,7 +243,7 @@ public class pInteractions : MonoBehaviour {
         else if (ncurrentTool[2] == "Tomato")
         {
             // Corresponding sprite
-            GameObject plant = Instantiate(groundPlants[3]);
+            GameObject plant = Instantiate(groundPlants[4]);
             plant.transform.SetParent(this.gameObject.transform, false);
 
             SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
@@ -244,7 +257,7 @@ public class pInteractions : MonoBehaviour {
         else if (ncurrentTool[2] == "Watermelon")
         {
             // Corresponding sprite
-            GameObject plant = Instantiate(groundPlants[4]);
+            GameObject plant = Instantiate(groundPlants[5]);
             plant.transform.SetParent(this.gameObject.transform, false);
 
             SpriteRenderer render = plant.GetComponent<SpriteRenderer>();
