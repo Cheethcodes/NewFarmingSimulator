@@ -62,10 +62,12 @@ public class customRainmakerEvent : MonoBehaviour
     {
         
         changeTempTimer += Time.deltaTime;
+
         if (hour == 24)
         {
             hour = dateTime.hour;
         }
+
         if (newWeather == true)
         {
             Debug.Log("New Weather");
@@ -76,6 +78,7 @@ public class customRainmakerEvent : MonoBehaviour
             Debug.Log("Brand new TriggerRain " + triggerRain);
             rainChancePicker();
         }
+
         if (currentWeather.getSunny() == true)
         {
             if (dateTime.hour == hour + 1)

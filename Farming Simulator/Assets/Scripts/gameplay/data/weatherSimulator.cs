@@ -39,7 +39,8 @@ public class weatherSimulator : MonoBehaviour {
     private float sunIntensity;
 
     // Rain
-    private float rainIntensity, rainDurationMin, rainDurationMax, rainChance;
+    private float rainIntensity;
+    private int rainDurationMin, rainDurationMax, rainChance;
 
     // Temperature
     // Ceiling and floor values
@@ -157,44 +158,44 @@ public class weatherSimulator : MonoBehaviour {
         }
 
         ////set how long the rain last
-        //weatherEasy.setRainDuration(Random.Range(rainDurationMin, rainDurationMax));
-        //weatherMedium.setRainDuration(Random.Range(rainDurationMin + 2, rainDurationMax + 2));
-        //weatherHard.setRainDuration(Random.Range(rainDurationMin + 5, rainDurationMax + 5));
+        //wEasy.setRainDuration(Random.Range(rainDurationMin, rainDurationMax));
+        //wMedium.setRainDuration(Random.Range(rainDurationMin + 2, rainDurationMax + 2));
+        //wHard.setRainDuration(Random.Range(rainDurationMin + 5, rainDurationMax + 5));
 
         ////set sun duration
-        //weatherEasy.setSunDuration(23 - weatherEasy.getRainDuration());
-        //weatherMedium.setSunDuration(23 - weatherMedium.getRainDuration());
-        //weatherHard.setSunDuration(23 - weatherHard.getRainDuration());
+        //wEasy.setSunDuration(23 - wEasy.getRainDuration());
+        //wMedium.setSunDuration(23 - wMedium.getRainDuration());
+        //wHard.setSunDuration(23 - wHard.getRainDuration());
 
         ////set rain intensity
-        //setRainIntensity(weatherEasy, rainIntensity);
-        //setRainIntensity(weatherMedium, rainIntensity + 0.10f);
-        //setRainIntensity(weatherHard, rainIntensity + 0.20f);
+        //setRainIntensity(wEasy, rainIntensity);
+        //setRainIntensity(wMedium, rainIntensity + 0.10f);
+        //setRainIntensity(wHard, rainIntensity + 0.20f);
 
         ////set sun intensity
-        //setSunIntensity(weatherEasy, sunIntensity);
-        //setSunIntensity(weatherMedium, sunIntensity + 2);
-        //setSunIntensity(weatherHard, sunIntensity + 5);
+        //setSunIntensity(wEasy, sunIntensity);
+        //setSunIntensity(wMedium, sunIntensity + 2);
+        //setSunIntensity(wHard, sunIntensity + 5);
 
         ////set TemperatureMin
-        //weatherEasy.setTemperatureMin(tempMin);
-        //weatherMedium.setTemperatureMin(tempMin + 2);
-        //weatherHard.setTemperatureMin(tempMin + 5);
+        //wEasy.setTemperatureMin(tempMin);
+        //wMedium.setTemperatureMin(tempMin + 2);
+        //wHard.setTemperatureMin(tempMin + 5);
 
         ////set TemperatureMax
-        //weatherEasy.setTemperatureMax(tempMax - 10);
-        //weatherMedium.setTemperatureMax(tempMax - 5);
-        //weatherHard.setTemperatureMax(tempMax);
+        //wEasy.setTemperatureMax(tempMax - 10);
+        //wMedium.setTemperatureMax(tempMax - 5);
+        //wHard.setTemperatureMax(tempMax);
 
         ////set rain chance percentage
-        //weatherEasy.setRainChancePercentage(rainChancePercent);
-        //weatherMedium.setRainChancePercentage(rainChancePercent + 5);
-        //weatherHard.setRainChancePercentage(rainChancePercent + 10);
+        //wEasy.setRainChancePercentage(rainChance);
+        //wMedium.setRainChancePercentage(rainChance + 5);
+        //wHard.setRainChancePercentage(rainChance + 10);
 
         ////set weather type
-        //weatherEasy.setWeatherType(weatherType);
-        //weatherMedium.setWeatherType(weatherType);
-        //weatherHard.setWeatherType(weatherType);
+        //wEasy.setWeatherType(weatherType);
+        //wMedium.setWeatherType(weatherType);
+        //wHard.setWeatherType(weatherType);
     }
 
     #region Weather sun and rain intensities
