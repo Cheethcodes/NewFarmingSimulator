@@ -225,7 +225,7 @@ public class pInteractions : MonoBehaviour {
             dataCont.moneyValue -= 50;
         }
 
-        // Radishes
+        // Radish
         else if (ncurrentTool[2] == "Radishes")
         {
             // Corresponding sprite
@@ -264,7 +264,7 @@ public class pInteractions : MonoBehaviour {
             render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
 
             // Cost
-            dataCont.moneyValue -= 30;
+            dataCont.moneyValue -= 40;
         }
 
         else
@@ -477,7 +477,6 @@ public class pInteractions : MonoBehaviour {
         // If parent object has more than 1 child
         if (ct >= 1)
         {
-
             // Loops through all child found in the parent
             foreach (Transform child in transform)
             {

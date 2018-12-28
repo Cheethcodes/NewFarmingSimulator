@@ -22,6 +22,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class cursorEvents : MonoBehaviour {
 
@@ -96,12 +97,19 @@ public class cursorEvents : MonoBehaviour {
         #endregion
     }
 
+    public void ShowToolTip(BaseEventData baseEvent = null)
+    {
+        if (baseEvent != null)
+        {
+            Debug.Log(baseEvent.selectedObject.name);
+        }
+    }
+
     // Show button labels
-    public void showLabel()
+    public void showLabel(string objName)
     {
         // Get the name of the object
-        string[] name = (this.gameObject.name).Split('-');
-        Debug.Log(name[0]);
+        string[] name = (objName).Split('-');
 
         #region Gemplay buttons
         // Standard of namin button objects "play-(Type of button)_(Name of button)"
@@ -112,73 +120,167 @@ public class cursorEvents : MonoBehaviour {
 
             switch (newName[0])
             {
+
+                #region Tools
+
                 case "Tool":
-                    switch (newName[2])
+
+                    obj_Tools.SetActive(true);
+
+                    switch (newName[1])
                     {
                         case "Default":
-                            obj_Tools.SetActive(true);
                             txt_ToolsChild.text = "Default tool";
                             break;
 
                         case "Fertilizer":
+                            txt_ToolsChild.text = "Fertilizer tool";
                             break;
 
                         case "Water":
+                            txt_ToolsChild.text = "Water tool";
                             break;
 
                         case "Cultivate":
+                            txt_ToolsChild.text = "Cultivate tool";
                             break;
 
                         case "Harvest":
+                            txt_ToolsChild.text = "Harvest tool";
                             break;
 
                         case "Recycle":
+                            txt_ToolsChild.text = "Recycle tool";
                             break;
 
                     }
                     break;
 
+                #endregion
+
+                #region  Buildings
+
                 case "Bldg":
+
+                    obj_Play.SetActive(true);
+
+                    switch (newName[1])
+                    {
+                        case "Greenhouse":
+                            txt_PlayChild_Title.text = "Greenhouse";
+                            txt_PlayChild_Description_Bldg.text = "A greenhouse that can be built to control the environmental condition for the plants that will be stored.\n\n" +
+                                "Cost: 1000 coins | 3 days\n" +
+                                "Income: 10 coins/day";
+                            break;
+                    }
 
                     break;
 
+                #endregion
+
+                #region Plant
+
                 case "Plant":
 
+                    obj_Play.SetActive(true);
+
+                    switch (newName[1])
+                    {
+                        // Carrot
+                        case "Carrot":
+                            txt_PlayChild_Title.text = "Carrot";
+                            txt_PlayChild_Description_Plant.text = "A carrot seed.\n\n" +
+                                "Cost:   15 coins | Average Growth Time: 60 days\n" +
+                                "Income: 40 coins | Score: 20";
+                            break;
+
+                        // Onion
+                        case "Onion":
+                            txt_PlayChild_Title.text = "Onion";
+                            txt_PlayChild_Description_Plant.text = "An onion seed.\n\n" +
+                                "Cost:    5 coins | Average Growth Time: 60 days\n" +
+                                "Income: 70 coins | Score: 30";
+                            break;
+
+                        // Pumpkin
+                        case "Pumpkin":
+                            txt_PlayChild_Title.text = "Pumpkin";
+                            txt_PlayChild_Description_Plant.text = "A pumpkin seed.\n\n" +
+                                "Cost:    50 coins | Average Growth Time: 60 days\n" +
+                                "Income: 120 coins | Score: 60";
+                            break;
+
+                        // Radish
+                        case "Radish":
+                            txt_PlayChild_Title.text = "Radish";
+                            txt_PlayChild_Description_Plant.text = "A radish seed.\n\n" +
+                                "Cost:   15 coins | Average Growth Time: 60 days\n" +
+                                "Income: 40 coins | Score: 20";
+                            break;
+
+                        // Tomato
+                        case "Tomato":
+                            txt_PlayChild_Title.text = "Tomato";
+                            txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
+                                "Cost:   10 coins | Average Growth Time: 60 days\n" +
+                                "Income: 30 coins | Score: 10";
+                            break;
+
+                        // Watermelon
+                        case "Watermelon":
+                            txt_PlayChild_Title.text = "Tomato";
+                            txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
+                                "Cost:    40 coins | Average Growth Time: 60 days\n" +
+                                "Income: 150 coins | Score: 70";
+                            break;
+                    }
+                    break;
+
+                    #endregion
+
+            }
+        }
+
+        else if (name[0] == "icon")
+        {
+            string newName = name[1];
+            
+            obj_Options.SetActive(true);
+
+            switch (name[1])
+            {
+                case "options":
+                    txt_OptionsChild.text = "Options";
+                    break;
+
+                case "help":
+                    txt_OptionsChild.text = "Help";
+                    break;
+
+                case "logout":
+                    txt_OptionsChild.text = "Save & LogOut";
                     break;
             }
         }
 
+        else { }
+
         #endregion
     }
 
-    //private Button btnMenu;
+    public void hideLabel()
+    {
+        // Set active tool tip menu to false
+        obj_Options.SetActive(false);
+        obj_Tools.SetActive(false);
+        obj_Play.SetActive(false);
 
-    //private Transform tooltipMenu;
-    //private bool tooltipMenu_Active = false;
-    //private string tooltipMenu_Title;
-    //private string tooltipMenu_Description;
-
-    //void Start()
-    //{
-
-    //}
-
-    //void OnMouseEnter()
-    //{
-    //    if (tooltip_Active == false)
-    //    {
-    //        tooltip.GetComponent<TextMesh>().text = "A tooltip";
-    //        tooltip_Active = true;
-    //        Instantiate(tooltip, new Vector3(transform.position.x, transform.position.y - 10, 0), tooltip.rotation);
-    //    }
-    //}
-
-    //void OnMouseExit()
-    //{
-    //    if (tooltip_Active == true)
-    //    {
-    //        tooltip_Active = false;
-    //    }
-    //}
+        // Resets the value for all text gui inside the objects that has been set to inactive
+        txt_OptionsChild.text = "";
+        txt_ToolsChild.text = "";
+        txt_PlayChild_Title.text = "";
+        txt_PlayChild_Description_Bldg.text = "";
+        txt_PlayChild_Description_Plant.text = "";
+    }
 
 }
