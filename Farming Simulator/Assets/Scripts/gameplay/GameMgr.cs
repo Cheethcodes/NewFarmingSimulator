@@ -46,12 +46,12 @@ public class GameMgr : MonoBehaviour {
     private float newX;
     private float newY;
 
-	void Start ()
+    void Start()
     {
         // Fill in details and instructions for help menu context
         //helptextContainer = GameObject.Find("helpmenucontext").GetComponent<Text>();
         helptextContainer.text = "HOW TO PLAY THE GAME";
-
+        
         // Populate world space with tile sprites in an X x Y axis 
         for (int x = 0; x < 200; x++)
         {
@@ -59,14 +59,18 @@ public class GameMgr : MonoBehaviour {
 
             for (int y = 1; y < 201; y++)
             {
-                newY = initialY - (offsetY + (y-1));
+                newY = initialY - (offsetY + (y - 1));
+
                 // If current tile is even
                 if (y % 2 == 0)
                 {
                     newX = initialX + 1f;
+
                     grass = Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
                     render = grass.GetComponent<SpriteRenderer>();
                     render.sortingOrder = y - 1;
+
+                    grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
                 }
 
                 // If current tile is odd
@@ -75,6 +79,8 @@ public class GameMgr : MonoBehaviour {
                     grass = Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
                     render = grass.GetComponent<SpriteRenderer>();
                     render.sortingOrder = y - 1;
+
+                    grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
                 }
             }
         }
