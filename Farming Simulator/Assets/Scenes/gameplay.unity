@@ -748,6 +748,12 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &62955154 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114313754434930706, guid: eafc27928fe40a8429ecbb4548790af2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1714958284}
+  m_Script: {fileID: 11500000, guid: 340901a9d8d97bd43abdfe247e210193, type: 3}
 --- !u!1 &71968056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3740,13 +3746,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede5504034653248a93b06db7220ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RainScript: {fileID: 0}
+  RainScript: {fileID: 62955154}
   weather:
   - {fileID: 412906219}
   - {fileID: 613572498}
   - {fileID: 1528058004}
-  dateTime: {fileID: 0}
-  labelTemperature: {fileID: 0}
 --- !u!1 &964595929
 GameObject:
   m_ObjectHideFlags: 0
@@ -15862,6 +15866,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1808231084}
   - component: {fileID: 1808231085}
+  - component: {fileID: 1808231083}
+  - component: {fileID: 1808231086}
   m_Layer: 0
   m_Name: WeatherManager
   m_TagString: Untagged
@@ -15869,6 +15875,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1808231083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808231082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6be05745fe1114c9425a010bd48274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1808231084
 Transform:
   m_ObjectHideFlags: 0
@@ -15900,6 +15917,17 @@ MonoBehaviour:
   wMedium: {fileID: 613572498}
   wHard: {fileID: 1528058004}
   weatherTypeArray: []
+--- !u!114 &1808231086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1808231082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc10cff34a33559498d5582a2caa17ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1810187448
 GameObject:
   m_ObjectHideFlags: 0

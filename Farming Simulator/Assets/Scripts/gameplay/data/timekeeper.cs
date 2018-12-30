@@ -36,7 +36,8 @@ public class timekeeper : MonoBehaviour {
     int year = 2019;
     int month = 1;
     int day = 1;
-    int hour = 0;
+    public static int hour = 0;
+    public static int hour_military = 0;
     public static int hour_hidden = 0;
     float msecs;
     string timeofday;
@@ -105,25 +106,27 @@ public class timekeeper : MonoBehaviour {
             // For every full 60 milliseconds, 1 is added to hour value
             msecs -= 1.0f;
             hour++;
+            hour_military++;
             hour_hidden++;
 
             // Hour to day (morning)
-            if (hour_hidden == 12 && msecs > 0)
+            if (hour_military == 12 && msecs > 0)
             {
                 timeofday = "PM";
             }
 
-            else if (hour_hidden == 13)
+            else if (hour_military == 13)
             {
                 timeofday = "PM";
                 hour = 1;
             }
 
             // Hour to day (evening)
-            else if (hour_hidden == 24)
+            else if (hour_military == 24)
             {
                 // For every full 24 hours, 1 is added to day value and reset hour value to 0
                 hour = 0;
+                hour_military = 0;
                 day++;
                 timeofday = "AM";
 

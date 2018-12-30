@@ -19,7 +19,7 @@
  *     
  */
 
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,8 +31,8 @@ public class customRainmakerEvent : MonoBehaviour
     public BaseRainScript RainScript;
     public weatherGet[] weather;
     public static weatherGet currentWeather;
-    public weatherTimer dateTime;
-    [SerializeField] Text labelTemperature;
+
+    private Text labelTemperature;
     // triggers when it will be rainy or sunny
     int triggerRain;
     int triggerSun;
@@ -42,16 +42,20 @@ public class customRainmakerEvent : MonoBehaviour
 
     private void Start()
     {
+        labelTemperature = GameObject.Find("container_Temperature").GetComponent<Text>();
         currentWeather = weather[Random.Range(0, 2)];
-        hour = dateTime.hour;
-        //if (RainScript == null)
-        //{
-        //    return;
-        //}
-        //RainScript.EnableWind = false;
+        labelTemperature.text = Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()).ToString();
+
+        hour = timekeeper.hour_military;
+
+        if (RainScript == null)
+        {
+            return;
+        }
+        RainScript.EnableWind = false;
         triggerRain = UnityEngine.Random.Range(0, currentWeather.getSunDuration() - 1);
-        labelTemperature.text = UnityEngine.Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()).ToString();
         rainChancePicker();
+
         Debug.Log(currentWeather);
         Debug.Log(currentWeather.getWeatherType());
         Debug.Log("Starting TriggerRain " + triggerRain);
@@ -60,12 +64,12 @@ public class customRainmakerEvent : MonoBehaviour
 
     private void Update()
     {
-        
+
         changeTempTimer += Time.deltaTime;
 
         if (hour == 24)
         {
-            hour = dateTime.hour;
+            hour = timekeeper.hour_military;
         }
 
         if (newWeather == true)
@@ -81,10 +85,10 @@ public class customRainmakerEvent : MonoBehaviour
 
         if (currentWeather.getSunny() == true)
         {
-            if (dateTime.hour == hour + 1)
+            if (timekeeper.hour_military == 12)
             {
                 currentWeather.setSunDuration(currentWeather.getSunDuration() - 1);
-                hour = dateTime.hour;
+                hour = timekeeper.hour_military;
             }
             if (currentWeather.getSunDuration() <= 0 || currentWeather.getSunDuration() == triggerRain)
             {
@@ -98,10 +102,10 @@ public class customRainmakerEvent : MonoBehaviour
         }
         else if (currentWeather.getRaining() == true)
         {
-            if (dateTime.hour == hour + 1)
+            if (timekeeper.hour_military == 12)
             {
                 currentWeather.setRainDuration(currentWeather.getRainDuration() - 1);
-                hour = dateTime.hour;
+                hour = timekeeper.hour_military;
             }
             if (currentWeather.getRainDuration() <= 0 /*||currentWeather.getRainDuration() == triggerSun*/)
             {
@@ -114,14 +118,19 @@ public class customRainmakerEvent : MonoBehaviour
             weatherSimulator.makeWeather = true;
             Debug.Log("Simulating new weather");
         }
-        if (RainScript == null) {
+        if (RainScript == null)
+        {
             return;
-        } else if (currentWeather.getRaining()) {
+        }
+        else if (currentWeather.getRaining())
+        {
             RainScript.RainIntensity = currentWeather.getRainIntensity();
 
             RainScript.EnableWind = true;
 
-        } else if (currentWeather.getSunny()) {
+        }
+        else if (currentWeather.getSunny())
+        {
             RainScript.RainIntensity = 0f;
             RainScript.EnableWind = false;
         }

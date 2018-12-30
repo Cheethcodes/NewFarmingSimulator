@@ -216,36 +216,10 @@ public class weatherSimulator : MonoBehaviour {
                 break;
         }
 
-        //set how long the rain last
-        
-        //wEasy.setRainDuration(Random.Range(rainDurationMin, rainDurationMax));
-        //wMedium.setRainDuration(Random.Range(rainDurationMin + 2, rainDurationMax + 2));
-        //wHard.setRainDuration(Random.Range(rainDurationMin + 5, rainDurationMax + 5));
-
         //set sun duration
         wEasy.setSunDuration(23 - wEasy.getRainDuration());
         wMedium.setSunDuration(23 - wMedium.getRainDuration());
         wHard.setSunDuration(23 - wHard.getRainDuration());
-
-        //set rain intensity
-        //setRainIntensity(wEasy, rainIntensity);
-        //setRainIntensity(wMedium, rainIntensity + 0.10f);
-        //setRainIntensity(wHard, rainIntensity + 0.20f);
-
-        //set sun intensity
-        //setSunIntensity(wEasy, sunIntensity);
-        //setSunIntensity(wMedium, sunIntensity + 2);
-        //setSunIntensity(wHard, sunIntensity + 5);
-
-        //set TemperatureMin
-        //wEasy.setTemperatureMin(tempMin);
-        //wMedium.setTemperatureMin(tempMin + 2);
-        //wHard.setTemperatureMin(tempMin + 5);
-
-        //set TemperatureMax
-        //wEasy.setTemperatureMax(tempMax - 10);
-        //wMedium.setTemperatureMax(tempMax - 5);
-        //wHard.setTemperatureMax(tempMax);
 
         ////set rain chance percentage
         wEasy.setRainChancePercentage(rainChance);
