@@ -2278,6 +2278,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &412906218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412906220}
+  - component: {fileID: 412906219}
+  m_Layer: 0
+  m_Name: WeatherEasy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &412906219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412906218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e07666722c57074f9496200410246b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainDuration: 0
+  sunDuration: 0
+  rainIntensity: 0
+  rainChancePercentage: 0
+  sunIntensity: 0
+  temperatureMin: 0
+  temperatureMax: 0
+  raining: 0
+  sunny: 1
+  weatherType: 
+--- !u!4 &412906220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412906218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808231084}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494841553
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,6 +2594,56 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599376135}
   m_CullTransparentMesh: 0
+--- !u!1 &613572497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613572499}
+  - component: {fileID: 613572498}
+  m_Layer: 0
+  m_Name: WeatherMedium
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &613572498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613572497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e07666722c57074f9496200410246b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainDuration: 0
+  sunDuration: 0
+  rainIntensity: 0
+  rainChancePercentage: 0
+  sunIntensity: 0
+  temperatureMin: 0
+  temperatureMax: 0
+  raining: 0
+  sunny: 1
+  weatherType: 
+--- !u!4 &613572499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613572497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808231084}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &634922363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3589,7 @@ GameObject:
   - component: {fileID: 900249760}
   - component: {fileID: 900249758}
   - component: {fileID: 900249761}
+  - component: {fileID: 900249762}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3602,7 +3703,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &900249760
 MonoBehaviour:
@@ -3628,6 +3729,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helptextContainer: {fileID: 1516389108}
   objGrass: {fileID: 4617561864965340, guid: 74f9916593916874cbdfa2402810cd0a, type: 2}
+--- !u!114 &900249762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 900249757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cede5504034653248a93b06db7220ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RainScript: {fileID: 0}
+  weather:
+  - {fileID: 412906219}
+  - {fileID: 613572498}
+  - {fileID: 1528058004}
+  dateTime: {fileID: 0}
+  labelTemperature: {fileID: 0}
+--- !u!1 &964595929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 964595930}
+  m_Layer: 0
+  m_Name: RainScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &964595930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 964595929}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 296.82208, y: 252.42966, z: 10.75902}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1599299042}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018694798
 GameObject:
   m_ObjectHideFlags: 0
@@ -4310,7 +4458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143776159
 GameObject:
@@ -4953,7 +5101,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1383046629
 MonoBehaviour:
@@ -14716,7 +14864,7 @@ Transform:
   m_Children:
   - {fileID: 1418717876}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -180.162, y: 0, z: 0}
 --- !u!1 &1500863590
 GameObject:
@@ -14978,6 +15126,56 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1516389106}
   m_CullTransparentMesh: 0
+--- !u!1 &1528058003
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528058005}
+  - component: {fileID: 1528058004}
+  m_Layer: 0
+  m_Name: WeatherHard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1528058004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528058003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e07666722c57074f9496200410246b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainDuration: 0
+  sunDuration: 0
+  rainIntensity: 0
+  rainChancePercentage: 0
+  sunIntensity: 0
+  temperatureMin: 0
+  temperatureMax: 0
+  raining: 0
+  sunny: 1
+  weatherType: 
+--- !u!4 &1528058005
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1528058003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1808231084}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1548478056
 GameObject:
   m_ObjectHideFlags: 0
@@ -15148,6 +15346,11 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!4 &1599299042 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1714958284}
 --- !u!1 &1665538984
 GameObject:
   m_ObjectHideFlags: 0
@@ -15333,6 +15536,72 @@ RectTransform:
   m_AnchoredPosition: {x: -0.2000122, y: -27.999996}
   m_SizeDelta: {x: 617.3, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1714958284
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 964595930}
+    m_Modifications:
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.12732431
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.06851555
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4827448371798444, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313754434930706, guid: eafc27928fe40a8429ecbb4548790af2,
+        type: 2}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1810187450}
+    - target: {fileID: 1568161673673308, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+      propertyPath: m_Name
+      value: RainPrefab2D
+      objectReference: {fileID: 0}
+    - target: {fileID: 114313754434930706, guid: eafc27928fe40a8429ecbb4548790af2,
+        type: 2}
+      propertyPath: CollisionMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 199788517701829486, guid: eafc27928fe40a8429ecbb4548790af2,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 1085135751
+      objectReference: {fileID: 0}
+    - target: {fileID: 199788517701829486, guid: eafc27928fe40a8429ecbb4548790af2,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eafc27928fe40a8429ecbb4548790af2, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1746878187
 GameObject:
   m_ObjectHideFlags: 0
@@ -15593,7 +15862,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1808231084}
   - component: {fileID: 1808231085}
-  - component: {fileID: 1808231083}
   m_Layer: 0
   m_Name: WeatherManager
   m_TagString: Untagged
@@ -15601,27 +15869,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1808231083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1808231082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e07666722c57074f9496200410246b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rainDuration: 0
-  sunDuration: 0
-  rainIntensity: 0
-  rainChancePercentage: 0
-  sunIntensity: 0
-  temperatureMin: 0
-  temperatureMax: 0
-  raining: 0
-  sunny: 1
-  weatherType: 
 --- !u!4 &1808231084
 Transform:
   m_ObjectHideFlags: 0
@@ -15631,9 +15878,12 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 296.82208, y: 252.42966, z: 10.75902}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 412906220}
+  - {fileID: 613572499}
+  - {fileID: 1528058005}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1808231085
 MonoBehaviour:
@@ -15646,9 +15896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a9a6a2c0f128a48b520f02803eb839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wEasy: {fileID: 0}
-  wMedium: {fileID: 0}
-  wHard: {fileID: 0}
+  wEasy: {fileID: 412906219}
+  wMedium: {fileID: 613572498}
+  wHard: {fileID: 1528058004}
   weatherTypeArray: []
 --- !u!1 &1810187448
 GameObject:
@@ -15877,7 +16127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1812843317
 MonoBehaviour:

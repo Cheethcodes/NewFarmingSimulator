@@ -24,11 +24,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//using DigitalRuby.RainMaker;
+using DigitalRuby.RainMaker;
 
 public class customRainmakerEvent : MonoBehaviour
 {
-    //public BaseRainScript RainScript;
+    public BaseRainScript RainScript;
     public weatherGet[] weather;
     public static weatherGet currentWeather;
     public weatherTimer dateTime;
@@ -114,22 +114,17 @@ public class customRainmakerEvent : MonoBehaviour
             weatherSimulator.makeWeather = true;
             Debug.Log("Simulating new weather");
         }
-        //if (RainScript == null)
-        //{
-        //    return;
-        //}
-        //else if (currentWeather.getRaining())
-        //{
-        //    RainScript.RainIntensity = currentWeather.getRainIntensity();
+        if (RainScript == null) {
+            return;
+        } else if (currentWeather.getRaining()) {
+            RainScript.RainIntensity = currentWeather.getRainIntensity();
 
-        //    RainScript.EnableWind = true;
+            RainScript.EnableWind = true;
 
-        //}
-        //else if (currentWeather.getSunny())
-        //{
-        //    RainScript.RainIntensity = 0f;
-        //    RainScript.EnableWind = false;
-        //}
+        } else if (currentWeather.getSunny()) {
+            RainScript.RainIntensity = 0f;
+            RainScript.EnableWind = false;
+        }
 
         if (changeTempTimer >= 5)
         {
