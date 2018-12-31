@@ -8,6 +8,7 @@ TagManager:
   - grass
   - building
   - plant
+  - Pest
   layers:
   - Default
   - TransparentFX
@@ -56,6 +57,9 @@ TagManager:
     locked: 0
   - name: ground
     uniqueID: 1085135751
+    locked: 0
+  - name: Pest
+    uniqueID: 170345609
     locked: 0
   - name: menu
     uniqueID: 3005382823

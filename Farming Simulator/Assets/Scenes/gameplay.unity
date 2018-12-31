@@ -10249,6 +10249,47 @@ RectTransform:
   m_AnchoredPosition: {x: -197, y: 24.099995}
   m_SizeDelta: {x: 381.4, y: 34.9}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1454764255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1454764257}
+  - component: {fileID: 1454764256}
+  m_Layer: 0
+  m_Name: SpawnController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1454764256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454764255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cf513699aa095a4caa4478caf8b2d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pest: {fileID: 1650630308598406, guid: f57f41c553082ad4ba5634b7d1234430, type: 2}
+--- !u!4 &1454764257
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454764255}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 561.37286, y: -51.48341, z: -0.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1466607021
 GameObject:
   m_ObjectHideFlags: 0
