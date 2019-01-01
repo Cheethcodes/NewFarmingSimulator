@@ -111,6 +111,8 @@ public class cursorEvents : MonoBehaviour {
         // Get the name of the object
         string[] name = (objName).Split('-');
 
+        Vector2 targetButton = GameObject.Find(objName).transform.position;
+
         #region Gemplay buttons
         // Standard of namin button objects "play-(Type of button)_(Name of button)"
 
@@ -127,29 +129,37 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Tools.SetActive(true);
 
+                    targetButton.x -= 80;
+
                     switch (newName[1])
                     {
                         case "Default":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Default tool";
                             break;
 
                         case "Fertilizer":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Fertilizer tool";
                             break;
 
                         case "Water":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Water tool";
                             break;
 
                         case "Cultivate":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Cultivate tool";
                             break;
 
                         case "Harvest":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Harvest tool";
                             break;
 
                         case "Recycle":
+                            obj_Tools.transform.position = targetButton;
                             txt_ToolsChild.text = "Recycle tool";
                             break;
 
@@ -164,9 +174,12 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Play.SetActive(true);
 
+                    targetButton.x -= 140;
+
                     switch (newName[1])
                     {
                         case "Greenhouse":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Greenhouse";
                             txt_PlayChild_Description_Bldg.text = "A greenhouse that can be built to control the environmental condition for the plants that will be stored.\n\n" +
                                 "Cost: 1000 coins | 3 days\n" +
@@ -184,10 +197,13 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Play.SetActive(true);
 
+                    targetButton.x -= 140;
+
                     switch (newName[1])
                     {
                         // Carrot
                         case "Carrot":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Carrot";
                             txt_PlayChild_Description_Plant.text = "A carrot seed.\n\n" +
                                 "Cost:   15 coins | Average Growth Time: 60 days\n" +
@@ -196,6 +212,7 @@ public class cursorEvents : MonoBehaviour {
 
                         // Onion
                         case "Onion":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Onion";
                             txt_PlayChild_Description_Plant.text = "An onion seed.\n\n" +
                                 "Cost:    5 coins | Average Growth Time: 60 days\n" +
@@ -204,6 +221,7 @@ public class cursorEvents : MonoBehaviour {
 
                         // Pumpkin
                         case "Pumpkin":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Pumpkin";
                             txt_PlayChild_Description_Plant.text = "A pumpkin seed.\n\n" +
                                 "Cost:    50 coins | Average Growth Time: 60 days\n" +
@@ -212,6 +230,7 @@ public class cursorEvents : MonoBehaviour {
 
                         // Radish
                         case "Radish":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Radish";
                             txt_PlayChild_Description_Plant.text = "A radish seed.\n\n" +
                                 "Cost:   15 coins | Average Growth Time: 60 days\n" +
@@ -220,6 +239,7 @@ public class cursorEvents : MonoBehaviour {
 
                         // Tomato
                         case "Tomato":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Tomato";
                             txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
                                 "Cost:   10 coins | Average Growth Time: 60 days\n" +
@@ -228,6 +248,7 @@ public class cursorEvents : MonoBehaviour {
 
                         // Watermelon
                         case "Watermelon":
+                            obj_Play.transform.position = targetButton;
                             txt_PlayChild_Title.text = "Tomato";
                             txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
                                 "Cost:    40 coins | Average Growth Time: 60 days\n" +
@@ -247,17 +268,23 @@ public class cursorEvents : MonoBehaviour {
             
             obj_Options.SetActive(true);
 
+            targetButton.x -= 30;
+            targetButton.y -= 30;
+
             switch (name[1])
             {
                 case "options":
+                    obj_Options.transform.position = targetButton;
                     txt_OptionsChild.text = "Options";
                     break;
 
                 case "help":
+                    obj_Options.transform.position = targetButton;
                     txt_OptionsChild.text = "Help";
                     break;
 
                 case "logout":
+                    obj_Options.transform.position = targetButton;
                     txt_OptionsChild.text = "Save & LogOut";
                     break;
             }
