@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\gameplay\Pest.cs" />
     <Compile Include="Assets\Scripts\gameplay\Spawner.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\characteristics.cs" />
+    <Compile Include="Assets\Scripts\gameplay\tile characteristics\plantInfo.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\plantstate.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\plantTimer.cs" />
     <Compile Include="Assets\Scripts\gameplay\tile characteristics\soilstate.cs" />

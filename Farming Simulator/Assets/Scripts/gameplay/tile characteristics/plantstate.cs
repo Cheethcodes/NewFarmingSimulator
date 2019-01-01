@@ -24,6 +24,8 @@ using UnityEngine;
 
 public class plantstate : MonoBehaviour {
 
+    GameObject plantInfoParent, plantInfoPanel;
+
     #region Growth variables of the plant
     /* STAGES and corresponding SPRITES
     *   1 - seed
@@ -45,6 +47,11 @@ public class plantstate : MonoBehaviour {
     private float growthTimeMature_3;
     private float growthTimeMature_4;
     private float growthTimeMature_5;
+    private int timeLeft;
+
+    // Other dependency variables
+    private float amountWater;
+    private float fNitrogen, fPhosphorus, fPotassium;
 
     #endregion
 
@@ -53,8 +60,16 @@ public class plantstate : MonoBehaviour {
 
     void Start()
     {
+        plantInfoParent = GameObject.Find("menuPlantInfoContainer");
+        plantInfoPanel = plantInfoParent.transform.Find("menuPlantInfoPanel").gameObject;
+
         // Set all plant to birth + immature stage
         growthStage = 0;
+        amountWater = 0;
+        fNitrogen = 0;
+        fPhosphorus = 0;
+        fPotassium = 0;
+        timeLeft = growthTime;
 
         // Time at which the plant changes state
         growthTimeMature_1 = Mathf.Floor(growthTime / 4) * 1;
@@ -93,6 +108,38 @@ public class plantstate : MonoBehaviour {
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[3];
             growthStage = 4;
+        }
+
+        amountWater = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountWater;
+        fNitrogen = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Nitorgen;
+        fPhosphorus = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Phosphorus;
+        fPotassium = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Potassium;
+    }
+
+    void OnMouseDown()
+    {
+        if (pInteractions.currentTool == "action-None")
+        {
+            plantInfoPanel.SetActive(true);
+
+            // Update soil properties
+            plantInfo.waterbarValue = amountWater;
+
+            plantInfo.fNitrogen = fNitrogen;
+            plantInfo.fPhosphorus = fPhosphorus;
+            plantInfo.fPotassium = fPotassium;
+
+            plantInfo.harvestTimeLeft = timeLeft;
+
+            if (timeLived < growthTimeMature_4)
+            {
+                timeLeft = growthTime - timeLived;
+            }
+            else
+            {
+                timeLeft = 0;
+            }
+
         }
     }
 
