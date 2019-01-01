@@ -3595,7 +3595,6 @@ GameObject:
   - component: {fileID: 900249760}
   - component: {fileID: 900249758}
   - component: {fileID: 900249761}
-  - component: {fileID: 900249762}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3735,22 +3734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helptextContainer: {fileID: 1516389108}
   objGrass: {fileID: 4617561864965340, guid: 74f9916593916874cbdfa2402810cd0a, type: 2}
---- !u!114 &900249762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 900249757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cede5504034653248a93b06db7220ecf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RainScript: {fileID: 62955154}
-  weather:
-  - {fileID: 412906219}
-  - {fileID: 613572498}
-  - {fileID: 1528058004}
 --- !u!1 &964595929
 GameObject:
   m_ObjectHideFlags: 0
@@ -6670,9 +6653,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1808231082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc10cff34a33559498d5582a2caa17ee, type: 3}
+  m_Script: {fileID: 11500000, guid: cede5504034653248a93b06db7220ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RainScript: {fileID: 62955154}
+  weather:
+  - {fileID: 412906219}
+  - {fileID: 613572498}
+  - {fileID: 1528058004}
 --- !u!1 &1810187448
 GameObject:
   m_ObjectHideFlags: 0
