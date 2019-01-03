@@ -21,6 +21,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -57,6 +58,28 @@ public class buttonFunctions : MonoBehaviour {
         counterBuild = 2;
         counterPlant = 2;
         counterTools = 2;
+    }
+
+    void Update()
+    {
+        if (!EventSystem.current.IsPointerOverGameObject())
+        {
+            Debug.Log("This is a Game Object");
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                if (hit.collider.tag == "ground" || hit.collider.tag == "soil" || hit.collider.tag == "plant")
+                {
+                    Debug.DrawLine(ray.origin, hit.point);
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("This is a UI.");
+        }
     }
 
     #region Help menu
@@ -168,17 +191,27 @@ public class buttonFunctions : MonoBehaviour {
     // Cultivate grass tool
     public void selectCultivateTool()
     {
-        pInteractions.currentTool = "action-Cultivate";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[2];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            pInteractions.currentTool = "action-Cultivate";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[2];
+            animTools.SetBool("slide", false);
+        }
+        else
+            return;
     }
 
     // Watering tool
     public void selectWaterTool()
     {
-        pInteractions.currentTool = "action-Water";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[3];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            pInteractions.currentTool = "action-Water";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[3];
+            animTools.SetBool("slide", false);
+        }
+        else
+            return;
     }
 
     // Harvest tool
