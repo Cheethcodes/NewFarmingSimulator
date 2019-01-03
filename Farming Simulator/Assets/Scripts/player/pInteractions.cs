@@ -22,6 +22,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class pInteractions : MonoBehaviour {
 
@@ -61,92 +62,94 @@ public class pInteractions : MonoBehaviour {
 
     void OnMouseDown()
     {
-        ncurrentTool = currentTool.Split('-');
+        if (!EventSystem.current.IsPointerOverGameObject()) { 
+            ncurrentTool = currentTool.Split('-');
 
-        // Read what option the player chooses to be his / her action
-        switch (ncurrentTool[1])
-        {
-            // When player picks up rake
-            case "Cultivate":
-                if (dataCont.moneyValue >= 5)
-                {
-                    if (Type == "grass")
+            // Read what option the player chooses to be his / her action
+            switch (ncurrentTool[1])
+            {
+                // When player picks up rake
+                case "Cultivate":
+                    if (dataCont.moneyValue >= 5)
                     {
-                        execCultivate();
+                        if (Type == "grass")
+                        {
+                            execCultivate();
+                        }
+                        else
+                        {
+                            Debug.Log("Already cultivated!");
+                        }
                     }
                     else
                     {
-                        Debug.Log("Already cultivated!");
+                        Debug.Log("Not enough money");
                     }
-                }
-                else
-                {
-                    Debug.Log("Not enough money");
-                }
-                break;
+                    break;
             
-            // When player picks up any seeds to be planted
-            case "Plant":
-                if (Type == "soil")
-                {
-                    execPlant();
-                }
-                else if (Type == "plant")
-                {
-                    Debug.Log("Plot already planted!");
-                }
-                else
-                {
-                    Debug.Log("Plot needs to be cultivated first!");
-                }
-                break;
+                // When player picks up any seeds to be planted
+                case "Plant":
+                    if (Type == "soil")
+                    {
+                        execPlant();
+                    }
+                    else if (Type == "plant")
+                    {
+                        Debug.Log("Plot already planted!");
+                    }
+                    else
+                    {
+                        Debug.Log("Plot needs to be cultivated first!");
+                    }
+                    break;
             
-            // When player picks up the scythe
-            case "Harvest":
-                if (Type == "plant")
-                {
-                    execHarvest();
-                }
-                else
-                {
-                    Debug.Log("There is no available plants in this area!");
-                }
-                break;
+                // When player picks up the scythe
+                case "Harvest":
+                    if (Type == "plant")
+                    {
+                        execHarvest();
+                    }
+                    else
+                    {
+                        Debug.Log("There is no available plants in this area!");
+                    }
+                    break;
 
-            // When player picks up the pail
-            case "Water":
-                if (Type == "plant" || Type == "soil")
-                {
-                    execWater();
-                }
-                else
-                {
-                    Debug.Log("No are for water to be applied!");
-                }
-                break;
+                // When player picks up the pail
+                case "Water":
+                    if (Type == "plant" || Type == "soil")
+                    {
+                        execWater();
+                    }
+                    else
+                    {
+                        Debug.Log("No are for water to be applied!");
+                    }
+                    break;
 
-            case "Fertilize":
-                if (Type == "plant" || Type == "soil")
-                {
-                    execFertilize();
-                }
-                else
-                {
-                    Debug.Log("No area for fertilizer to be applied.");
-                }
-                break;
+                case "Fertilize":
+                    if (Type == "plant" || Type == "soil")
+                    {
+                        execFertilize();
+                    }
+                    else
+                    {
+                        Debug.Log("No area for fertilizer to be applied.");
+                    }
+                    break;
 
-            // When player picks up recycle tool
-            case "Sell":
-                execRecycle();
-                break;
+                // When player picks up recycle tool
+                case "Sell":
+                    execRecycle();
+                    break;
 
-            case "Build":
-                execBuild();
-                break;
+                case "Build":
+                    execBuild();
+                    break;
 
-            default:
-                break;
+                default:
+                    break;
+            }
         }
     }
 
