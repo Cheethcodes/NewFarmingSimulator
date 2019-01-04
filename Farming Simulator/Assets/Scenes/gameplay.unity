@@ -4713,6 +4713,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helptextContainer: {fileID: 1516389108}
   objGrass: {fileID: 4617561864965340, guid: 74f9916593916874cbdfa2402810cd0a, type: 2}
+--- !u!114 &928834830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11475408, guid: b046278bb9b6e104790392b566667ba5,
+    type: 2}
+  m_PrefabInternal: {fileID: 626224247}
+  m_Script: {fileID: 11500000, guid: 340901a9d8d97bd43abdfe247e210193, type: 3}
 --- !u!1 &930572960
 GameObject:
   m_ObjectHideFlags: 0
@@ -8478,7 +8484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cede5504034653248a93b06db7220ecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RainScript: {fileID: 0}
+  RainScript: {fileID: 928834830}
   weather:
   - {fileID: 412906219}
   - {fileID: 613572498}
