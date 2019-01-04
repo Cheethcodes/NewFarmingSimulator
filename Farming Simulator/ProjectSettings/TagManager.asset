@@ -64,3 +64,6 @@ TagManager:
   - name: menu
     uniqueID: 3005382823
     locked: 0
+  - name: rain
+    uniqueID: 3256107783
+    locked: 0

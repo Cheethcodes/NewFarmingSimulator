@@ -67,7 +67,7 @@ public class customRainmakerEvent : MonoBehaviour
 
         changeTempTimer += Time.deltaTime;
 
-        if (hour == 24)
+        if (hour == 23)
         {
             hour = timekeeper.hour_military;
         }
@@ -85,7 +85,7 @@ public class customRainmakerEvent : MonoBehaviour
 
         if (currentWeather.getSunny() == true)
         {
-            if (timekeeper.hour_military == 12)
+            if (timekeeper.hour_military == hour+1)
             {
                 currentWeather.setSunDuration(currentWeather.getSunDuration() - 1);
                 hour = timekeeper.hour_military;
@@ -102,7 +102,7 @@ public class customRainmakerEvent : MonoBehaviour
         }
         else if (currentWeather.getRaining() == true)
         {
-            if (timekeeper.hour_military == 12)
+            if (timekeeper.hour_military == hour+1)
             {
                 currentWeather.setRainDuration(currentWeather.getRainDuration() - 1);
                 hour = timekeeper.hour_military;
