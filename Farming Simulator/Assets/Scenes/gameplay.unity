@@ -2300,7 +2300,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: -392, y: -330}
   m_SizeDelta: {x: 599, y: 309.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301714957
@@ -6911,7 +6911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pest: {fileID: 1650630308598406, guid: f57f41c553082ad4ba5634b7d1234430, type: 2}
-  spawnedPest: {fileID: 0}
   timeleft: 10
 --- !u!4 &1454764257
 Transform:
@@ -8782,7 +8781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 392, y: 290}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1841978763

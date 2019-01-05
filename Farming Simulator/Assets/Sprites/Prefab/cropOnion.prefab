@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212948836376695686}
   - component: {fileID: 114023852586854752}
   - component: {fileID: 114364945330234356}
-  - component: {fileID: 60926724631500732}
+  - component: {fileID: 61794077116095502}
   m_Layer: 29
   m_Name: cropOnion
   m_TagString: plant
@@ -43,8 +43,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60926724631500732
-PolygonCollider2D:
+--- !u!61 &61794077116095502
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,7 +55,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -65,12 +65,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.04, y: 0.099999994}
-      - {x: -0.04, y: 0.03}
-      - {x: 0.03, y: 0.03}
-      - {x: 0.03, y: 0.099999994}
+  serializedVersion: 2
+  m_Size: {x: 0.24, y: 0.12}
+  m_EdgeRadius: 0
 --- !u!114 &114023852586854752
 MonoBehaviour:
   m_ObjectHideFlags: 1
