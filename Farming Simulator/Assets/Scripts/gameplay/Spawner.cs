@@ -3,38 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
+
     private IList<GameObject> plants = new List<GameObject>();
     public GameObject Pest;
-    public GameObject spawnedPest;
+    public static GameObject spawnedPest;
     public static string difficulty = "easy";
     private int numberspawn = 1;
     public float timeleft = 90;
     public static float pestlifespan;
-    // Use this for initialization
-    void Start () {
-		
-	}
-	void Plant()
-    {
 
-    }
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
         if(GameObject.FindGameObjectsWithTag("plant").Length != 0)
         {
             timeleft -= Time.deltaTime;
         }
+
         foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("plant"))
         {
-
             plants.Add(fooObj);
         }
+
         if((plants.Count > 0)&(timeleft < 0))
         {
             int randomIndex = Random.Range(0, plants.Count);
 
-            //pass in the game object into your MoveToward() method
+            // Pass in the game object into your MoveToward() method
             Vector3 center = plants[randomIndex].transform.position;
+
             if (difficulty.Equals("easy"))
             {
                 numberspawn = 1;
@@ -47,6 +43,7 @@ public class Spawner : MonoBehaviour {
             {
                 numberspawn = 7;
             }
+
             for (int i = 0; i < numberspawn; i++)
             {
                 Vector3 pos = RandomCircle(center, 20f);
@@ -55,6 +52,7 @@ public class Spawner : MonoBehaviour {
                 spawnedPest.GetComponent<Pest>().targetplant = plants[randomIndex];
             }
         }
+
         if(timeleft < 0)
         {
             if (difficulty.Equals("easy"))
@@ -71,6 +69,7 @@ public class Spawner : MonoBehaviour {
             }
         }
     }
+
     Vector3 RandomCircle(Vector3 center, float radius)
     {
         float ang = Random.value * 360;

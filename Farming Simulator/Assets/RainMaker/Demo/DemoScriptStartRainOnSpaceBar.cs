@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-using DigitalRuby.RainMaker;
-
+namespace DigitalRuby.RainMaker
+{
     public class DemoScriptStartRainOnSpaceBar : MonoBehaviour
     {
         public BaseRainScript RainScript;
@@ -30,3 +30,4 @@ using DigitalRuby.RainMaker;
             }
         }
     }
+}

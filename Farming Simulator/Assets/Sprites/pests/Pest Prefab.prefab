@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 95414287946623158}
   - component: {fileID: 114282100983981140}
   - component: {fileID: 61857058019413064}
-  m_Layer: 10
+  m_Layer: 30
   m_Name: Pest Prefab
   m_TagString: Pest
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPest: {fileID: 4526163828968542}
+  thepest: {fileID: 1650630308598406}
   plant: []
   plant_length: 0
   counter: 0
@@ -139,7 +140,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 170345609
   m_SortingLayer: 5
-  m_SortingOrder: 0
+  m_SortingOrder: 1000
   m_Sprite: {fileID: 21300000, guid: b7e2adf1dfb04374e9d4ab54c710699d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

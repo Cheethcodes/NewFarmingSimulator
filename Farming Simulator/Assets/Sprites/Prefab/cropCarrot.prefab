@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212247463831132154}
   - component: {fileID: 114430585705987334}
   - component: {fileID: 114784248158015804}
-  - component: {fileID: 60678700756561010}
-  m_Layer: 28
+  - component: {fileID: 61311259341781760}
+  m_Layer: 29
   m_Name: cropCarrot
   m_TagString: plant
   m_Icon: {fileID: 0}
@@ -43,8 +43,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &60678700756561010
-PolygonCollider2D:
+--- !u!61 &61311259341781760
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -55,7 +55,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -65,17 +65,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.089999996, y: 0.19999999}
-      - {x: -0.13, y: 0.19999999}
-      - {x: -0.17, y: 0.14}
-      - {x: -0.17, y: 0.049999997}
-      - {x: -0.04, y: 0}
-      - {x: 0.12, y: 0}
-      - {x: 0.14999999, y: 0.01}
-      - {x: 0.17, y: 0.049999997}
-      - {x: 0.17, y: 0.14999999}
+  serializedVersion: 2
+  m_Size: {x: 0.34, y: 0.2}
+  m_EdgeRadius: 0
 --- !u!114 &114430585705987334
 MonoBehaviour:
   m_ObjectHideFlags: 1

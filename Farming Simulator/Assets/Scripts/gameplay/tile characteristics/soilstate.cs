@@ -21,8 +21,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DigitalRuby.RainMaker;
 
 public class soilstate : MonoBehaviour {
+
+    // Identify rain
+    private RainScript2D rainOccurrence;
+    private float rainWater;
 
     // Component variables of the soil tile
     public float amountWater;
@@ -36,6 +41,11 @@ public class soilstate : MonoBehaviour {
     float decayFertilizer_Potassium;
     float decayFertilizer_Phosphorus;
 
+    void Start()
+    {
+        rainOccurrence = GameObject.Find("RainPrefab2D").GetComponent<RainScript2D>();
+    }
+
     void Update()
     {
         #region Declaration
@@ -45,27 +55,42 @@ public class soilstate : MonoBehaviour {
         decayFertilizer_Potassium = Random.Range(0.0001f, 0.0005f);
         decayFertilizer_Phosphorus = Random.Range(0.0001f, 0.0005f);
 
+        rainWater = rainOccurrence.RainIntensity;
+
         #endregion
 
+        // Decrease amount of water due to evaporation
         if (amountWater > 0)
         {
             amountWater -= Time.deltaTime * decayWater;
         }
 
+        // Decrease amount of fertilizer components overtime - Nitrogen
         if (amountFertilizer_Nitorgen > 0)
         {
             amountFertilizer_Nitorgen -= Time.deltaTime * decayFertilizer_Nitrogen;
         }
 
+        // Decrease amount of fertilizer components overtime - Phosphorus
         if (amountFertilizer_Phosphorus > 0)
         {
             amountFertilizer_Phosphorus -= Time.deltaTime * decayFertilizer_Phosphorus;
         }
 
+        // Decrease amount of fertilizer components overtime - Potassium
         if (amountFertilizer_Potassium > 0)
         {
             amountFertilizer_Potassium -= Time.deltaTime * decayFertilizer_Potassium;
         }
+
+        // Increase amoung of water base on the rainfall that will occur
+        if (rainWater > 0)
+        {
+            amountWater += rainWater;
+        }
+
+        amountWater = Mathf.Clamp(amountWater, 0, 100);
+        
     }
 
 }

@@ -60,28 +60,6 @@ public class buttonFunctions : MonoBehaviour {
         counterTools = 2;
     }
 
-    void Update()
-    {
-        if (!EventSystem.current.IsPointerOverGameObject())
-        {
-            Debug.Log("This is a Game Object");
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit, 100))
-            {
-                if (hit.collider.tag == "ground" || hit.collider.tag == "soil" || hit.collider.tag == "plant")
-                {
-                    Debug.DrawLine(ray.origin, hit.point);
-                }
-            }
-        }
-        else
-        {
-            Debug.Log("This is a UI.");
-        }
-    }
-
     #region Help menu
 
     public void showmenu_Help()

@@ -59,7 +59,7 @@ namespace DigitalRuby.RainMaker
 
         protected override void Start()
         {
-            //base.Start();
+            base.Start();
         }
 
         protected override void Update()

@@ -21,6 +21,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class plantstate : MonoBehaviour {
 
@@ -50,6 +51,7 @@ public class plantstate : MonoBehaviour {
     private int timeLeft;
 
     // Other dependency variables
+    private float amountHealth;
     private float amountWater;
     private float fNitrogen, fPhosphorus, fPotassium;
 
@@ -58,6 +60,8 @@ public class plantstate : MonoBehaviour {
     // Defines what kind of plant
     public string plantName;
 
+    private bool hasPest;
+
     void Start()
     {
         plantInfoParent = GameObject.Find("menuPlantInfoContainer");
@@ -65,11 +69,13 @@ public class plantstate : MonoBehaviour {
 
         // Set all plant to birth + immature stage
         growthStage = 0;
+        amountHealth = 100;
         amountWater = 0;
         fNitrogen = 0;
         fPhosphorus = 0;
         fPotassium = 0;
         timeLeft = growthTime;
+        hasPest = false;
 
         // Time at which the plant changes state
         growthTimeMature_1 = Mathf.Floor(growthTime / 4) * 1;
@@ -77,6 +83,7 @@ public class plantstate : MonoBehaviour {
         growthTimeMature_3 = Mathf.Floor(growthTime / 4) * 3;
         growthTimeMature_4 = growthTime;
         growthTimeMature_5 = growthTime * 2;
+
     }
 
     // Update is called once per frame
@@ -114,32 +121,55 @@ public class plantstate : MonoBehaviour {
         fNitrogen = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Nitorgen;
         fPhosphorus = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Phosphorus;
         fPotassium = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountFertilizer_Potassium;
+
+        // Check if there is pest on the plant object
+        if (hasPest && amountHealth > 0)
+        {
+            amountHealth -= 0.05f * Time.deltaTime;
+        }
     }
 
     void OnMouseDown()
     {
-        if (pInteractions.currentTool == "action-None")
+            if (pInteractions.currentTool == "action-None")
+            {
+                plantInfoPanel.SetActive(true);
+
+                // Update soil properties
+                plantInfo.waterbarValue = amountWater;
+                plantInfo.healthbarValue = amountHealth;
+
+                plantInfo.fNitrogen = fNitrogen;
+                plantInfo.fPhosphorus = fPhosphorus;
+                plantInfo.fPotassium = fPotassium;
+
+                plantInfo.harvestTimeLeft = timeLeft;
+
+                if (timeLived < growthTimeMature_4)
+                {
+                    timeLeft = growthTime - timeLived;
+                }
+                else
+                {
+                    timeLeft = 0;
+                }
+            }
+            
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pest"))
         {
-            plantInfoPanel.SetActive(true);
+            hasPest = true;
+        }
+    }
 
-            // Update soil properties
-            plantInfo.waterbarValue = amountWater;
-
-            plantInfo.fNitrogen = fNitrogen;
-            plantInfo.fPhosphorus = fPhosphorus;
-            plantInfo.fPotassium = fPotassium;
-
-            plantInfo.harvestTimeLeft = timeLeft;
-
-            if (timeLived < growthTimeMature_4)
-            {
-                timeLeft = growthTime - timeLived;
-            }
-            else
-            {
-                timeLeft = 0;
-            }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pest"))
+        {
+            hasPest = false;
         }
     }
 

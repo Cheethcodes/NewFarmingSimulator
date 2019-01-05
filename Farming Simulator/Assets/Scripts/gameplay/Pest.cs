@@ -19,7 +19,7 @@ using UnityEngine;
 public class Pest : MonoBehaviour
 {
     public Transform targetPest;
-    private GameObject thepest;
+    public GameObject thepest;
     float MoveSpeed = 0.2f;
     float MinDist = 0f;
     public GameObject[] plant;
@@ -33,7 +33,7 @@ public class Pest : MonoBehaviour
 
     void Start()
     {
-        thepest = targetPest.gameObject;
+        //thepest = targetPest.gameObject;
         if (Spawner.difficulty.Equals("easy"))
         {
             pesthealth = 40;
@@ -50,10 +50,12 @@ public class Pest : MonoBehaviour
 
     void Update()
     {
+        thepest = Spawner.spawnedPest;
         if(pesthealth == 0)
         {
             Destroy(thepest);
         }
+
         MoveTowardsPlant();
         pestsurvivaltimecounter += Time.deltaTime;
     }
@@ -72,15 +74,15 @@ public class Pest : MonoBehaviour
 
     }
 
-
     public void MoveTowardsPlant()
     {
-            //pass in the game object into your MoveToward() method
-            transform.LookAt(targetplant.transform);
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
-            }
+        //pass in the game object into your MoveToward() method
+        transform.LookAt(targetplant.transform);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+        if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
+        }
     }
 }
