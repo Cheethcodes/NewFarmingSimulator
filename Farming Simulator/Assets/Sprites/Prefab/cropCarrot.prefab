@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114430585705987334}
   - component: {fileID: 114784248158015804}
   - component: {fileID: 60678700756561010}
-  m_Layer: 28
+  m_Layer: 29
   m_Name: cropCarrot
   m_TagString: plant
   m_Icon: {fileID: 0}

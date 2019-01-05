@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour {
 
     private IList<GameObject> plants = new List<GameObject>();
     public GameObject Pest;
-    public GameObject spawnedPest;
+    public static GameObject spawnedPest;
     public static string difficulty = "easy";
     private int numberspawn = 1;
     public float timeleft = 90;

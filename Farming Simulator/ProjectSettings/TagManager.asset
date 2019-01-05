@@ -40,8 +40,8 @@ TagManager:
   - 
   - ground
   - plants
+  - pest
   - menu
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0

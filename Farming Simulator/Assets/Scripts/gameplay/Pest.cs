@@ -19,7 +19,7 @@ using UnityEngine;
 public class Pest : MonoBehaviour
 {
     public Transform targetPest;
-    private GameObject thepest;
+    public GameObject thepest;
     float MoveSpeed = 0.2f;
     float MinDist = 0f;
     public GameObject[] plant;
@@ -33,7 +33,7 @@ public class Pest : MonoBehaviour
 
     void Start()
     {
-        thepest = targetPest.gameObject;
+        //thepest = targetPest.gameObject;
         if (Spawner.difficulty.Equals("easy"))
         {
             pesthealth = 40;
@@ -50,6 +50,7 @@ public class Pest : MonoBehaviour
 
     void Update()
     {
+        thepest = Spawner.spawnedPest;
         if(pesthealth == 0)
         {
             Destroy(thepest);

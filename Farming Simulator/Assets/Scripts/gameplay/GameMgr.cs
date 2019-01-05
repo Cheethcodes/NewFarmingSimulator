@@ -68,7 +68,7 @@ public class GameMgr : MonoBehaviour {
 
                     grass = Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
                     render = grass.GetComponent<SpriteRenderer>();
-                    render.sortingOrder = y - 1;
+                    //render.sortingOrder = y - 1;
 
                     grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
                 }
@@ -78,7 +78,7 @@ public class GameMgr : MonoBehaviour {
                 {
                     grass = Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
                     render = grass.GetComponent<SpriteRenderer>();
-                    render.sortingOrder = y - 1;
+                    //render.sortingOrder = y - 1;
 
                     grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
                 }
