@@ -60,11 +60,6 @@ public class buttonFunctions : MonoBehaviour {
         counterTools = 2;
     }
 
-    void Update()
-    {
-        
-    }
-
     #region Help menu
 
     public void showmenu_Help()

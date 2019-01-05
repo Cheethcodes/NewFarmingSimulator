@@ -38,8 +38,6 @@ public class dataCont : MonoBehaviour {
 
         moneyValue = int.Parse(moneyContainer.text);
         scoreValue = int.Parse(scoreContainer.text);
-
-        Debug.Log(moneyValue + "," + scoreValue);
     }
 
     void Update()

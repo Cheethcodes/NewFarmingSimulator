@@ -4,9 +4,9 @@
  * Date Created: --------
  * Source: Unity Asset Store\Rainmaker - 2D and 3D Rain Particle System for Unity
  * 
- * Modified by: Gabriel Hansley Suarez
- * Date Modified: September 15, 2018
- * Last Date Modified: September 15, 2018
+ * Modified by: Gabriel Hansley Suarez, Christian Philippe Abutan
+ * Date Modified: January 5, 2018
+ * Last Date Modified: January 5, 2018
  * 
  * Contributors:
  * 
@@ -56,10 +56,10 @@ public class customRainmakerEvent : MonoBehaviour
         triggerRain = UnityEngine.Random.Range(0, currentWeather.getSunDuration() - 1);
         rainChancePicker();
 
-        Debug.Log(currentWeather);
-        Debug.Log(currentWeather.getWeatherType());
-        Debug.Log("Starting TriggerRain " + triggerRain);
-        Debug.Log(triggerRain + " " + currentWeather.getRainDuration() + " " + currentWeather.getSunDuration());
+        //Debug.Log(currentWeather);
+        //Debug.Log(currentWeather.getWeatherType());
+        //Debug.Log("Starting TriggerRain " + triggerRain);
+        //Debug.Log(triggerRain + " " + currentWeather.getRainDuration() + " " + currentWeather.getSunDuration());
     }
 
     private void Update()
@@ -74,12 +74,12 @@ public class customRainmakerEvent : MonoBehaviour
 
         if (newWeather == true)
         {
-            Debug.Log("New Weather");
+            //Debug.Log("New Weather");
             newWeather = false;
             currentWeather = weather[Random.Range(0, 2)];
-            Debug.Log(currentWeather + " " + currentWeather.getWeatherType());
+            //Debug.Log(currentWeather + " " + currentWeather.getWeatherType());
             triggerRain = Random.Range(0, currentWeather.getSunDuration() - 1);
-            Debug.Log("Brand new TriggerRain " + triggerRain);
+            //Debug.Log("Brand new TriggerRain " + triggerRain);
             rainChancePicker();
         }
 
@@ -116,7 +116,7 @@ public class customRainmakerEvent : MonoBehaviour
         if (currentWeather.getSunDuration() <= 0 && currentWeather.getRainDuration() <= 0)
         {
             weatherSimulator.makeWeather = true;
-            Debug.Log("Simulating new weather");
+            //Debug.Log("Simulating new weather");
         }
         if (RainScript == null)
         {
@@ -137,7 +137,7 @@ public class customRainmakerEvent : MonoBehaviour
 
         if (changeTempTimer >= 5)
         {
-            Debug.Log("Changing Temp");
+            //Debug.Log("Changing Temp");
             int newTemp = Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax());
             if (hour >= 18)
                 newTemp -= 10;
@@ -149,10 +149,10 @@ public class customRainmakerEvent : MonoBehaviour
     void rainChancePicker()
     {
         int x = Random.Range(1, 100);
-        Debug.Log(x);
+
         if ((100 - currentWeather.getRainChancePercentage()) > x)
         {
-            Debug.Log("Will not rain");
+            //Debug.Log("Will not rain");
             currentWeather.setSunDuration(currentWeather.getSunDuration() + currentWeather.getRainDuration());
             currentWeather.setRainDuration(0);
             currentWeather.setSunny(true);

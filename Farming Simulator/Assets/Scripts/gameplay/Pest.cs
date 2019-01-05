@@ -54,6 +54,7 @@ public class Pest : MonoBehaviour
         {
             Destroy(thepest);
         }
+
         MoveTowardsPlant();
         pestsurvivaltimecounter += Time.deltaTime;
     }
@@ -72,15 +73,15 @@ public class Pest : MonoBehaviour
 
     }
 
-
     public void MoveTowardsPlant()
     {
-            //pass in the game object into your MoveToward() method
-            transform.LookAt(targetplant.transform);
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-            if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
-            }
+        //pass in the game object into your MoveToward() method
+        transform.LookAt(targetplant.transform);
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+
+        if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
+        }
     }
 }

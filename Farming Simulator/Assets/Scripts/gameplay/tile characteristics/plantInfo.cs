@@ -19,21 +19,6 @@ public class plantInfo : MonoBehaviour {
     public Text harvestETA;
     public static float harvestTimeLeft;
 
-	void Start ()
-    {
-        //// Slider values
-        //waterbarValue = 0;
-        //healthbarValue = 0;
-
-        //// Fertilizer values
-        //fNitrogen = 0;
-        //fPhosphorus = 0;
-        //fPotassium = 0;
-
-        //// Harvest time left ETA
-        //harvestTimeLeft = 0;
-	}
-	
 	void Update ()
     {
         // Update time left until harvest
@@ -43,6 +28,10 @@ public class plantInfo : MonoBehaviour {
         waterbarValue = Mathf.Clamp(waterbarValue, 0, 100);
         waterbar.value = waterbarValue / 100;
         waterbarPercentage.text = waterbarValue.ToString("n2") + " %";
+
+        healthbarValue = Mathf.Clamp(healthbarValue, 0, 100);
+        healthbar.value = healthbarValue / 100;
+        healthbarPercentage.text = healthbarValue.ToString("n2") + " %";
 
         // Update read values for fertilizer
         amtNitrogen.text = fNitrogen.ToString("n2");
