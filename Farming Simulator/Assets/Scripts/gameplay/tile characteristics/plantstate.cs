@@ -164,7 +164,6 @@ public class plantstate : MonoBehaviour {
         if (collision.CompareTag("Pest"))
         {
             hasPest = true;
-            Debug.Log("ALERT! Pest invasion.");
         }
     }
 
@@ -173,7 +172,6 @@ public class plantstate : MonoBehaviour {
         if (collision.CompareTag("Pest"))
         {
             hasPest = false;
-            Debug.Log("Pest is gone.");
         }
     }
 

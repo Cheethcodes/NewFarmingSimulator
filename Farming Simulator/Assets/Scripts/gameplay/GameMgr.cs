@@ -53,11 +53,11 @@ public class GameMgr : MonoBehaviour {
         helptextContainer.text = "HOW TO PLAY THE GAME";
         
         // Populate world space with tile sprites in an X x Y axis 
-        for (int x = 0; x < 200; x++)
+        for (int x = 0; x < 40; x++)
         {
             initialX += (offsetX + 1);
 
-            for (int y = 1; y < 201; y++)
+            for (int y = 1; y < 41; y++)
             {
                 newY = initialY - (offsetY + (y - 1));
 
