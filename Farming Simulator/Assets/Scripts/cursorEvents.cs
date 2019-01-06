@@ -129,7 +129,7 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Tools.SetActive(true);
 
-                    targetButton.x -= 80;
+                    targetButton.x -= Screen.width / 7.707f;
 
                     switch (newName[1])
                     {
@@ -174,7 +174,7 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Play.SetActive(true);
 
-                    targetButton.x -= 140;
+                    targetButton.x -= Screen.width / 4.459f;
 
                     switch (newName[1])
                     {
@@ -197,7 +197,7 @@ public class cursorEvents : MonoBehaviour {
 
                     obj_Play.SetActive(true);
 
-                    targetButton.x -= 140;
+                    targetButton.x -= Screen.width / 4.484f;
 
                     switch (newName[1])
                     {
@@ -249,8 +249,8 @@ public class cursorEvents : MonoBehaviour {
                         // Watermelon
                         case "Watermelon":
                             obj_Play.transform.position = targetButton;
-                            txt_PlayChild_Title.text = "Tomato";
-                            txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
+                            txt_PlayChild_Title.text = "Watermelon";
+                            txt_PlayChild_Description_Plant.text = "A watermelon seed.\n\n" +
                                 "Cost:    40 coins | Average Growth Time: 60 days\n" +
                                 "Income: 150 coins | Score: 70";
                             break;
@@ -268,8 +268,8 @@ public class cursorEvents : MonoBehaviour {
             
             obj_Options.SetActive(true);
 
-            targetButton.x -= 30;
-            targetButton.y -= 30;
+            targetButton.x -= Screen.width / 19.266f;
+            targetButton.y -= Screen.height / 12.233f;
 
             switch (name[1])
             {

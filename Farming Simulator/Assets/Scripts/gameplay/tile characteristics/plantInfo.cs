@@ -19,6 +19,10 @@ public class plantInfo : MonoBehaviour {
     public Text harvestETA;
     public static float harvestTimeLeft;
 
+    // Plant name
+    public Text plantName;
+    public static string plantNameText;
+
 	void Update ()
     {
         // Update time left until harvest
@@ -37,6 +41,9 @@ public class plantInfo : MonoBehaviour {
         amtNitrogen.text = fNitrogen.ToString("n2");
         amtPhosphorus.text = fPhosphorus.ToString("n2");
         amtPotassium.text = fPotassium.ToString("n2");
+
+        // Update plant name
+        plantName.text = plantNameText;
 	}
 
     public void closePlantInfoPanel()
@@ -44,6 +51,7 @@ public class plantInfo : MonoBehaviour {
         this.gameObject.SetActive(false);
 
         // Reset all values so that the characteristic of the game object read before will not overwrite the properties to be read in the next object
+        plantNameText = "";
         waterbarValue = 0;
         healthbarValue = 0;
         fNitrogen = 0;
