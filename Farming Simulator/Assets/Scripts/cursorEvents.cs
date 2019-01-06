@@ -249,8 +249,8 @@ public class cursorEvents : MonoBehaviour {
                         // Watermelon
                         case "Watermelon":
                             obj_Play.transform.position = targetButton;
-                            txt_PlayChild_Title.text = "Tomato";
-                            txt_PlayChild_Description_Plant.text = "A tomato seed.\n\n" +
+                            txt_PlayChild_Title.text = "Watermelon";
+                            txt_PlayChild_Description_Plant.text = "A watermelon seed.\n\n" +
                                 "Cost:    40 coins | Average Growth Time: 60 days\n" +
                                 "Income: 150 coins | Score: 70";
                             break;

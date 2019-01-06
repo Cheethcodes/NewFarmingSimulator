@@ -187,6 +187,24 @@ public class pInteractions : MonoBehaviour {
         isBuildable = false;
         isFarmable = false;
 
+        // Count how many child object the parent has
+        int ct = this.gameObject.transform.childCount;
+
+        // If parent object has more than 1 child
+        if (ct >= 1)
+        {
+            // Loops through all child found in the parent
+            foreach (Transform child in transform)
+            {
+                // Detects child with tag - "soil"
+                if (child.CompareTag("soil"))
+                {
+                    // Update tile definition
+                    child.GetComponent<characteristics>().isDestroyable = false;
+                }
+            }
+        }
+
         // Carrot
         if (ncurrentTool[2] == "Carrot")
         {
@@ -388,6 +406,7 @@ public class pInteractions : MonoBehaviour {
 
                 // Destroy all objects contained within the parent object
                 GameObject.Destroy(child.gameObject);
+
             }
 
             // Change state of the tile 

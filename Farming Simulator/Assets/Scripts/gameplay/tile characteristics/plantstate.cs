@@ -131,29 +131,31 @@ public class plantstate : MonoBehaviour {
 
     void OnMouseDown()
     {
-            if (pInteractions.currentTool == "action-None")
+        if (pInteractions.currentTool == "action-None")
+        {
+            plantInfoPanel.SetActive(true);
+
+            // Update soil properties
+            plantInfo.waterbarValue = amountWater;
+
+            plantInfo.fNitrogen = fNitrogen;
+            plantInfo.fPhosphorus = fPhosphorus;
+            plantInfo.fPotassium = fPotassium;
+
+            // Update plant properties
+            plantInfo.plantNameText = plantName;
+            plantInfo.healthbarValue = amountHealth;
+            plantInfo.harvestTimeLeft = timeLeft;
+
+            if (timeLived < growthTimeMature_4)
             {
-                plantInfoPanel.SetActive(true);
-
-                // Update soil properties
-                plantInfo.waterbarValue = amountWater;
-                plantInfo.healthbarValue = amountHealth;
-
-                plantInfo.fNitrogen = fNitrogen;
-                plantInfo.fPhosphorus = fPhosphorus;
-                plantInfo.fPotassium = fPotassium;
-
-                plantInfo.harvestTimeLeft = timeLeft;
-
-                if (timeLived < growthTimeMature_4)
-                {
-                    timeLeft = growthTime - timeLived;
-                }
-                else
-                {
-                    timeLeft = 0;
-                }
+                timeLeft = growthTime - timeLived;
             }
+            else
+            {
+                timeLeft = 0;
+            }
+        }
             
     }
 
@@ -162,6 +164,7 @@ public class plantstate : MonoBehaviour {
         if (collision.CompareTag("Pest"))
         {
             hasPest = true;
+            Debug.Log("ALERT! Pest invasion.");
         }
     }
 
@@ -170,6 +173,7 @@ public class plantstate : MonoBehaviour {
         if (collision.CompareTag("Pest"))
         {
             hasPest = false;
+            Debug.Log("Pest is gone.");
         }
     }
 

@@ -2356,6 +2356,7 @@ MonoBehaviour:
   amtPhosphorus: {fileID: 2086279091}
   amtPotassium: {fileID: 139519694}
   harvestETA: {fileID: 934940105}
+  plantName: {fileID: 1583649384}
 --- !u!1 &316634300
 GameObject:
   m_ObjectHideFlags: 0
