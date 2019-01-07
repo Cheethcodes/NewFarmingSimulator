@@ -334,7 +334,6 @@ public class GameMgr : MonoBehaviour {
 
                                 SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
                                 renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
-
                             }
 
                             // Onion

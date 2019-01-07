@@ -72,7 +72,7 @@ public class pInteractions : MonoBehaviour {
                 case "Cultivate":
                     if (dataCont.moneyValue >= 5)
                     {
-                        if (Type == "grass")
+                        if (this.gameObject.GetComponent<TileDefinition>().type == "grass")
                         {
                             execCultivate();
                         }
@@ -89,11 +89,11 @@ public class pInteractions : MonoBehaviour {
             
                 // When player picks up any seeds to be planted
                 case "Plant":
-                    if (Type == "soil")
+                    if (this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execPlant();
                     }
-                    else if (Type == "plant")
+                    else if (this.gameObject.GetComponent<TileDefinition>().type == "plant")
                     {
                         Debug.Log("Plot already planted!");
                     }
@@ -105,7 +105,7 @@ public class pInteractions : MonoBehaviour {
             
                 // When player picks up the scythe
                 case "Harvest":
-                    if (Type == "plant")
+                    if (this.gameObject.GetComponent<TileDefinition>().type == "plant")
                     {
                         execHarvest();
                     }
@@ -117,7 +117,7 @@ public class pInteractions : MonoBehaviour {
 
                 // When player picks up the pail
                 case "Water":
-                    if (Type == "plant" || Type == "soil")
+                    if (this.gameObject.GetComponent<TileDefinition>().type == "plant" || this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execWater();
                     }
@@ -128,7 +128,7 @@ public class pInteractions : MonoBehaviour {
                     break;
 
                 case "Fertilize":
-                    if (Type == "plant" || Type == "soil")
+                    if (this.gameObject.GetComponent<TileDefinition>().type == "plant" || this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execFertilize();
                     }
