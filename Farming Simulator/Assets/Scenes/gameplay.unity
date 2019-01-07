@@ -4714,6 +4714,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   helptextContainer: {fileID: 1516389108}
   objGrass: {fileID: 4617561864965340, guid: 74f9916593916874cbdfa2402810cd0a, type: 2}
+  groundTiles:
+  - {fileID: 0}
+  - {fileID: 1294490312845876, guid: a00f22f0f5ca59c4c956e064e13b614a, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  groundPlants:
+  - {fileID: 1800734783027682, guid: 86dae14059f856c498936e240ef8da3d, type: 2}
+  - {fileID: 1847777308231204, guid: 8147af9fc8eaf7644a4e0b90f9c2fb1f, type: 2}
+  - {fileID: 1811615052668742, guid: 9751c040c0c0e174a91c374bfe60103f, type: 2}
+  - {fileID: 1171807760934126, guid: 8a64ea1c469a9d243bbd12b430498a18, type: 2}
+  - {fileID: 1707118441838264, guid: f84d9416dcd3738438165698bf8680d6, type: 2}
+  - {fileID: 1058721638738068, guid: ac011db905f6dcc47a0fe44f02b5b8fc, type: 2}
 --- !u!114 &928834830 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 11475408, guid: b046278bb9b6e104790392b566667ba5,

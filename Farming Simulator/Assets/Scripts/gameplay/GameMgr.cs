@@ -26,6 +26,8 @@ using UnityEngine.UI;
 
 public class GameMgr : MonoBehaviour {
 
+    #region Game initialization module
+
     // Help menu box
     public Text helptextContainer;
 
@@ -46,51 +48,98 @@ public class GameMgr : MonoBehaviour {
     private float newX;
     private float newY;
 
+    #endregion
+
+    #region Game objects initialization
+
+    // Ground tile objects
+    public GameObject[] groundTiles;
+    public GameObject[] groundPlants;
+
+    // Current action of the player
+    public static string currentTool;
+
+    // Current grass tile state
+    private string Type;
+    private bool isBuildable, isFarmable;
+
+    #endregion
+
     void Start()
     {
         // Fill in details and instructions for help menu context
         //helptextContainer = GameObject.Find("helpmenucontext").GetComponent<Text>();
         helptextContainer.text = "HOW TO PLAY THE GAME";
 
-        //if (PlayerPrefs.HasKey("grass(Clone)_000_001_posX"))
-        //{
-        //    Debug.Log("Loading existing save file data");
+        if (PlayerPrefs.HasKey("grass(Clone)_000_001_posX"))
+        {
+            Debug.Log("Loading existing save file data");
 
-        //    // Populate world space with tile sprites in an X x Y axis 
-        //    for (int x = 0; x < 40; x++)
-        //    {
-        //        initialX += (offsetX + 1);
+            // Populate world space with tile sprites in an X x Y axis 
+            for (int x = 0; x < 40; x++)
+            {
+                initialX += (offsetX + 1);
 
-        //        for (int y = 1; y < 41; y++)
-        //        {
-        //            newY = initialY - (offsetY + (y - 1));
+                for (int y = 1; y < 41; y++)
+                {
+                    newY = initialY - (offsetY + (y - 1));
 
-        //            // If current tile is even
-        //            if (y % 2 == 0)
-        //            {
-        //                newX = initialX + 1f;
+                    // If current tile is even
+                    if (y % 2 == 0)
+                    {
+                        newX = initialX + 1f;
 
-        //                grass = Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
-        //                render = grass.GetComponent<SpriteRenderer>();
+                        grass = Instantiate(objGrass, new Vector2(newX, newY), objGrass.rotation);
+                        render = grass.GetComponent<SpriteRenderer>();
 
-        //                grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
+                        grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
 
-        //            }
+                        if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 0)
+                        {
 
-        //            // If current tile is odd
-        //            else
-        //            {
-        //                grass = Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
-        //                render = grass.GetComponent<SpriteRenderer>();
+                        }
 
-        //                grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
-        //            }
-        //        }
-        //    }
-        //}
+                        else if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 1)
+                        {
+                            // Generates new farmable tile and makes it the child of the current tile clicked
+                            GameObject plot = Instantiate(groundTiles[1]);
+                            plot.transform.SetParent(grass.transform, false);
+                            SpriteRenderer render = plot.GetComponent<SpriteRenderer>();
+                            render.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
 
-        //else
-        //{
+                            // Change state of the tile
+                            grass.GetComponent<TileDefinition>().type = "soil";
+
+                            grass.GetComponent<TileDefinition>().isBuildable = false;
+                            grass.GetComponent<TileDefinition>().isFarmable = true;
+                        }
+
+                        else if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 2)
+                        {
+
+                        }
+
+                        else
+                        {
+
+                        }
+
+                    }
+
+                    // If current tile is odd
+                    else
+                    {
+                        grass = Instantiate(objGrass, new Vector2(initialX, newY), objGrass.rotation);
+                        render = grass.GetComponent<SpriteRenderer>();
+
+                        grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
+                    }
+                }
+            }
+        }
+
+        else
+        {
             // Populate world space with tile sprites in an X x Y axis 
             for (int x = 0; x < 40; x++)
             {
@@ -149,7 +198,7 @@ public class GameMgr : MonoBehaviour {
                     }
                 }
             }
-        //}
+        }
 
         //PlayerPrefs.DeleteAll();
     }

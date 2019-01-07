@@ -169,10 +169,9 @@ public class pInteractions : MonoBehaviour {
         Type = "soil";
 
         isBuildable = false;
-        //this.gameObject.GetComponent<TileDefinition>().isBuildable = false;
-
         isFarmable = true;
-        //this.gameObject.GetComponent<TileDefinition>().isFarmable = true;
+
+        PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 1);
     }
 
     #endregion
