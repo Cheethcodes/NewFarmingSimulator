@@ -86,6 +86,7 @@ MonoBehaviour:
   - {fileID: 21300208, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 50
+  amountHealth: 100
   plantName: tomato
 --- !u!114 &114858507686217940
 MonoBehaviour:

@@ -51,7 +51,7 @@ public class plantstate : MonoBehaviour {
     private int timeLeft;
 
     // Other dependency variables
-    private float amountHealth;
+    public float amountHealth;
     private float amountWater;
     private float fNitrogen, fPhosphorus, fPotassium;
 
@@ -62,6 +62,8 @@ public class plantstate : MonoBehaviour {
 
     private bool hasPest;
 
+    string plantID;
+
     void Start()
     {
         plantInfoParent = GameObject.Find("menuPlantInfoContainer");
@@ -69,7 +71,7 @@ public class plantstate : MonoBehaviour {
 
         // Set all plant to birth + immature stage
         growthStage = 0;
-        amountHealth = 100;
+        //amountHealth = 100;
         amountWater = 0;
         fNitrogen = 0;
         fPhosphorus = 0;
@@ -83,6 +85,8 @@ public class plantstate : MonoBehaviour {
         growthTimeMature_3 = Mathf.Floor(growthTime / 4) * 3;
         growthTimeMature_4 = growthTime;
         growthTimeMature_5 = growthTime * 2;
+
+        plantID = this.gameObject.transform.parent.name;
 
     }
 
@@ -127,6 +131,9 @@ public class plantstate : MonoBehaviour {
         {
             amountHealth -= 0.05f * Time.deltaTime;
         }
+        
+        PlayerPrefs.SetFloat(plantID + "_hasPlantHealth", amountHealth);
+
     }
 
     void OnMouseDown()

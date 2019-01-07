@@ -86,6 +86,7 @@ MonoBehaviour:
   - {fileID: 21300226, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 4
+  amountHealth: 100
   plantName: carrot
 --- !u!114 &114784248158015804
 MonoBehaviour:

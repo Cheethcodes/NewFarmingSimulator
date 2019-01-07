@@ -167,7 +167,6 @@ public class pInteractions : MonoBehaviour {
 
         // Change state of the tile
         Type = "soil";
-
         isBuildable = false;
         isFarmable = true;
 
@@ -291,6 +290,9 @@ public class pInteractions : MonoBehaviour {
         {
 
         }
+
+        PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 2);
+        PlayerPrefs.SetString(this.gameObject.name + "_hasPlant", ncurrentTool[2]);
     }
 
     #endregion
@@ -413,6 +415,19 @@ public class pInteractions : MonoBehaviour {
             isBuildable = false;
             isFarmable = false;
 
+            PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
+            PlayerPrefs.SetString(this.gameObject.name + "_hasPlant", "");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantStage");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHealth");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantMsec");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHour");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantDay");
+
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildWater", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildNitrogen", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPhosphorus", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPotassium", 0);
+
         }
         else
         {
@@ -516,6 +531,8 @@ public class pInteractions : MonoBehaviour {
                         // Resets ground properties
                         Type = "grass";
                         isFarmable = false;
+
+                        PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
                     }
 
                     // If definition script has destroyable variable set to false

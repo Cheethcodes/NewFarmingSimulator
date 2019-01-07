@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: 21300200, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 90
+  amountHealth: 100
   plantName: pumpkin
 --- !u!212 &212166474906340738
 SpriteRenderer:

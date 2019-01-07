@@ -41,6 +41,7 @@ public class plantTimer : MonoBehaviour {
     void Start ()
     {
         clockSpeed = timekeeper.clockSpeed;
+        Debug.Log(this.gameObject.transform.parent.name);
 	}
 	
 	void Update ()
@@ -63,5 +64,10 @@ public class plantTimer : MonoBehaviour {
                 day++;
             }
         }
+
+        PlayerPrefs.SetFloat(this.gameObject.transform.parent.name + "_hasPlantMsec", msecs);
+        PlayerPrefs.SetInt(this.gameObject.transform.parent.name + "_hasPlantHour", hour);
+        PlayerPrefs.SetInt(this.gameObject.transform.parent.name + "_hasPlantDay", day);
+
     }
 }

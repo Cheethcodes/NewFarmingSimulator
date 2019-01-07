@@ -65,6 +65,12 @@ public class GameMgr : MonoBehaviour {
 
     #endregion
 
+    #region Game object local variables
+
+    string plantname;
+
+    #endregion
+
     void Start()
     {
         // Fill in details and instructions for help menu context
@@ -104,18 +110,146 @@ public class GameMgr : MonoBehaviour {
                             // Generates new farmable tile and makes it the child of the current tile clicked
                             GameObject plot = Instantiate(groundTiles[1]);
                             plot.transform.SetParent(grass.transform, false);
-                            SpriteRenderer render = plot.GetComponent<SpriteRenderer>();
-                            render.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
+                            SpriteRenderer renderSoil = plot.GetComponent<SpriteRenderer>();
+                            renderSoil.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+                            plot.GetComponent<characteristics>().isDestroyable = true;
+                            plot.GetComponent<soilstate>().amountWater = PlayerPrefs.GetFloat(grass.name + "_hasChildWater");
+                            plot.GetComponent<soilstate>().amountFertilizer_Nitorgen = PlayerPrefs.GetFloat(grass.name + "_hasChildNitrogen");
+                            plot.GetComponent<soilstate>().amountFertilizer_Phosphorus = PlayerPrefs.GetFloat(grass.name + "_hasChildPhosphorus");
+                            plot.GetComponent<soilstate>().amountFertilizer_Potassium = PlayerPrefs.GetFloat(grass.name + "_hasChildPotassium");
 
                             // Change state of the tile
                             grass.GetComponent<TileDefinition>().type = "soil";
-
                             grass.GetComponent<TileDefinition>().isBuildable = false;
                             grass.GetComponent<TileDefinition>().isFarmable = true;
                         }
 
                         else if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 2)
                         {
+                            #region Soil
+
+                            // Generates new farmable tile and makes it the child of the current tile clicked
+                            GameObject plot = Instantiate(groundTiles[1]);
+                            plot.transform.SetParent(grass.transform, false);
+                            SpriteRenderer renderSoil = plot.GetComponent<SpriteRenderer>();
+                            renderSoil.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+                            plot.GetComponent<characteristics>().isDestroyable = false;
+                            plot.GetComponent<soilstate>().amountWater = PlayerPrefs.GetFloat(grass.name + "_hasChildWater");
+                            plot.GetComponent<soilstate>().amountFertilizer_Nitorgen = PlayerPrefs.GetFloat(grass.name + "_hasChildNitrogen");
+                            plot.GetComponent<soilstate>().amountFertilizer_Phosphorus = PlayerPrefs.GetFloat(grass.name + "_hasChildPhosphorus");
+                            plot.GetComponent<soilstate>().amountFertilizer_Potassium = PlayerPrefs.GetFloat(grass.name + "_hasChildPotassium");
+
+                            // Change state of the tile
+                            grass.GetComponent<TileDefinition>().type = "plant";
+                            grass.GetComponent<TileDefinition>().isBuildable = false;
+                            grass.GetComponent<TileDefinition>().isFarmable = false;
+
+                            #endregion
+
+                            #region Plants
+
+                            // Generate plants
+                            plantname = PlayerPrefs.GetString(grass.name + "_hasPlant");
+
+                            // Carrot
+                            if (plantname == "Carrot")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[0]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+                            }
+
+                            // Onion
+                            else if (plantname == "Onion")
+                            {
+                                GameObject plant = Instantiate(groundPlants[1]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Pumpkin
+                            else if (plantname == "Pumpkin")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[2]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Radish
+                            else if (plantname == "Radishes")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[3]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Tomato
+                            else if (plantname == "Tomato")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[4]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Watermelon
+                            else if (plantname == "Watermelon")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[5]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            else
+                            {
+
+                            }
+                            
+
+                            #endregion
 
                         }
 
@@ -133,10 +267,189 @@ public class GameMgr : MonoBehaviour {
                         render = grass.GetComponent<SpriteRenderer>();
 
                         grass.name = grass.name + "_" + x.ToString("000") + "_" + y.ToString("000");
+
+                        if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 0)
+                        {
+
+                        }
+
+                        else if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 1)
+                        {
+                            // Generates new farmable tile and makes it the child of the current tile clicked
+                            GameObject plot = Instantiate(groundTiles[1]);
+                            plot.transform.SetParent(grass.transform, false);
+                            SpriteRenderer renderSoil = plot.GetComponent<SpriteRenderer>();
+                            renderSoil.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+                            plot.GetComponent<characteristics>().isDestroyable = true;
+                            plot.GetComponent<soilstate>().amountWater = PlayerPrefs.GetFloat(grass.name + "_hasChildWater");
+                            plot.GetComponent<soilstate>().amountFertilizer_Nitorgen = PlayerPrefs.GetFloat(grass.name + "_hasChildNitrogen");
+                            plot.GetComponent<soilstate>().amountFertilizer_Phosphorus = PlayerPrefs.GetFloat(grass.name + "_hasChildPhosphorus");
+                            plot.GetComponent<soilstate>().amountFertilizer_Potassium = PlayerPrefs.GetFloat(grass.name + "_hasChildPotassium");
+
+                            // Change state of the tile
+                            grass.GetComponent<TileDefinition>().type = "soil";
+                            grass.GetComponent<TileDefinition>().isBuildable = false;
+                            grass.GetComponent<TileDefinition>().isFarmable = true;
+                        }
+
+                        else if (PlayerPrefs.GetInt(grass.name + "_hasChild") == 2)
+                        {
+                            #region Soil
+
+                            // Generates new farmable tile and makes it the child of the current tile clicked
+                            GameObject plot = Instantiate(groundTiles[1]);
+                            plot.transform.SetParent(grass.transform, false);
+                            SpriteRenderer renderSoil = plot.GetComponent<SpriteRenderer>();
+                            renderSoil.sortingOrder = grass.GetComponent<SpriteRenderer>().sortingOrder + 1;
+
+                            plot.GetComponent<characteristics>().isDestroyable = false;
+                            plot.GetComponent<soilstate>().amountWater = PlayerPrefs.GetFloat(grass.name + "_hasChildWater");
+                            plot.GetComponent<soilstate>().amountFertilizer_Nitorgen = PlayerPrefs.GetFloat(grass.name + "_hasChildNitrogen");
+                            plot.GetComponent<soilstate>().amountFertilizer_Phosphorus = PlayerPrefs.GetFloat(grass.name + "_hasChildPhosphorus");
+                            plot.GetComponent<soilstate>().amountFertilizer_Potassium = PlayerPrefs.GetFloat(grass.name + "_hasChildPotassium");
+
+                            // Change state of the tile
+                            grass.GetComponent<TileDefinition>().type = "plant";
+                            grass.GetComponent<TileDefinition>().isBuildable = false;
+                            grass.GetComponent<TileDefinition>().isFarmable = false;
+
+                            #endregion
+
+                            #region Plants
+
+                            // Generate plants
+                            plantname = PlayerPrefs.GetString(grass.name + "_hasPlant");
+
+                            // Carrot
+                            if (plantname == "Carrot")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[0]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+
+                            }
+
+                            // Onion
+                            else if (plantname == "Onion")
+                            {
+                                GameObject plant = Instantiate(groundPlants[1]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Pumpkin
+                            else if (plantname == "Pumpkin")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[2]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Radish
+                            else if (plantname == "Radishes")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[3]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Tomato
+                            else if (plantname == "Tomato")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[4]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            // Watermelon
+                            else if (plantname == "Watermelon")
+                            {
+                                // Corresponding sprite
+                                GameObject plant = Instantiate(groundPlants[5]);
+                                plant.transform.SetParent(grass.gameObject.transform, false);
+                                plant.GetComponent<plantstate>().amountHealth = PlayerPrefs.GetFloat(grass.name + "_hasPlantHealth");
+                                plant.GetComponent<plantTimer>().msecs = PlayerPrefs.GetFloat(grass.name + "_hasPlantMsec");
+                                plant.GetComponent<plantTimer>().hour = PlayerPrefs.GetInt(grass.name + "_hasPlantHour");
+                                plant.GetComponent<plantTimer>().day = PlayerPrefs.GetInt(grass.name + "_hasPlantDay");
+
+                                SpriteRenderer renderPlant = plant.GetComponent<SpriteRenderer>();
+                                renderPlant.sortingOrder = grass.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 2;
+                            }
+
+                            else
+                            {
+
+                            }
+
+
+                            #endregion
+
+                        }
+
+                        else
+                        {
+
+                        }
                     }
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         else
         {
@@ -163,13 +476,15 @@ public class GameMgr : MonoBehaviour {
                         PlayerPrefs.SetFloat(grass.name + "_posX", this.gameObject.transform.position.x);
                         PlayerPrefs.SetFloat(grass.name + "_posY", this.gameObject.transform.position.y);
 
-                        // Record tile definition
-                        PlayerPrefs.SetString(grass.name + "_Type", "");
-                        PlayerPrefs.SetInt(grass.name + "_isFarmable", 0);
-                        PlayerPrefs.SetInt(grass.name + "_isBuildable", 0);
-
                         // Record things instantiated on the tiles
+                        // Soil
                         PlayerPrefs.SetInt(grass.name + "_hasChild", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildWater", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildNitrogen", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildPhosphorus", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildPotassium", 0);
+
+                        // Plant
                         PlayerPrefs.SetString(grass.name + "_hasPlant", "");
 
                     }
@@ -186,13 +501,15 @@ public class GameMgr : MonoBehaviour {
                         PlayerPrefs.SetFloat(grass.name + "_posX", this.gameObject.transform.position.x);
                         PlayerPrefs.SetFloat(grass.name + "_posY", this.gameObject.transform.position.y);
 
-                        // Record tile definition
-                        PlayerPrefs.SetString(grass.name + "_Type", "");
-                        PlayerPrefs.SetInt(grass.name + "_isFarmable", 0);
-                        PlayerPrefs.SetInt(grass.name + "_isBuildable", 0);
-
                         // Record things instantiated on the tiles
+                        // Soil
                         PlayerPrefs.SetInt(grass.name + "_hasChild", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildWater", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildNitrogen", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildPhosphorus", 0);
+                        PlayerPrefs.SetFloat(grass.name + "_hasChildPotassium", 0);
+
+                        // Plant
                         PlayerPrefs.SetString(grass.name + "_hasPlant", "");
 
                     }

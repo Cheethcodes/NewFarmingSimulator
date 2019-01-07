@@ -41,9 +41,13 @@ public class soilstate : MonoBehaviour {
     float decayFertilizer_Potassium;
     float decayFertilizer_Phosphorus;
 
+    string soilID;
+
     void Start()
     {
         rainOccurrence = GameObject.Find("RainPrefab2D").GetComponent<RainScript2D>();
+
+        soilID = this.gameObject.transform.parent.name;
     }
 
     void Update()
@@ -90,7 +94,12 @@ public class soilstate : MonoBehaviour {
         }
 
         amountWater = Mathf.Clamp(amountWater, 0, 100);
-        
+
+        PlayerPrefs.SetFloat(soilID + "_hasChildWater", amountWater);
+        PlayerPrefs.SetFloat(soilID + "_hasChildNitrogen", amountFertilizer_Nitorgen);
+        PlayerPrefs.SetFloat(soilID + "_hasChildPhosphorus", amountFertilizer_Phosphorus);
+        PlayerPrefs.SetFloat(soilID + "_hasChildPotassium", amountFertilizer_Potassium);
+
     }
 
 }

@@ -100,6 +100,7 @@ MonoBehaviour:
   - {fileID: 21300006, guid: 3f7148a1e0e45314b8e6483b087ea929, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 4
+  amountHealth: 100
   plantName: radish
 --- !u!212 &212071038596942548
 SpriteRenderer:

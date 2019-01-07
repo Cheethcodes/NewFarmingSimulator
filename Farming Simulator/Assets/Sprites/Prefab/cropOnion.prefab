@@ -86,6 +86,7 @@ MonoBehaviour:
   - {fileID: 21300124, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   - {fileID: 21300112, guid: dd1cdd65b9fc740deb02b700ec23b66e, type: 3}
   growthTime: 4
+  amountHealth: 100
   plantName: onion
 --- !u!114 &114364945330234356
 MonoBehaviour:
