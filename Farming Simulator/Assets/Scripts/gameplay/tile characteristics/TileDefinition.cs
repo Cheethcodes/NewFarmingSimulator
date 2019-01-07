@@ -26,12 +26,5 @@ public class TileDefinition : MonoBehaviour {
 
     public string type;
     public bool isBuildable, isFarmable;
-
-    void Start()
-    {
-        type = "grass";
-        isBuildable = true;
-        isFarmable = false;
-    }
-
+    
 }

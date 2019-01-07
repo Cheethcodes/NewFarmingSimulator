@@ -430,27 +430,6 @@ public class GameMgr : MonoBehaviour {
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         else
         {
             // Populate world space with tile sprites in an X x Y axis 
@@ -516,7 +495,10 @@ public class GameMgr : MonoBehaviour {
                 }
             }
         }
-
-        //PlayerPrefs.DeleteAll();
     }
+
+    //void Start()
+    //{
+    //    PlayerPrefs.DeleteAll();
+    //}
 }

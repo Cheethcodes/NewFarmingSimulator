@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b49e6cf051c7e4693ad5809fdbcf31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 
-  isBuildable: 0
+  type: grass
+  isBuildable: 1
   isFarmable: 0
 --- !u!212 &212654614967883936
 SpriteRenderer:

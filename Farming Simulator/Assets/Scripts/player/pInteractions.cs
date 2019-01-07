@@ -166,9 +166,9 @@ public class pInteractions : MonoBehaviour {
         dataCont.moneyValue -= 5;
 
         // Change state of the tile
-        Type = "soil";
-        isBuildable = false;
-        isFarmable = true;
+        this.gameObject.GetComponent<TileDefinition>().type = "soil";
+        this.gameObject.GetComponent<TileDefinition>().isBuildable = false;
+        this.gameObject.GetComponent<TileDefinition>().isFarmable = true;
 
         PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 1);
     }
@@ -181,9 +181,9 @@ public class pInteractions : MonoBehaviour {
     void execPlant()
     {
         // Change state of the tile
-        Type = "plant";
-        isBuildable = false;
-        isFarmable = false;
+        this.gameObject.GetComponent<TileDefinition>().type = "plant";
+        this.gameObject.GetComponent<TileDefinition>().isBuildable = false;
+        this.gameObject.GetComponent<TileDefinition>().isFarmable = false;
 
         // Count how many child object the parent has
         int ct = this.gameObject.transform.childCount;
@@ -411,9 +411,9 @@ public class pInteractions : MonoBehaviour {
             }
 
             // Change state of the tile 
-            Type = "grass";
-            isBuildable = false;
-            isFarmable = false;
+            this.gameObject.GetComponent<TileDefinition>().type = "grass";
+            this.gameObject.GetComponent<TileDefinition>().isBuildable = true;
+            this.gameObject.GetComponent<TileDefinition>().isFarmable = false;
 
             PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
             PlayerPrefs.SetString(this.gameObject.name + "_hasPlant", "");
@@ -529,8 +529,8 @@ public class pInteractions : MonoBehaviour {
                         GameObject.Destroy(child.gameObject);
 
                         // Resets ground properties
-                        Type = "grass";
-                        isFarmable = false;
+                        this.gameObject.GetComponent<TileDefinition>().type = "grass";
+                        this.gameObject.GetComponent<TileDefinition>().isFarmable = false;
 
                         PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
                     }
