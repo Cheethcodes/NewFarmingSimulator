@@ -22,6 +22,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,12 +35,12 @@ public class timekeeper : MonoBehaviour {
     private Text timecontainer, ampmcontainer;
 
     // Time variables
-    int year = 2019;
-    int month = 1;
-    int day = 1;
-    public static int hour = 0;
-    public static int hour_military = 0;
-    public static int hour_hidden = 0;
+    int year;
+    int month;
+    int day;
+    public static int hour;
+    public static int hour_military;
+    public static int hour_hidden;
     float msecs;
     string timeofday;
 
@@ -64,6 +66,17 @@ public class timekeeper : MonoBehaviour {
 
     #endregion
 
+    #region Local save variables
+
+    string[] dtSave;
+    double dtDifference;
+
+    DateTime dtPrev;
+
+    string[] prevGameTime;
+
+    #endregion
+
     void Start()
     {
         #region Game time initialization
@@ -72,7 +85,6 @@ public class timekeeper : MonoBehaviour {
 
         // Set initial time values
         msecs = 0.0f;
-        timeofday = "AM";
 
         // Initialize where to display time
         timecontainer = GameObject.Find("container_Time").GetComponent<Text>();
@@ -88,6 +100,47 @@ public class timekeeper : MonoBehaviour {
         // Record time the player started to play
         tStart = DateTime.Now;
         sessionTime_Start = tStart.ToString();
+
+        #endregion
+
+        #region Session time record
+
+        // Get DateTime now
+        DateTime dtCurrent = DateTime.Now;
+
+        // Default path
+        string path = Application.persistentDataPath + "/sessionRecord.rt";
+
+        // Search for file
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            dtSave = (formatter.Deserialize(stream) as string).Split(',');
+
+            dtDifference = dtCurrent.Subtract(Convert.ToDateTime(dtSave[0])).TotalSeconds;
+
+            prevGameTime = dtSave[1].Split('|');
+            year = Convert.ToInt32(prevGameTime[0]);
+            month = Convert.ToInt32(prevGameTime[1]);
+            day = Convert.ToInt32(prevGameTime[2]);
+            hour = Convert.ToInt32(prevGameTime[3]);
+            timeofday = prevGameTime[4];
+            hour_military = Convert.ToInt32(prevGameTime[5]);
+            hour_hidden = Convert.ToInt32(prevGameTime[6]);
+        }
+        else
+        {
+            year = DateTime.Now.Year;
+            month = 1;
+            day = 1;
+            hour = 0;
+            hour_military = 0;
+            hour_hidden = 0;
+
+            timeofday = "AM";
+        }
 
         #endregion
     }
@@ -287,4 +340,19 @@ public class timekeeper : MonoBehaviour {
 
     #endregion
 
+    // Record time when game is closed
+    void OnApplicationQuit()
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        // Defined where to save the file
+        string path = Application.persistentDataPath + "/sessionRecord.rt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        string timeData = DateTime.Now.ToString();
+        string gameTime = year.ToString() + "|" + month.ToString() + "|" + day.ToString() + "|" + hour.ToString() + "|" + timeofday + "|" + hour_military + "|" + hour_hidden;
+
+        formatter.Serialize(stream, timeData + "," + gameTime);
+        stream.Close();
+    }
 }
