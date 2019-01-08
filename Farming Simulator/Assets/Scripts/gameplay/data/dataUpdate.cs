@@ -44,9 +44,12 @@ public class dataUpdate : MonoBehaviour {
 
     private static string errMessage = "";
 
+    int logoutCounter;
+
     void Start()
     {
         pUser = authenticate.IGuser;
+        logoutCounter = 0;
     }
 
     public void logout()
@@ -66,8 +69,35 @@ public class dataUpdate : MonoBehaviour {
         #endregion
 
         StartCoroutine("updateData");
-        //Debug.Log(pUser + ", " + newTime + ", " + newInteract + ", " + newPoints + ", " + sessionTime + ", " + sessionPts + "," + newMoney);
+
+        logoutCounter += 1;
     }
+
+    //void OnApplicationQuit()
+    //{
+    //    if (logoutCounter == 0)
+    //    {
+    //        #region To be updated data
+
+    //        // Session data
+    //        sessionTime = timekeeper.currentsessionTime;
+    //        sessionPts = pInteractions.temp_scoreValue;
+
+    //        // New data (total)
+    //        newTime = timekeeper.totaltime;
+    //        newPoints = dataCont.scoreValue;
+    //        newInteract = "tssss";                        //====================================================== TO BE UPDATED
+    //        newMoney = dataCont.moneyValue;
+
+    //        #endregion
+
+    //        StartCoroutine("updateData");
+    //    }
+    //    else
+    //    {
+
+    //    }
+    //}
 
     IEnumerator updateData()
     {
