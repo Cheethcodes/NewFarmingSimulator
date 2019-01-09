@@ -183,6 +183,8 @@ public class timekeeper : MonoBehaviour {
                 day++;
                 timeofday = "AM";
 
+                dataCont.moneyValue += 10;
+
                 #region DAY-MONTH-Year + Leap year checker
 
                 // Leap year
