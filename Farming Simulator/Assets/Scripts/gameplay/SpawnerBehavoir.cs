@@ -1,4 +1,24 @@
-﻿using System.Collections;
+﻿/*
+ * 
+ * Author: Gabriel Hansley Suarez
+ * Date Created: January 10, 2019
+ * Source: 
+ * 
+ * Modified by: Gabriel Hansley Suarez
+ * Date Modified: January 10, 2019
+ * Last Date Modified: January 10, 2019
+ * 
+ * Contributors:
+ * 
+ * Credits: -----------
+ * 
+ * License: 
+ * 
+ * Note: Acts as modifier for pest spawner script
+ * 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,7 +44,6 @@ public class SpawnerBehavoir : MonoBehaviour {
             {
                 Spawner.difficulty = "medium";
                 reactionTime = newreactionTime;
-                Debug.Log("choose medium");
                 isKilled = false;
             }
 
@@ -32,7 +51,6 @@ public class SpawnerBehavoir : MonoBehaviour {
             {
                 Spawner.difficulty = "hard";
                 reactionTime = newreactionTime;
-                Debug.Log("choose hard");
                 isKilled = false;
             }
 
@@ -40,7 +58,6 @@ public class SpawnerBehavoir : MonoBehaviour {
             {
                 Spawner.difficulty = "easy";
                 reactionTime = newreactionTime;
-                Debug.Log("choose easy");
                 isKilled = false;
             }
 
@@ -48,7 +65,6 @@ public class SpawnerBehavoir : MonoBehaviour {
             {
                 Random.Range(0, Spawner.difficultyspawn.Length);
                 reactionTime = newreactionTime;
-                Debug.Log("choose random");
                 isKilled = false;
             }
         }
