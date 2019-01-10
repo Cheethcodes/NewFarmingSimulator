@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnerBehavoir : MonoBehaviour {
-
-    GameObject gamePest;
-    private float reactionTime;
-    private float newreactionTime;
+    
+    private static float reactionTime;
+    public static float newreactionTime;
+    public static bool isKilled;
 
 	// Use this for initialization
 	void Start () {
-        gamePest = this.gameObject.GetComponent<Spawner>().Pest;
+        isKilled = false;
         reactionTime = 0;
         newreactionTime = 0;
 	}
@@ -18,32 +18,38 @@ public class SpawnerBehavoir : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        newreactionTime = 0; //insert pest survival time final here ;
-
-        if (!GameObject.Find("Pest Prefab(Clone)") && Spawner.timeleft <= 0)
+        if (isKilled == true)
         {
             if (newreactionTime < reactionTime + 5f && newreactionTime > reactionTime - 5f)
             {
                 Spawner.difficulty = "medium";
                 reactionTime = newreactionTime;
+                Debug.Log("choose medium");
+                isKilled = false;
             }
 
             else if (newreactionTime < reactionTime - 6f)
             {
                 Spawner.difficulty = "hard";
                 reactionTime = newreactionTime;
+                Debug.Log("choose hard");
+                isKilled = false;
             }
 
             else if (newreactionTime > reactionTime + 6f)
             {
                 Spawner.difficulty = "easy";
                 reactionTime = newreactionTime;
+                Debug.Log("choose easy");
+                isKilled = false;
             }
 
             else
             {
                 Random.Range(0, Spawner.difficultyspawn.Length);
                 reactionTime = newreactionTime;
+                Debug.Log("choose random");
+                isKilled = false;
             }
         }
 

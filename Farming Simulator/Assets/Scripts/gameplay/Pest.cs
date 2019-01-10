@@ -56,6 +56,8 @@ public class Pest : MonoBehaviour
         if(pesthealth == 0)
         {
             Destroy(thepest);
+            SpawnerBehavoir.isKilled = true;
+            Debug.Log("Killed");
         }
 
         MoveTowardsPlant();
@@ -71,7 +73,7 @@ public class Pest : MonoBehaviour
     {
         //this will get the time the counter has when the pest was killed
         pestsurvivaltimefinal = Mathf.RoundToInt(pestsurvivaltimecounter);
-        Spawner.pestlifespan = pestsurvivaltimefinal;
+        SpawnerBehavoir.newreactionTime = pestsurvivaltimefinal;
         pesthealth -= 20;
 
     }

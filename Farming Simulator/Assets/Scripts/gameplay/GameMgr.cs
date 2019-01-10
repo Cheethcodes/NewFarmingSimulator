@@ -79,8 +79,6 @@ public class GameMgr : MonoBehaviour {
 
         if (PlayerPrefs.HasKey("grass(Clone)_000_001_posX"))
         {
-            Debug.Log("Loading existing save file data");
-
             // Populate world space with tile sprites in an X x Y axis 
             for (int x = 0; x < 40; x++)
             {

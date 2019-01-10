@@ -41,7 +41,6 @@ public class plantTimer : MonoBehaviour {
     void Start ()
     {
         clockSpeed = timekeeper.clockSpeed;
-        Debug.Log(this.gameObject.transform.parent.name);
 	}
 	
 	void Update ()
