@@ -6924,7 +6924,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pest: {fileID: 1650630308598406, guid: f57f41c553082ad4ba5634b7d1234430, type: 2}
-  timeleft: 10
 --- !u!4 &1454764257
 Transform:
   m_ObjectHideFlags: 0

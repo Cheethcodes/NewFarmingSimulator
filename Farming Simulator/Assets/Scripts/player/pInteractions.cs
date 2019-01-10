@@ -429,6 +429,32 @@ public class pInteractions : MonoBehaviour {
             PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPotassium", 0);
 
         }
+        else if (harvestState == 4)
+        {
+            foreach (Transform child in parentContainer)
+            {
+                // Destroy all objects contained within the parent object
+                GameObject.Destroy(child.gameObject);
+            }
+
+            // Change state of the tile 
+            this.gameObject.GetComponent<TileDefinition>().type = "grass";
+            this.gameObject.GetComponent<TileDefinition>().isBuildable = true;
+            this.gameObject.GetComponent<TileDefinition>().isFarmable = false;
+
+            PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
+            PlayerPrefs.SetString(this.gameObject.name + "_hasPlant", "");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantStage");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHealth");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantMsec");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHour");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantDay");
+
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildWater", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildNitrogen", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPhosphorus", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPotassium", 0);
+        }
         else
         {
             Debug.Log("no plant or plant is not ready for harvest");
@@ -468,7 +494,6 @@ public class pInteractions : MonoBehaviour {
 
         if (x == true)
         {
-
             foreach (Transform child in parentContainer)
             {
                 if (child.tag == "plant")

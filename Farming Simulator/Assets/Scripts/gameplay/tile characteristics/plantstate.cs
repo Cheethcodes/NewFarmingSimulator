@@ -104,7 +104,7 @@ public class plantstate : MonoBehaviour {
         {
 
         }
-        if (timeLived >= growthTimeMature_1 && timeLived < growthTimeMature_2)
+        else if (timeLived >= growthTimeMature_1 && timeLived < growthTimeMature_2)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[0];
             growthStage = 1;

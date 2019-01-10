@@ -7,12 +7,21 @@ public class Spawner : MonoBehaviour {
     private IList<GameObject> plants = new List<GameObject>();
     public GameObject Pest;
     public static GameObject spawnedPest;
-    public static string difficulty = "easy";
-    private int numberspawn = 1;
-    public float timeleft = 90;
+    public static string difficulty;
+    private int numberspawn;
+    public static float timeleft;
     public static float pestlifespan;
+    public static string[] difficultyspawn = { "easy", "medium", "hard" };
+    int startDifficultyIndex;
 
-	void Update ()
+    void Start()
+    {
+        startDifficultyIndex = Random.Range(0, difficultyspawn.Length);
+        difficulty = difficultyspawn[startDifficultyIndex];
+        timeleft = 90f;
+    }
+
+    void Update ()
     {
         if(GameObject.FindGameObjectsWithTag("plant").Length != 0)
         {
@@ -59,14 +68,15 @@ public class Spawner : MonoBehaviour {
             {
                 timeleft = Random.Range(80, 90);
             }
-            if (difficulty.Equals("medium"))
+            else if (difficulty.Equals("medium"))
             {
-                timeleft = Random.Range(80, 90);
+                timeleft = Random.Range(50, 90);
             }
-            if (difficulty.Equals("hard"))
+            else if (difficulty.Equals("hard"))
             {
-                timeleft = Random.Range(80, 90);
+                timeleft = Random.Range(24, 80);
             }
+            else { }
         }
     }
 

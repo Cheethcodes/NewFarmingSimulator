@@ -38,19 +38,21 @@ public class Pest : MonoBehaviour
         {
             pesthealth = 40;
         }
-        if (Spawner.difficulty.Equals("medium"))
+        else if (Spawner.difficulty.Equals("medium"))
         {
             pesthealth = 60;
         }
-        if (Spawner.difficulty.Equals("hard"))
+        else if (Spawner.difficulty.Equals("hard"))
         {
             pesthealth = 100;
         }
+        else { }
     }
 
     void Update()
     {
         thepest = Spawner.spawnedPest;
+
         if(pesthealth == 0)
         {
             Destroy(thepest);
