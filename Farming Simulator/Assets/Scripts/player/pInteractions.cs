@@ -47,10 +47,20 @@ public class pInteractions : MonoBehaviour {
 
     #endregion
 
+    #region Audio target
+
+    AudioSource audiosrc;
+    AudioClip[] audioclip;
+
+    #endregion
+
     private string[] ncurrentTool;
 
     void Start()
     {
+        audiosrc = GameObject.Find("GameManager").GetComponent<AudioSource>();
+        audioclip = GameObject.Find("GameManager").GetComponent<GameMgr>().audioClips;
+
         // Initialize player action
         currentTool = "action-None";
 
@@ -75,6 +85,7 @@ public class pInteractions : MonoBehaviour {
                         if (this.gameObject.GetComponent<TileDefinition>().type == "grass")
                         {
                             execCultivate();
+                            playAudio(1);
                         }
                         else
                         {
@@ -92,6 +103,7 @@ public class pInteractions : MonoBehaviour {
                     if (this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execPlant();
+                        playAudio(2);
                     }
                     else if (this.gameObject.GetComponent<TileDefinition>().type == "plant")
                     {
@@ -108,6 +120,7 @@ public class pInteractions : MonoBehaviour {
                     if (this.gameObject.GetComponent<TileDefinition>().type == "plant")
                     {
                         execHarvest();
+                        playAudio(5);
                     }
                     else
                     {
@@ -120,6 +133,7 @@ public class pInteractions : MonoBehaviour {
                     if (this.gameObject.GetComponent<TileDefinition>().type == "plant" || this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execWater();
+                        playAudio(3);
                     }
                     else
                     {
@@ -131,6 +145,7 @@ public class pInteractions : MonoBehaviour {
                     if (this.gameObject.GetComponent<TileDefinition>().type == "plant" || this.gameObject.GetComponent<TileDefinition>().type == "soil")
                     {
                         execFertilize();
+                        playAudio(4);
                     }
                     else
                     {
@@ -141,10 +156,12 @@ public class pInteractions : MonoBehaviour {
                 // When player picks up recycle tool
                 case "Sell":
                     execRecycle();
+                    playAudio(6);
                     break;
 
                 case "Build":
                     execBuild();
+                    playAudio(7);
                     break;
 
                 default:
@@ -588,5 +605,12 @@ public class pInteractions : MonoBehaviour {
     }
 
     #endregion
+
+    // Intitialize how audio is played
+    void playAudio(int x)
+    {
+        audiosrc.clip = audioclip[x]; // play corresponding audio clip
+        audiosrc.Play(); // Audio source attached to the player
+    }
 
 }

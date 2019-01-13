@@ -28,6 +28,9 @@ public class GameMgr : MonoBehaviour {
 
     #region Game initialization module
 
+    // Audio and audio clips
+    public AudioClip[] audioClips;
+
     // Help menu box
     public Text helptextContainer;
 

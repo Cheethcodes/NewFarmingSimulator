@@ -27,6 +27,13 @@ using UnityEngine.UI;
 
 public class buttonFunctions : MonoBehaviour {
 
+    #region Audio target
+
+    AudioSource audiosrc;
+    AudioClip[] audioclip;
+
+    #endregion
+
     #region GameObjects menu
 
     // General menu
@@ -44,6 +51,10 @@ public class buttonFunctions : MonoBehaviour {
 
     void Start()
     {
+        // Initialize audio and clips
+        audiosrc = GameObject.Find("GameManager").GetComponent<AudioSource>();
+        audioclip = GameObject.Find("GameManager").GetComponent<GameMgr>().audioClips;
+
         // Initialize animations for play menu
         animTools = menuTools.GetComponent<Animator>();
         animBuild = menuBuild.GetComponent<Animator>();
@@ -64,12 +75,24 @@ public class buttonFunctions : MonoBehaviour {
 
     public void showmenu_Help()
     {
-        menuHelp.SetActive(true);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            menuHelp.SetActive(true);
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void closemenu_Help()
     {
-        menuHelp.SetActive(false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            menuHelp.SetActive(false);
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     #endregion
@@ -81,64 +104,221 @@ public class buttonFunctions : MonoBehaviour {
     // Tool selector
     public void toggleToolSelector()
     {
-        counterTools += 1;
-
-        if (counterTools % 2 == 1)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            // Set current menu to active / show on screen
-            animTools.SetBool("slide", true);
+            if (animBuild.GetBool("slide") == false && animPlant.GetBool("slide") == false)
+            {
+                counterTools += 1;
 
-            // Set all other menu to inactive / hide from screen
-            animBuild.SetBool("slide", false);
-            animPlant.SetBool("slide", false);
+                if (counterTools % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animTools.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                }
+            }
+            else if (animBuild.GetBool("slide") == true && animPlant.GetBool("slide") == false)
+            {
+                counterTools += 1;
+                counterBuild += 1;
+
+                if (counterTools % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animTools.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                }
+            }
+            else if (animBuild.GetBool("slide") == false && animPlant.GetBool("slide") == true)
+            {
+                counterTools += 1;
+                counterPlant += 1;
+
+                if (counterTools % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animTools.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                }
+            }
+            else { }
+            
+            playAudio(0);
         }
         else
-        {
-            // Set current menu to inactive / hide from screen
-            animTools.SetBool("slide", false);
-        }
+            return;
     }
 
     // Building selector
     public void toggleBldgSelector()
     {
-        counterBuild += 1;
-
-        if (counterBuild % 2 == 1)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            // Set current menu to active / show on screen
-            animBuild.SetBool("slide", true);
+            if (animTools.GetBool("slide") == false && animPlant.GetBool("slide") == false)
+            {
+                counterBuild += 1;
 
-            // Set all other menu to inactive / hide from screen
-            animTools.SetBool("slide", false);
-            animPlant.SetBool("slide", false);
+                if (counterBuild % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animBuild.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                }
+            }
+            else if (animTools.GetBool("slide") == true && animPlant.GetBool("slide") == false)
+            {
+                counterTools += 1;
+                counterBuild += 1;
+
+                if (counterBuild % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animBuild.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                }
+
+            }
+            else if (animTools.GetBool("slide") == false && animPlant.GetBool("slide") == true)
+            {
+                counterBuild += 1;
+                counterPlant += 1;
+
+                if (counterBuild % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animBuild.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animTools.SetBool("slide", false);
+                    animPlant.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                }
+
+            }
+            else { }
+
+            playAudio(0);
         }
         else
-        {
-            // Set current menu to inactive / hide from screen
-            animBuild.SetBool("slide", false);
-        }
+            return;
     }
 
     // Plant selector
     public void togglePlantSelector()
     {
-        counterPlant += 1;
-
-        if (counterPlant % 2 == 1)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
-            // Set current menu to active / show on screen
-            animPlant.SetBool("slide", true);
+            if (animTools.GetBool("slide") == false && animBuild.GetBool("slide") == false)
+            {
+                counterPlant += 1;
 
-            // Set all other menu to inactive / hide from screen
-            animBuild.SetBool("slide", false);
-            animTools.SetBool("slide", false);
+                if (counterPlant % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animPlant.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animTools.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animPlant.SetBool("slide", false);
+                }
+            }
+            else if (animTools.GetBool("slide") == true && animBuild.GetBool("slide") == false)
+            {
+                counterTools += 1;
+                counterPlant += 1;
+
+                if (counterPlant % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animPlant.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animTools.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animPlant.SetBool("slide", false);
+                }
+
+            }
+            else if (animTools.GetBool("slide") == false && animBuild.GetBool("slide") == true)
+            {
+                counterBuild += 1;
+                counterPlant += 1;
+
+                if (counterPlant % 2 == 1)
+                {
+                    // Set current menu to active / show on screen
+                    animPlant.SetBool("slide", true);
+
+                    // Set all other menu to inactive / hide from screen
+                    animBuild.SetBool("slide", false);
+                    animTools.SetBool("slide", false);
+                }
+                else
+                {
+                    // Set current menu to inactive / hide from screen
+                    animPlant.SetBool("slide", false);
+                }
+
+            }
+            else { }
+
+            playAudio(0);
         }
         else
-        {
-            // Set current menu to inactive / hide from screen
-            animPlant.SetBool("slide", false);
-        }
+            return;
     }
 
     #endregion
@@ -153,17 +333,35 @@ public class buttonFunctions : MonoBehaviour {
     // Default tool
     public void selectDefaultTool()
     {
-        pInteractions.currentTool = "action-None";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[0];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterTools += 1;
+
+            pInteractions.currentTool = "action-None";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[0];
+            animTools.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     // Move tool used for moving objects in the game
     public void selectMoveTool()
     {
-        pInteractions.currentTool = "action-Move";
-        //menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[1];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterTools += 1;
+
+            pInteractions.currentTool = "action-Move";
+            //menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[1];
+            animTools.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     // Cultivate grass tool
@@ -171,9 +369,13 @@ public class buttonFunctions : MonoBehaviour {
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
+            counterTools += 1;
+
             pInteractions.currentTool = "action-Cultivate";
             menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[2];
             animTools.SetBool("slide", false);
+
+            playAudio(0);
         }
         else
             return;
@@ -184,9 +386,13 @@ public class buttonFunctions : MonoBehaviour {
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
+            counterTools += 1;
+
             pInteractions.currentTool = "action-Water";
             menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[3];
             animTools.SetBool("slide", false);
+
+            playAudio(0);
         }
         else
             return;
@@ -195,67 +401,169 @@ public class buttonFunctions : MonoBehaviour {
     // Harvest tool
     public void selectHarvestTool()
     {
-        pInteractions.currentTool = "action-Harvest";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[4];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterTools += 1;
+
+            pInteractions.currentTool = "action-Harvest";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[4];
+            animTools.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void selectRecycleTool()
     {
-        pInteractions.currentTool = "action-Sell";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[5];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterTools += 1;
+
+            pInteractions.currentTool = "action-Sell";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[5];
+            animTools.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void selectFertilizerTool()
     {
-        pInteractions.currentTool = "action-Fertilize";
-        menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[1];
-        animTools.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterTools += 1;
+
+            pInteractions.currentTool = "action-Fertilize";
+            menuToolsBTN.GetComponent<Image>().sprite = playTools_btnImages[1];
+            animTools.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     #endregion
 
     #region Buildings
 
+    public void buildGreenhouse()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterBuild += 1;
+
+            animBuild.SetBool("slide", false);
+
+            playAudio(0);
+        }
+    }
+
     #endregion
 
     #region Plants
 
+    // Array of images for button
+    public Sprite[] playPlants_btnImages;
+
     public void plantCarrot()
     {
-        pInteractions.currentTool = "action-Plant-Carrot";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Carrot";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[0];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void plantOnion()
     {
-        pInteractions.currentTool = "action-Plant-Onion";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Onion";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[1];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void plantPumpkin()
     {
-        pInteractions.currentTool = "action-Plant-Pumpkin";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Pumpkin";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[2];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void plantRadish()
     {
-        pInteractions.currentTool = "action-Plant-Radish";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Radish";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[3];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void plantTomato()
     {
-        pInteractions.currentTool = "action-Plant-Tomato";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Tomato";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[4];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void plantWatermelon()
     {
-        pInteractions.currentTool = "action-Plant-Watermelon";
-        animPlant.SetBool("slide", false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            counterPlant += 1;
+
+            pInteractions.currentTool = "action-Plant-Watermelon";
+            menuPlantBTN.GetComponent<Image>().sprite = playPlants_btnImages[5];
+            animPlant.SetBool("slide", false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     #endregion
@@ -271,13 +579,35 @@ public class buttonFunctions : MonoBehaviour {
     // Volume of the background music and SFX as well as the quality of the game graphics rendering
     public void showmenu_Options()
     {
-        menuOptions.SetActive(true);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            menuOptions.SetActive(true);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     public void closemenu_Options()
     {
-        menuOptions.SetActive(false);
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            menuOptions.SetActive(false);
+
+            playAudio(0);
+        }
+        else
+            return;
     }
 
     #endregion
+
+    // Intitialize how audio is played
+    void playAudio(int x)
+    {
+        audiosrc.clip = audioclip[x]; // play corresponding audio clip
+        audiosrc.Play(); // Audio source attached to the player
+    }
+
 }
