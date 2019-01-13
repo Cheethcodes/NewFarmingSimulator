@@ -31,6 +31,10 @@ public class cameraController : MonoBehaviour {
     // Get Camera object
     public Camera cam;
 
+    // Get all UI game objects
+    public GameObject[] menus;
+    public Animator animTools, animPlant, animBuild;
+
     void Start()
     {
 
@@ -39,34 +43,41 @@ public class cameraController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // press and drag - movement of camera
-        if (Input.GetMouseButton(0) && pInteractions.currentTool == "action-None")
+        if (
+            menus[0].activeSelf == false && menus[1].activeSelf == false && menus[2].activeSelf == false &&
+            menus[3].activeSelf == false && menus[4].activeSelf == false && menus[5].activeSelf == false &&
+            animTools.GetBool("slide") == false && animBuild.GetBool("slide") == false && animPlant.GetBool("slide") == false
+            )
         {
-            if (Input.GetAxis("Mouse X") > 0)
+
+            // press and drag - movement of camera
+            if (Input.GetMouseButton(0) && pInteractions.currentTool == "action-None")
             {
-                if (cam.transform.position.x != 190f)
-                    transform.position -= new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed_horizontal, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed_vertical, 0.0f);
-                else
-                    transform.position -= new Vector3(0.0f, 0.0f, 0.0f);
+                if (Input.GetAxis("Mouse X") > 0)
+                {
+                    if (cam.transform.position.x != 190f)
+                        transform.position -= new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed_horizontal, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed_vertical, 0.0f);
+                    else
+                        transform.position -= new Vector3(0.0f, 0.0f, 0.0f);
+                }
+                else if (Input.GetAxis("Mouse X") < 0)
+                {
+                    if (cam.transform.position.x != -190f)
+                        transform.position -= new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed_horizontal, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed_vertical, 0.0f);
+                    else
+                        transform.position -= new Vector3(0.0f, 0.0f, 0.0f);
+                }
             }
-            else if (Input.GetAxis("Mouse X") < 0)
+
+            // zoom - movement of camera (orthographic)
+            if ((((Input.GetAxis("Mouse ScrollWheel") > 0f) || (Input.GetKey(KeyCode.KeypadPlus))) && !(cam.orthographicSize <= 4)) && pInteractions.currentTool == "action-None")
             {
-                if (cam.transform.position.x != -190f)
-                    transform.position -= new Vector3(Input.GetAxisRaw("Mouse X") * Time.deltaTime * speed_horizontal, Input.GetAxisRaw("Mouse Y") * Time.deltaTime * speed_vertical, 0.0f);
-                else
-                    transform.position -= new Vector3(0.0f, 0.0f, 0.0f);
+                cam.orthographicSize -= 2f;
             }
+            if ((((Input.GetAxis("Mouse ScrollWheel") < 0f) || (Input.GetKey(KeyCode.KeypadMinus))) && !(cam.orthographicSize >= 20)) && pInteractions.currentTool == "action-None")
+                cam.orthographicSize += 2f;
         }
 
-        // zoom - movement of camera (orthographic)
-        if ((((Input.GetAxis("Mouse ScrollWheel") > 0f) || (Input.GetKey(KeyCode.KeypadPlus))) && !(cam.orthographicSize <= 4)) && pInteractions.currentTool == "action-None")
-        {
-            cam.orthographicSize -= 2f;
-        }
-        if ((((Input.GetAxis("Mouse ScrollWheel") < 0f) || (Input.GetKey(KeyCode.KeypadMinus))) && !(cam.orthographicSize >= 20)) && pInteractions.currentTool == "action-None")
-            cam.orthographicSize += 2f;
     }
-
-
 
 }

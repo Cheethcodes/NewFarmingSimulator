@@ -21,6 +21,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class volumeControl : MonoBehaviour {
@@ -36,16 +37,35 @@ public class volumeControl : MonoBehaviour {
     #endregion
 
     // Volume value
-    private static float volumeBG = 1f, volumeFX = 1f;
+    private static float volumeBG, volumeFX;
 
-	void Start () {
+	void Start ()
+    {
         outputBG = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         outputFX = GameObject.Find("GameManager").GetComponent<AudioSource>();
+
+        if (PlayerPrefs.HasKey("outputBG"))
+        {
+            volumeBG = PlayerPrefs.GetFloat("outputBG");
+            volumeFX = PlayerPrefs.GetFloat("outputFX");
+
+            outputBG.volume = volumeBG;
+            outputFX.volume = volumeFX;
+        }
+        else
+        {
+            volumeBG = 1f;
+            volumeFX = 1f;
+        }
 	}
 	
-	void Update () {
+	void Update ()
+    {
         outputBG.volume = volumeBG;
         outputFX.volume = volumeFX;
+
+        PlayerPrefs.SetFloat("outputBG", volumeBG);
+        PlayerPrefs.SetFloat("outputFX", volumeFX);
 	}
 
     #region Functions
@@ -54,12 +74,26 @@ public class volumeControl : MonoBehaviour {
 
     public void setvolumeBG(Slider x)
     {
-        volumeBG = x.value;
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            volumeBG = x.value;
+
+            PlayerPrefs.SetFloat("sliderBG", x.value);
+        }
+        else
+            return;
     }
 
     public void setvoluemFX(Slider x)
     {
-        volumeFX = x.value;
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            volumeFX = x.value;
+
+            PlayerPrefs.SetFloat("sliderFX", x.value);
+        }
+        else
+            return;
     }
 
     #endregion
