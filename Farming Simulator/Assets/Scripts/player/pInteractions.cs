@@ -262,7 +262,7 @@ public class pInteractions : MonoBehaviour {
         }
 
         // Radish
-        else if (ncurrentTool[2] == "Radishes")
+        else if (ncurrentTool[2] == "Radish")
         {
             // Corresponding sprite
             GameObject plant = Instantiate(groundPlants[3]);
