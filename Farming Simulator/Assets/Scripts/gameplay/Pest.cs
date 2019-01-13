@@ -53,11 +53,12 @@ public class Pest : MonoBehaviour
     {
         thepest = Spawner.spawnedPest;
 
+        pesthealth = Mathf.Clamp(pesthealth, 0, 100);
+
         if(pesthealth == 0)
         {
             Destroy(thepest);
             SpawnerBehavoir.isKilled = true;
-            Debug.Log("Killed");
         }
 
         MoveTowardsPlant();
