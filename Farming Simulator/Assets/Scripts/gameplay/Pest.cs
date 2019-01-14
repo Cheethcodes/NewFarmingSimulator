@@ -76,7 +76,6 @@ public class Pest : MonoBehaviour
         pestsurvivaltimefinal = Mathf.RoundToInt(pestsurvivaltimecounter);
         SpawnerBehavoir.newreactionTime = pestsurvivaltimefinal;
         pesthealth -= 20;
-
     }
 
     public void MoveTowardsPlant()
@@ -89,5 +88,10 @@ public class Pest : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
         }
+    }
+
+    void OnApplicationQuit()
+    {
+        Destroy(thepest);
     }
 }

@@ -109,15 +109,16 @@ public class plantstate : MonoBehaviour {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[0];
             growthStage = 1;
         }
-        else if (timeLived == growthTimeMature_2 && timeLived < growthTimeMature_3)
+        else if (timeLived >= growthTimeMature_2 && timeLived < growthTimeMature_3)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[1];
             growthStage = 2;
         }
-        else if (timeLived == growthTimeMature_3 && timeLived < growthTimeMature_4)
+        else if (timeLived >= growthTimeMature_3 && timeLived < growthTimeMature_5)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[2];
             growthStage = 3;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
         else if (timeLived >= growthTimeMature_5)
         {

@@ -71,13 +71,23 @@ public class GameMgr : MonoBehaviour {
     #region Game object local variables
 
     string plantname;
+    GameObject[] pests;
 
     #endregion
 
     void Start()
     {
+        pests = GameObject.FindGameObjectsWithTag("Pest");
+
+        if (pests.Length > 0)
+        {
+            foreach(GameObject i in pests)
+            {
+                Destroy(i);
+            }
+        }
+
         // Fill in details and instructions for help menu context
-        //helptextContainer = GameObject.Find("helpmenucontext").GetComponent<Text>();
         helptextContainer.text = "HOW TO PLAY THE GAME";
 
         if (PlayerPrefs.HasKey("grass(Clone)_000_001_posX"))
