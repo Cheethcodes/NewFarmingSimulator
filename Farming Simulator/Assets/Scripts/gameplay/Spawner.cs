@@ -34,10 +34,7 @@ public class Spawner : MonoBehaviour {
 
         if((plants.Count > 0) & (timeleft < 0))
         {
-            int randomIndex = Random.Range(0, plants.Count);
-
-            // Pass in the game object into your MoveToward() method
-            Vector3 center = plants[randomIndex].transform.position;
+            
 
             if (difficulty.Equals("easy"))
             {
@@ -55,6 +52,9 @@ public class Spawner : MonoBehaviour {
 
             for (int i = 0; i < numberspawn; i++)
             {
+                int randomIndex = Random.Range(0, plants.Count);
+                // Pass in the game object into your MoveToward() method
+                Vector3 center = plants[randomIndex].transform.position;
                 Vector3 pos = RandomCircle(center, 20f);
                 Quaternion rot = Quaternion.FromToRotation(Vector3.forward, center - pos);
                 spawnedPest = Instantiate(Pest, pos, Quaternion.identity);
