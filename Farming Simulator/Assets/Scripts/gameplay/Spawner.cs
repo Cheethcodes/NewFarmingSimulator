@@ -60,6 +60,7 @@ public class Spawner : MonoBehaviour {
                 spawnedPest = Instantiate(Pest, pos, Quaternion.identity);
                 spawnedPest.GetComponent<Pest>().targetplant = plants[randomIndex];
             }
+            plants= new List<GameObject>();
         }
 
         if(timeleft < 0)

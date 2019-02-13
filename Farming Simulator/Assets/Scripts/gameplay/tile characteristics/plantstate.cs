@@ -100,11 +100,7 @@ public class plantstate : MonoBehaviour {
 
         #endregion
 
-        if (timeLived < growthTimeMature_1)
-        {
-
-        }
-        else if (timeLived >= growthTimeMature_1 && timeLived < growthTimeMature_2)
+       if (timeLived >= growthTimeMature_1 && timeLived < growthTimeMature_2)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[0];
             growthStage = 1;
@@ -112,23 +108,24 @@ public class plantstate : MonoBehaviour {
         else if (timeLived >= growthTimeMature_2 && timeLived < growthTimeMature_3)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[1];
-            growthStage = 2;
+            growthStage = 2;            
         }
-        else if (timeLived >= growthTimeMature_3 && timeLived < growthTimeMature_5)
+        else if (timeLived >= growthTimeMature_3 && timeLived < growthTimeMature_4)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[2];
-            growthStage = 3;
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            growthStage = 3;
+        }
+        else if(timeLived >= growthTimeMature_4 && timeLived < growthTimeMature_5) {
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[2];
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            growthStage = 4;
         }
         else if (timeLived >= growthTimeMature_5)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[3];
-            growthStage = 4;
-        }
-        else
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = nextStageImage[3];
-            growthStage = 4;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            growthStage = 5;
         }
 
         amountWater = this.gameObject.transform.parent.GetComponentInChildren<soilstate>().amountWater;

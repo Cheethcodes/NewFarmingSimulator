@@ -450,6 +450,83 @@ public class pInteractions : MonoBehaviour {
         {
             foreach (Transform child in parentContainer)
             {
+                if (child.tag == "plant")
+                {
+                    // Get plant name
+                    string plantName = child.GetComponent<plantstate>().plantName;
+
+                    // Carrot
+                    if (plantName == "carrot")
+                    {
+                        dataCont.moneyValue += 60;
+                        dataCont.scoreValue += 25;
+                        temp_scoreValue += 25;
+                    }
+
+                    // Onion
+                    else if (plantName == "onion")
+                    {
+                        dataCont.moneyValue += 90;
+                        dataCont.scoreValue += 35;
+                        temp_scoreValue += 35;
+                    }
+
+                    // Pumpkin
+                    else if (plantName == "pumpkin")
+                    {
+                        dataCont.moneyValue += 140;
+                        dataCont.scoreValue += 65;
+                        temp_scoreValue += 65;
+                    }
+
+                    // Radish
+                    else if (plantName == "radish")
+                    {
+                        dataCont.moneyValue += 60;
+                        dataCont.scoreValue += 25;
+                        temp_scoreValue += 25;
+                    }
+
+                    // Tomato
+                    else if (plantName == "tomato")
+                    {
+                        dataCont.moneyValue += 50;
+                        dataCont.scoreValue += 15;
+                        temp_scoreValue += 15;
+                    }
+
+                    // Watermelon
+                    else if (plantName == "watermelon")
+                    {
+                        dataCont.moneyValue += 170;
+                        dataCont.scoreValue += 75;
+                        temp_scoreValue += 75;
+                    }
+
+                }
+                // Destroy all objects contained within the parent object
+                GameObject.Destroy(child.gameObject);
+            }
+
+            // Change state of the tile 
+            this.gameObject.GetComponent<TileDefinition>().type = "grass";
+            this.gameObject.GetComponent<TileDefinition>().isBuildable = true;
+            this.gameObject.GetComponent<TileDefinition>().isFarmable = false;
+
+            PlayerPrefs.SetInt(this.gameObject.name + "_hasChild", 0);
+            PlayerPrefs.SetString(this.gameObject.name + "_hasPlant", "");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantStage");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHealth");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantMsec");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantHour");
+            PlayerPrefs.DeleteKey(this.gameObject.name + "_hasPlantDay");
+
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildWater", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildNitrogen", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPhosphorus", 0);
+            PlayerPrefs.SetFloat(this.gameObject.name + "_hasChildPotassium", 0);
+        }else if (harvestState == 5) {
+            foreach (Transform child in parentContainer) {
                 // Destroy all objects contained within the parent object
                 GameObject.Destroy(child.gameObject);
             }

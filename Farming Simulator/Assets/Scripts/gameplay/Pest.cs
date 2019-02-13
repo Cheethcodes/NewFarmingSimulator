@@ -29,6 +29,7 @@ public class Pest : MonoBehaviour
     public int pestsurvivaltimefinal;
     public int pesthealth;
     public GameObject targetplant;
+    private IList<GameObject> plants = new List<GameObject>();
 
     void Start()
     {
@@ -53,11 +54,18 @@ public class Pest : MonoBehaviour
         pesthealth = Mathf.Clamp(pesthealth, 0, 100);
 
         if(pesthealth == 0)
-        {
+        {   
+            //only pass the time of the last killed pest
+            if (GameObject.FindGameObjectsWithTag("Pest").Length == 1) {
+                //this will get the time the counter has when the pest was killed
+                pestsurvivaltimefinal = Mathf.RoundToInt(pestsurvivaltimecounter);
+                SpawnerBehavoir.newreactionTime = pestsurvivaltimefinal;
+                SpawnerBehavoir.isKilled = true;
+            }
+            
             Destroy(gameObject);
-            SpawnerBehavoir.isKilled = true;
+            
         }
-
         MoveTowardsPlant();
         pestsurvivaltimecounter += Time.deltaTime;
     }
@@ -69,22 +77,28 @@ public class Pest : MonoBehaviour
 
     void OnMouseDown()
     {
-        //this will get the time the counter has when the pest was killed
-        pestsurvivaltimefinal = Mathf.RoundToInt(pestsurvivaltimecounter);
-        SpawnerBehavoir.newreactionTime = pestsurvivaltimefinal;
+        
         pesthealth -= 20;
     }
 
     public void MoveTowardsPlant()
     {
         //pass in the game object into your MoveToward() method
-        transform.LookAt(targetplant.transform);
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-
-        if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
+        try {
+            transform.LookAt(targetplant.transform);
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            if (Vector3.Distance(transform.position, targetplant.transform.position) >= MinDist)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, targetplant.transform.position, MoveSpeed);
+            }
+        } catch {
+            foreach (GameObject fooObj in GameObject.FindGameObjectsWithTag("plant")) {
+                plants.Add(fooObj);
+            }
+            targetplant = plants[Random.Range(0, plants.Count)];
+            plants= new List<GameObject>();
         }
+        
     }
 
     void OnApplicationQuit()
