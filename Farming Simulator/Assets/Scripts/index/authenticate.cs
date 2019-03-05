@@ -54,6 +54,8 @@ public class authenticate : MonoBehaviour {
     public static string IGinteract = "";
     public static float IGtime = 0;
     public static int IGmoney = 0;
+    public static int IGmoneyEarned = 0;
+    public static int IGmoneySpent = 0;
 
     #endregion
 
@@ -254,22 +256,24 @@ public class authenticate : MonoBehaviour {
 
             string[] textArr = loginAccountreturn.Split(',');
 
-            if (textArr[5] == "Success")
+            if (textArr[7] == "Success")
             {
                 // Gets variables that identify the current user
                 // Gets variables that are updated during the game play
                 IGtime = float.Parse(textArr[0]);
-                IGinteract = textArr[1];
-                IGpts = int.Parse(textArr[2]);
-                IGuser = textArr[3];
+                IGinteract = textArr[2];
+                IGpts = int.Parse(textArr[5]);
+                IGuser = textArr[6];
                 IGmoney = int.Parse(textArr[4]);
+                IGmoneyEarned = int.Parse(textArr[3]);
+                IGmoneySpent = int.Parse(textArr[4]);
 
                 // Load gameplay scene
                 SceneManager.LoadScene(1);
             }
             else
             {
-                errMessage1 = textArr[5];
+                errMessage1 = textArr[7];
             }
         }
     }

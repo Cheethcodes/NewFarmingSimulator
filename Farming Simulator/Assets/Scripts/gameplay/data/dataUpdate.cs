@@ -123,6 +123,7 @@ public class dataUpdate : MonoBehaviour {
         }
         else
         {
+            SceneManager.LoadScene(0);
             errMessage = logoutAccountreturn;
         }
     }
