@@ -23,7 +23,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class dataUpdate : MonoBehaviour {
+public class dataUpdate : MonoBehaviour
+{
 
     private static string logOutURL = "http://ghcsuarez.com/thesis/logoutAccount.php";
     //private static string logOutURL = "http://127.0.0.1/DB_testConnection/logoutAccount.php";
@@ -38,6 +39,8 @@ public class dataUpdate : MonoBehaviour {
     private static string newInteract;
     private static int newPoints;
     private static int newMoney;
+    private static int newMoneyEarned;
+    private static int newMoneySpent;
 
     private static float sessionTime;
     private static int sessionPts;
@@ -63,9 +66,17 @@ public class dataUpdate : MonoBehaviour {
         // New data (total)
         newTime = timekeeper.totaltime;
         newPoints = dataCont.scoreValue;
-        newInteract = "tssss";                        //====================================================== TO BE UPDATED
+        newInteract = " ";                        //====================================================== TO BE UPDATED
         newMoney = dataCont.moneyValue;
-        
+        newMoneyEarned = dataCont.moneyEarned;
+        newMoneySpent = dataCont.moneySpent;
+
+        Debug.Log(newMoneyEarned + "," + newMoneySpent);
+        Debug.Log(pUser);
+        Debug.Log(newTime.ToString());
+        Debug.Log(newPoints);
+        Debug.Log(sessionTime + "," + sessionPts);
+
         #endregion
 
         StartCoroutine("updateData");
@@ -108,7 +119,8 @@ public class dataUpdate : MonoBehaviour {
         frm.AddField("upPts", newPoints);
         frm.AddField("cTime", sessionTime.ToString());
         frm.AddField("cuPts", sessionPts);
-        frm.AddField("curMoney", newMoney);
+        frm.AddField("curMoneySpent", newMoneySpent);
+        frm.AddField("curMoneyEarned", newMoneyEarned);
 
         WWW logoutAcct = new WWW(logOutURL, frm);
 

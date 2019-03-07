@@ -28,7 +28,7 @@ public class dataCont : MonoBehaviour {
 
     // Score and money variables
     private Text moneyContainer, scoreContainer;
-    public static int moneyValue, scoreValue;
+    public static int moneyValue, scoreValue, moneyEarned, moneySpent;
 
     void Start()
     {
@@ -38,6 +38,9 @@ public class dataCont : MonoBehaviour {
 
         moneyValue = int.Parse(moneyContainer.text);
         scoreValue = int.Parse(scoreContainer.text);
+
+        moneyEarned = 0;
+        moneySpent = 0;
     }
 
     void Update()

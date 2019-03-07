@@ -27,7 +27,7 @@ using UnityEngine.UI;
 public class dataGet : MonoBehaviour {
 
     // Get current logged in user's statistics stored in the database
-    private static object[] currentUserData = {authenticate.IGuser, authenticate.IGpts, authenticate.IGtime, authenticate.IGinteract, authenticate.IGmoney};
+    private static object[] currentUserData = {authenticate.IGuser, authenticate.IGpts, authenticate.IGtime, authenticate.IGinteract, authenticate.IGmoneyCurrent};
 
     // Initialize containers
     private Text containerMoney,containerPoints;

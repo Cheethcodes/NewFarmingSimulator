@@ -181,6 +181,7 @@ public class pInteractions : MonoBehaviour {
         SpriteRenderer render = plot.GetComponent<SpriteRenderer>();
         render.sortingOrder = this.gameObject.GetComponent<SpriteRenderer>().sortingOrder + 1;
         dataCont.moneyValue -= 5;
+        dataCont.moneySpent += 5;
 
         // Change state of the tile
         this.gameObject.GetComponent<TileDefinition>().type = "soil";
@@ -232,6 +233,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 15;
+            dataCont.moneySpent += 15;
         }
 
         // Onion
@@ -245,6 +247,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 5;
+            dataCont.moneySpent += 5;
         }
 
         // Pumpkin
@@ -259,6 +262,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 50;
+            dataCont.moneySpent += 50;
         }
 
         // Radish
@@ -273,6 +277,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 15;
+            dataCont.moneySpent += 15;
         }
 
         // Tomato
@@ -287,6 +292,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 10;
+            dataCont.moneySpent += 10;
         }
 
         // Watermelon
@@ -301,6 +307,7 @@ public class pInteractions : MonoBehaviour {
 
             // Cost
             dataCont.moneyValue -= 40;
+            dataCont.moneySpent += 40;
         }
 
         else
@@ -343,6 +350,7 @@ public class pInteractions : MonoBehaviour {
             this.gameObject.GetComponentInChildren<soilstate>().amountFertilizer_Potassium = 10.000f;
 
             dataCont.moneyValue -= 10;
+            dataCont.moneySpent += 10;
         }
         else
         {
@@ -377,6 +385,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 40;
                         dataCont.scoreValue += 20;
+                        dataCont.moneyEarned += 40;
                         temp_scoreValue += 20;
                     }
 
@@ -385,6 +394,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 70;
                         dataCont.scoreValue += 30;
+                        dataCont.moneyEarned += 70;
                         temp_scoreValue += 30;
                     }
 
@@ -393,6 +403,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 120;
                         dataCont.scoreValue += 60;
+                        dataCont.moneyEarned += 120;
                         temp_scoreValue += 60;
                     }
 
@@ -401,6 +412,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 40;
                         dataCont.scoreValue += 20;
+                        dataCont.moneyEarned += 40;
                         temp_scoreValue += 20;
                     }
 
@@ -409,6 +421,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 30;
                         dataCont.scoreValue += 10;
+                        dataCont.moneyEarned += 30;
                         temp_scoreValue += 10;
                     }
 
@@ -417,6 +430,7 @@ public class pInteractions : MonoBehaviour {
                     {
                         dataCont.moneyValue += 150;
                         dataCont.scoreValue += 70;
+                        dataCont.moneyEarned += 150;
                         temp_scoreValue += 70;
                     }
 

@@ -56,6 +56,7 @@ public class authenticate : MonoBehaviour {
     public static int IGmoney = 0;
     public static int IGmoneyEarned = 0;
     public static int IGmoneySpent = 0;
+    public static int IGmoneyCurrent = 0;
 
     #endregion
 
@@ -267,6 +268,7 @@ public class authenticate : MonoBehaviour {
                 IGmoney = int.Parse(textArr[4]);
                 IGmoneyEarned = int.Parse(textArr[3]);
                 IGmoneySpent = int.Parse(textArr[4]);
+                IGmoneyCurrent = 500 + IGmoneyEarned - IGmoneySpent;
 
                 // Load gameplay scene
                 SceneManager.LoadScene(1);
