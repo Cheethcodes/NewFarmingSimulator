@@ -44,7 +44,7 @@ public class customRainmakerEvent : MonoBehaviour
     {
         labelTemperature = GameObject.Find("container_Temperature").GetComponent<Text>();
         currentWeather = weather[Random.Range(0, 2)];
-        labelTemperature.text = Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()).ToString();
+        labelTemperature.text = Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()).ToString() + "°C";
 
         hour = timekeeper.hour_military;
 
@@ -139,9 +139,12 @@ public class customRainmakerEvent : MonoBehaviour
         {
             //Debug.Log("Changing Temp");
             int newTemp = Random.Range(currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax());
+
             if (hour >= 18)
                 newTemp -= 10;
-            labelTemperature.text = newTemp.ToString();
+
+            labelTemperature.text = newTemp.ToString() + "°C";
+
             changeTempTimer = 0;
         }
 

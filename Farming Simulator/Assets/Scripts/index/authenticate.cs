@@ -29,8 +29,8 @@ public class authenticate : MonoBehaviour {
 
     #region Login variables
 
-    private static string LogInURL = "http://ghcsuarez.com/thesis/loginAccount.php";
-    //private static string LogInURL = "http://127.0.0.1/DB_testConnection/loginAccount.php";
+    //private static string LogInURL = "http://ghcsuarez.com/thesis/loginAccount.php";
+    private static string LogInURL = "http://127.0.0.1/DBThesis/loginAccount.php";
     private static string email = "";
     private static string password = "";
 
@@ -38,8 +38,8 @@ public class authenticate : MonoBehaviour {
 
     #region CreateAccount variables
 
-    private static string CreateAccountURL = "http://ghcsuarez.com/thesis/createAccount.php";
-    //private static string CreateAccountURL = "http://127.0.0.1/DB_testConnection/createAccount.php";
+    //private static string CreateAccountURL = "http://ghcsuarez.com/thesis/createAccount.php";
+    private static string CreateAccountURL = "http://127.0.0.1/DBThesis/createAccount.php";
     private static string ConEmail = "";
     private static string ConPass = "";
     private static string CEmail = "";

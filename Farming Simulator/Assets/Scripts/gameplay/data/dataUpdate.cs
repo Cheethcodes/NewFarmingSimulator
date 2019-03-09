@@ -26,8 +26,8 @@ using UnityEngine.SceneManagement;
 public class dataUpdate : MonoBehaviour
 {
 
-    private static string logOutURL = "http://ghcsuarez.com/thesis/logoutAccount.php";
-    //private static string logOutURL = "http://127.0.0.1/DB_testConnection/logoutAccount.php";
+    //private static string logOutURL = "http://ghcsuarez.com/thesis/logoutAccount.php";
+    private static string logOutURL = "http://127.0.0.1/DBThesis/logoutAccount.php";
 
     #region Save Option
 

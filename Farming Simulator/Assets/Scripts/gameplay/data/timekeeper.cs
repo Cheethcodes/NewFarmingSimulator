@@ -305,7 +305,7 @@ public class timekeeper : MonoBehaviour {
             else { }
         }
         
-        timecontainer.text = month.ToString() + " / " + day.ToString() + " / " + year.ToString() + " | " + hour.ToString("00");
+        timecontainer.text = month.ToString() + " / " + day.ToString() + " / " + year.ToString() + " | " + hour.ToString("00") + ":00 ";
 
         ampmcontainer.text = timeofday;
 
