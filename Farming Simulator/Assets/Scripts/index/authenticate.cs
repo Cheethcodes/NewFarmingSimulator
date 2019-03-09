@@ -57,6 +57,7 @@ public class authenticate : MonoBehaviour {
     public static int IGmoneyEarned = 0;
     public static int IGmoneySpent = 0;
     public static int IGmoneyCurrent = 0;
+    public static bool tutorial;
 
     #endregion
 
@@ -269,6 +270,15 @@ public class authenticate : MonoBehaviour {
                 IGmoneyEarned = int.Parse(textArr[3]);
                 IGmoneySpent = int.Parse(textArr[4]);
                 IGmoneyCurrent = 500 + IGmoneyEarned - IGmoneySpent;
+
+                if(IGtime > (float)0)
+                {
+                    tutorial = false;
+                }
+                else
+                {
+                    tutorial = true;
+                }
 
                 // Load gameplay scene
                 SceneManager.LoadScene(1);

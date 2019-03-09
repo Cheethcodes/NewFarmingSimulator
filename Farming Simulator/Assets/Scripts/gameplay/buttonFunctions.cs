@@ -49,6 +49,8 @@ public class buttonFunctions : MonoBehaviour {
 
     #endregion
 
+    public static int tutorialCT = 200;
+
     void Start()
     {
         // Initialize audio and clips
@@ -608,6 +610,17 @@ public class buttonFunctions : MonoBehaviour {
     {
         audiosrc.clip = audioclip[x]; // play corresponding audio clip
         audiosrc.Play(); // Audio source attached to the player
+    }
+
+    // Tutorial counter
+    public void subTutorial()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            tutorialCT -= 1;
+        }
+        else
+            return;
     }
 
 }

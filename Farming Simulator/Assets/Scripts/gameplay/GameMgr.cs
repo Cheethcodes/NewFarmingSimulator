@@ -24,7 +24,8 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
-public class GameMgr : MonoBehaviour {
+public class GameMgr : MonoBehaviour
+{
 
     #region Game initialization module
 
@@ -72,16 +73,43 @@ public class GameMgr : MonoBehaviour {
 
     string plantname;
     GameObject[] pests;
+    public GameObject[] speechbubbles;
 
     #endregion
 
     void Start()
     {
+        if (authenticate.tutorial == false)
+        {
+            GameObject.Find("playTool").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Default").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Fertilizer").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Water").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Cultivate").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Harvest").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Tool_Recycle").GetComponent<Button>().interactable = true;
+            GameObject.Find("playPlant").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Carrot").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Onion").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Pumpkin").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Radish").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Tomato").GetComponent<Button>().interactable = true;
+            GameObject.Find("play-Plant_Watermelon").GetComponent<Button>().interactable = true;
+            GameObject.Find("icon-options").GetComponent<Button>().interactable = true;
+            GameObject.Find("icon-help").GetComponent<Button>().interactable = true;
+            GameObject.Find("icon-logout").GetComponent<Button>().interactable = true;
+            //GameObject.Find("").GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            createTutorial();
+        }
+
         pests = GameObject.FindGameObjectsWithTag("Pest");
 
         if (pests.Length > 0)
         {
-            foreach(GameObject i in pests)
+            foreach (GameObject i in pests)
             {
                 Destroy(i);
             }
@@ -258,7 +286,7 @@ public class GameMgr : MonoBehaviour {
                             {
 
                             }
-                            
+
 
                             #endregion
 
@@ -511,4 +539,142 @@ public class GameMgr : MonoBehaviour {
     //{
     //    PlayerPrefs.DeleteAll();
     //}
+
+    void createTutorial()
+    {
+        if (authenticate.tutorial == true) {
+            switch (buttonFunctions.tutorialCT)
+            {
+                case 200:
+                    speechbubbles[0].SetActive(true);
+                    break;
+                case 199:
+                    speechbubbles[1].SetActive(true);
+                    speechbubbles[0].SetActive(false);
+                    break;
+                case 198:
+                    speechbubbles[2].SetActive(true);
+                    speechbubbles[1].SetActive(false);
+                    break;
+                case 197:
+                    speechbubbles[3].SetActive(true);
+                    speechbubbles[2].SetActive(false);
+                    break;
+                case 196:
+                    GameObject.Find("playTool").GetComponent<Button>().interactable = true;
+                    speechbubbles[4].SetActive(true);
+                    speechbubbles[3].SetActive(false);
+                    break;
+                case 195:
+                    GameObject.Find("play-Tool_Default").GetComponent<Button>().interactable = true;
+                    speechbubbles[5].SetActive(true);
+                    speechbubbles[4].SetActive(false);
+                    break;
+                case 194:
+                    GameObject.Find("play-Tool_Fertilizer").GetComponent<Button>().interactable = true;
+                    speechbubbles[6].SetActive(true);
+                    speechbubbles[5].SetActive(false);
+                    break;
+                case 193:
+                    GameObject.Find("play-Tool_Water").GetComponent<Button>().interactable = true;
+                    speechbubbles[7].SetActive(true);
+                    speechbubbles[6].SetActive(false);
+                    break;
+                case 192:
+                    GameObject.Find("play-Tool_Cultivate").GetComponent<Button>().interactable = true;
+                    speechbubbles[8].SetActive(true);
+                    speechbubbles[7].SetActive(false);
+                    break;
+                case 191:
+                    GameObject.Find("play-Tool_Harvest").GetComponent<Button>().interactable = true;
+                    speechbubbles[9].SetActive(true);
+                    speechbubbles[8].SetActive(false);
+                    break;
+                case 190:
+                    GameObject.Find("play-Tool_Recycle").GetComponent<Button>().interactable = true;
+                    speechbubbles[10].SetActive(true);
+                    speechbubbles[9].SetActive(false);
+                    break;
+                case 189:
+                    GameObject.Find("playPlant").GetComponent<Button>().interactable = true;
+                    speechbubbles[11].SetActive(true);
+                    speechbubbles[10].SetActive(false);
+                    break;
+                case 188:
+                    GameObject.Find("play-Plant_Carrot").GetComponent<Button>().interactable = true;
+                    speechbubbles[12].SetActive(true);
+                    speechbubbles[11].SetActive(false);
+                    break;
+                case 187:
+                    GameObject.Find("play-Plant_Onion").GetComponent<Button>().interactable = true;
+                    speechbubbles[13].SetActive(true);
+                    speechbubbles[12].SetActive(false);
+                    break;
+                case 186:
+                    GameObject.Find("play-Plant_Pumpkin").GetComponent<Button>().interactable = true;
+                    speechbubbles[14].SetActive(true);
+                    speechbubbles[13].SetActive(false);
+                    break;
+                case 185:
+                    GameObject.Find("play-Plant_Radish").GetComponent<Button>().interactable = true;
+                    speechbubbles[15].SetActive(true);
+                    speechbubbles[14].SetActive(false);
+                    break;
+                case 184:
+                    GameObject.Find("play-Plant_Tomato").GetComponent<Button>().interactable = true;
+                    speechbubbles[16].SetActive(true);
+                    speechbubbles[15].SetActive(false);
+                    break;
+                case 183:
+                    GameObject.Find("play-Plant_Watermelon").GetComponent<Button>().interactable = true;
+                    speechbubbles[17].SetActive(true);
+                    speechbubbles[16].SetActive(false);
+                    break;
+                case 182:
+                    GameObject.Find("icon-options").GetComponent<Button>().interactable = true;
+                    speechbubbles[18].SetActive(true);
+                    speechbubbles[17].SetActive(false);
+                    break;
+                case 181:
+                    speechbubbles[19].SetActive(true);
+                    speechbubbles[18].SetActive(false);
+                    break;
+                case 180:
+                    speechbubbles[20].SetActive(true);
+                    speechbubbles[19].SetActive(false);
+                    break;
+                case 179:
+                    speechbubbles[21].SetActive(true);
+                    speechbubbles[20].SetActive(false);
+                    break;
+                case 178:
+                    speechbubbles[22].SetActive(true);
+                    speechbubbles[21].SetActive(false);
+                    break;
+                case 177:
+                    speechbubbles[23].SetActive(true);
+                    speechbubbles[22].SetActive(false);
+                    break;
+                case 176:
+                    speechbubbles[24].SetActive(true);
+                    speechbubbles[23].SetActive(false);
+                    break;
+                case 175:
+                    GameObject.Find("icon-help").GetComponent<Button>().interactable = true;
+                    speechbubbles[199].SetActive(true);
+                    speechbubbles[24].SetActive(false);
+                    break;
+                case 174:
+                    GameObject.Find("icon-logout").GetComponent<Button>().interactable = true;
+                    speechbubbles[199].SetActive(false);
+                    authenticate.tutorial = false;
+                    break;
+            }
+        }
+    }
+
+    void Update()
+    {
+        createTutorial();
+    }
 }

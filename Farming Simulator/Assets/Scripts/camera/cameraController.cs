@@ -46,7 +46,8 @@ public class cameraController : MonoBehaviour {
         if (
             menus[0].activeSelf == false && menus[1].activeSelf == false && menus[2].activeSelf == false &&
             menus[3].activeSelf == false && menus[4].activeSelf == false && menus[5].activeSelf == false &&
-            animTools.GetBool("slide") == false && animBuild.GetBool("slide") == false && animPlant.GetBool("slide") == false
+            animTools.GetBool("slide") == false && animBuild.GetBool("slide") == false && animPlant.GetBool("slide") == false &&
+            authenticate.tutorial == false
             )
         {
 
