@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 10987715}
   - component: {fileID: 10987717}
   - component: {fileID: 10987716}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ RectTransform:
   - {fileID: 1811824854}
   - {fileID: 1869116780}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 30143725}
   - component: {fileID: 30143727}
   - component: {fileID: 30143726}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -565,11 +565,11 @@ RectTransform:
   - {fileID: 1528230903}
   - {fileID: 1203199264}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -115.00003}
+  m_AnchoredPosition: {x: 136, y: -48}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30143726
@@ -620,7 +620,7 @@ GameObject:
   - component: {fileID: 34082816}
   - component: {fileID: 34082818}
   - component: {fileID: 34082817}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +694,7 @@ GameObject:
   - component: {fileID: 40372242}
   - component: {fileID: 40372244}
   - component: {fileID: 40372243}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -927,7 +927,7 @@ GameObject:
   - component: {fileID: 51183687}
   - component: {fileID: 51183686}
   - component: {fileID: 51183685}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -951,7 +951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: -59}
+  m_AnchoredPosition: {x: 87, y: -69}
   m_SizeDelta: {x: 121.9, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &51183685
@@ -1468,7 +1468,7 @@ GameObject:
   - component: {fileID: 112415477}
   - component: {fileID: 112415476}
   - component: {fileID: 112415475}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1492,7 +1492,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: -59}
+  m_AnchoredPosition: {x: 87, y: -70}
   m_SizeDelta: {x: 121.9, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &112415475
@@ -1596,7 +1596,7 @@ GameObject:
   - component: {fileID: 113576923}
   - component: {fileID: 113576925}
   - component: {fileID: 113576924}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TIME
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,12 +1618,12 @@ RectTransform:
   - {fileID: 820291830}
   - {fileID: 769560992}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: -0.30004883}
-  m_SizeDelta: {x: 301.8, y: 158.3}
+  m_AnchoredPosition: {x: -170, y: -12.1}
+  m_SizeDelta: {x: 301.8, y: 182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113576924
 MonoBehaviour:
@@ -1753,7 +1753,7 @@ GameObject:
   - component: {fileID: 129969432}
   - component: {fileID: 129969431}
   - component: {fileID: 129969430}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2168,7 +2168,7 @@ GameObject:
   - component: {fileID: 155554436}
   - component: {fileID: 155554438}
   - component: {fileID: 155554437}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2190,11 +2190,11 @@ RectTransform:
   - {fileID: 639439536}
   - {fileID: 1356031210}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103.000015, y: -115.00003}
+  m_AnchoredPosition: {x: 136, y: -48}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155554437
@@ -2365,7 +2365,7 @@ GameObject:
   - component: {fileID: 196375164}
   - component: {fileID: 196375166}
   - component: {fileID: 196375165}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2440,7 +2440,7 @@ GameObject:
   - component: {fileID: 207771244}
   - component: {fileID: 207771243}
   - component: {fileID: 207771242}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2746,7 +2746,7 @@ GameObject:
   - component: {fileID: 217340627}
   - component: {fileID: 217340626}
   - component: {fileID: 217340625}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2874,7 +2874,7 @@ GameObject:
   - component: {fileID: 218150770}
   - component: {fileID: 218150772}
   - component: {fileID: 218150771}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2897,8 +2897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3, y: 17.1}
-  m_SizeDelta: {x: 291.9, y: 105}
+  m_AnchoredPosition: {x: 4.3, y: 13.799997}
+  m_SizeDelta: {x: 291.9, y: 115.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &218150771
 MonoBehaviour:
@@ -2922,7 +2922,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe9c08270dd77b34aa7f5560b961fe60, type: 3}
-    m_FontSize: 15
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -2933,7 +2933,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: The default tool is used for navigating through the farm area and opening
+    plant info. Hover on the plant to open its plant info and hold and drag on a empty
+    tile to move the camera throughout the farm area.
 --- !u!222 &218150772
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3259,7 +3261,7 @@ GameObject:
   - component: {fileID: 241471896}
   - component: {fileID: 241471898}
   - component: {fileID: 241471897}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3338,7 +3340,7 @@ GameObject:
   - component: {fileID: 242330625}
   - component: {fileID: 242330627}
   - component: {fileID: 242330626}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3397,7 +3399,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: a tomato crop
 --- !u!222 &242330627
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3512,7 +3514,7 @@ GameObject:
   - component: {fileID: 257709226}
   - component: {fileID: 257709228}
   - component: {fileID: 257709227}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3821,7 +3823,7 @@ GameObject:
   - component: {fileID: 291305790}
   - component: {fileID: 291305792}
   - component: {fileID: 291305791}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3979,7 +3981,7 @@ GameObject:
   - component: {fileID: 300756796}
   - component: {fileID: 300756798}
   - component: {fileID: 300756797}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4274,7 +4276,7 @@ GameObject:
   - component: {fileID: 353323105}
   - component: {fileID: 353323104}
   - component: {fileID: 353323103}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4402,7 +4404,7 @@ GameObject:
   - component: {fileID: 355473405}
   - component: {fileID: 355473407}
   - component: {fileID: 355473406}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4556,7 +4558,7 @@ GameObject:
   - component: {fileID: 374339384}
   - component: {fileID: 374339383}
   - component: {fileID: 374339382}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5098,6 +5100,135 @@ Transform:
   m_Father: {fileID: 1808231084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &415379961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 415379962}
+  - component: {fileID: 415379965}
+  - component: {fileID: 415379964}
+  - component: {fileID: 415379963}
+  m_Layer: 0
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &415379962
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415379961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 933378843}
+  m_Father: {fileID: 670719465}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 307, y: -182}
+  m_SizeDelta: {x: 121.9, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &415379963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415379961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 415379964}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1141978397}
+        m_MethodName: subTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &415379964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415379961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &415379965
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 415379961}
+  m_CullTransparentMesh: 0
 --- !u!1 &459925960
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,7 +5320,7 @@ GameObject:
   - component: {fileID: 466748491}
   - component: {fileID: 466748490}
   - component: {fileID: 466748489}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5317,7 +5448,7 @@ GameObject:
   - component: {fileID: 489686432}
   - component: {fileID: 489686434}
   - component: {fileID: 489686433}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5549,7 +5680,7 @@ GameObject:
   - component: {fileID: 515277694}
   - component: {fileID: 515277696}
   - component: {fileID: 515277695}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5628,7 +5759,7 @@ GameObject:
   - component: {fileID: 529273974}
   - component: {fileID: 529273976}
   - component: {fileID: 529273975}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5651,8 +5782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 12.8}
-  m_SizeDelta: {x: 288.5, y: 113.6}
+  m_AnchoredPosition: {x: 6, y: 1}
+  m_SizeDelta: {x: 288.5, y: 42.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529273975
 MonoBehaviour:
@@ -5707,7 +5838,7 @@ GameObject:
   - component: {fileID: 543411675}
   - component: {fileID: 543411677}
   - component: {fileID: 543411676}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5766,7 +5897,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: a watermelon crop
 --- !u!222 &543411677
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5914,7 +6045,7 @@ GameObject:
   - component: {fileID: 549571245}
   - component: {fileID: 549571247}
   - component: {fileID: 549571246}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5973,7 +6104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is where you can see your scire. Score can be earned by harvesting
+  m_Text: This is where you can see your scire. Scores can be earned by harvesting
     crops after they mature or when you are able to kill the pests that will spawn
     on a plant.
 --- !u!222 &549571247
@@ -5995,7 +6126,7 @@ GameObject:
   - component: {fileID: 569582085}
   - component: {fileID: 569582087}
   - component: {fileID: 569582086}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6017,11 +6148,11 @@ RectTransform:
   - {fileID: 832552784}
   - {fileID: 1889409223}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181, y: -115.00003}
+  m_AnchoredPosition: {x: -97, y: -125}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569582086
@@ -6072,7 +6203,7 @@ GameObject:
   - component: {fileID: 577312235}
   - component: {fileID: 577312237}
   - component: {fileID: 577312236}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6095,8 +6226,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3, y: 11.924996}
-  m_SizeDelta: {x: 291.9, y: 111.85}
+  m_AnchoredPosition: {x: 2.15, y: 6.4}
+  m_SizeDelta: {x: 291.6, y: 100.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577312236
 MonoBehaviour:
@@ -6131,7 +6262,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: 'The fertilizer tool is used to apply fertilizer on a plant.
+
+
+    Note: Every application of fertilizer costs gold so apply it wisely'
 --- !u!222 &577312237
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6151,7 +6285,7 @@ GameObject:
   - component: {fileID: 581659776}
   - component: {fileID: 581659778}
   - component: {fileID: 581659777}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6307,7 +6441,7 @@ GameObject:
   - component: {fileID: 593087155}
   - component: {fileID: 593087154}
   - component: {fileID: 593087153}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6562,7 +6696,7 @@ GameObject:
   - component: {fileID: 623177382}
   - component: {fileID: 623177384}
   - component: {fileID: 623177383}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6585,7 +6719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142, y: 80}
+  m_AnchoredPosition: {x: 189, y: 81}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &623177383
@@ -7046,7 +7180,7 @@ GameObject:
   - component: {fileID: 639439536}
   - component: {fileID: 639439538}
   - component: {fileID: 639439537}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7105,7 +7239,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: a carrot crop
 --- !u!222 &639439538
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7125,7 +7259,7 @@ GameObject:
   - component: {fileID: 640007801}
   - component: {fileID: 640007803}
   - component: {fileID: 640007802}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7184,7 +7318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: The water tool is used to water the plant.
 --- !u!222 &640007803
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7204,7 +7338,7 @@ GameObject:
   - component: {fileID: 643776323}
   - component: {fileID: 643776325}
   - component: {fileID: 643776324}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7437,7 +7571,7 @@ GameObject:
   - component: {fileID: 664374663}
   - component: {fileID: 664374662}
   - component: {fileID: 664374661}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7554,6 +7688,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664374659}
   m_CullTransparentMesh: 0
+--- !u!1 &670719464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670719465}
+  - component: {fileID: 670719467}
+  - component: {fileID: 670719466}
+  m_Layer: 0
+  m_Name: INTRODUCTION
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &670719465
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670719464}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 415379962}
+  - {fileID: 1484265546}
+  m_Father: {fileID: 819827473}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 4.6001, y: -2.9}
+  m_SizeDelta: {x: 771.3, y: 428.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &670719466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670719464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: c277ba8887ae50e46a189e4eabfc2ec4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &670719467
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670719464}
+  m_CullTransparentMesh: 0
 --- !u!1 &679384184
 GameObject:
   m_ObjectHideFlags: 0
@@ -7565,7 +7775,7 @@ GameObject:
   - component: {fileID: 679384185}
   - component: {fileID: 679384187}
   - component: {fileID: 679384186}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7644,7 +7854,7 @@ GameObject:
   - component: {fileID: 717450071}
   - component: {fileID: 717450073}
   - component: {fileID: 717450072}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7667,8 +7877,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -6}
-  m_SizeDelta: {x: 288.5, y: 108.4}
+  m_AnchoredPosition: {x: 3.2, y: 13.9}
+  m_SizeDelta: {x: 294.1, y: 122.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &717450072
 MonoBehaviour:
@@ -7704,6 +7914,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Temperature readings will also be displayed in the game in degrees celsius.
+    This is one of the factors that may affect and be affected by the weather that
+    you will be encountering
 --- !u!222 &717450073
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7724,7 +7936,7 @@ GameObject:
   - component: {fileID: 719085959}
   - component: {fileID: 719085958}
   - component: {fileID: 719085957}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8029,7 +8241,7 @@ GameObject:
   - component: {fileID: 721413645}
   - component: {fileID: 721413647}
   - component: {fileID: 721413646}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8050,7 +8262,7 @@ RectTransform:
   - {fileID: 1380401612}
   - {fileID: 1648843002}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8106,7 +8318,7 @@ GameObject:
   - component: {fileID: 727610977}
   - component: {fileID: 727610976}
   - component: {fileID: 727610975}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8234,7 +8446,7 @@ GameObject:
   - component: {fileID: 729646207}
   - component: {fileID: 729646209}
   - component: {fileID: 729646208}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8256,11 +8468,11 @@ RectTransform:
   - {fileID: 577312235}
   - {fileID: 1359129428}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.00007, y: -115.00003}
+  m_AnchoredPosition: {x: -93, y: -34}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729646208
@@ -8311,7 +8523,7 @@ GameObject:
   - component: {fileID: 760078830}
   - component: {fileID: 760078832}
   - component: {fileID: 760078831}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8390,7 +8602,7 @@ GameObject:
   - component: {fileID: 769560992}
   - component: {fileID: 769560994}
   - component: {fileID: 769560993}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8625,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.24, y: 111.7}
+  m_AnchoredPosition: {x: -45.24, y: 124}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769560993
@@ -8575,7 +8787,7 @@ GameObject:
   - component: {fileID: 802425572}
   - component: {fileID: 802425574}
   - component: {fileID: 802425573}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8596,7 +8808,7 @@ RectTransform:
   - {fileID: 466748488}
   - {fileID: 1531490219}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8826,7 +9038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 819827473}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8844,6 +9056,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 670719465}
   - {fileID: 1402995880}
   - {fileID: 1959822301}
   - {fileID: 113576923}
@@ -8889,7 +9102,7 @@ GameObject:
   - component: {fileID: 820291830}
   - component: {fileID: 820291832}
   - component: {fileID: 820291831}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8912,8 +9125,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: -6}
-  m_SizeDelta: {x: 288.5, y: 108.4}
+  m_AnchoredPosition: {x: 0.000005722, y: 15.315}
+  m_SizeDelta: {x: 288.5, y: 127.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &820291831
 MonoBehaviour:
@@ -8950,7 +9163,10 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Time is also available in the game conforming to the format:
 
-    MONTH / DAY / Year  |  time'
+    MONTH / DAY / Year  |  time
+
+
+    Note: Every end of the day you will get an addition 10 gold'
 --- !u!222 &820291832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8970,7 +9186,7 @@ GameObject:
   - component: {fileID: 823838910}
   - component: {fileID: 823838912}
   - component: {fileID: 823838911}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8992,11 +9208,11 @@ RectTransform:
   - {fileID: 1080413978}
   - {fileID: 1386524461}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000076, y: -115.00003}
+  m_AnchoredPosition: {x: 136, y: -48}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823838911
@@ -9047,7 +9263,7 @@ GameObject:
   - component: {fileID: 831424818}
   - component: {fileID: 831424820}
   - component: {fileID: 831424819}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9069,11 +9285,11 @@ RectTransform:
   - {fileID: 1538980982}
   - {fileID: 300756796}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181, y: -115.00003}
+  m_AnchoredPosition: {x: -95, y: -53}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &831424819
@@ -9124,7 +9340,7 @@ GameObject:
   - component: {fileID: 832552784}
   - component: {fileID: 832552786}
   - component: {fileID: 832552785}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9183,7 +9399,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: The recycle tool is used to sell or destory anything unless there is a crop
+    planted on a plot.
 --- !u!222 &832552786
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9380,7 +9597,7 @@ GameObject:
   - component: {fileID: 850847867}
   - component: {fileID: 850847869}
   - component: {fileID: 850847868}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9459,7 +9676,7 @@ GameObject:
   - component: {fileID: 851029954}
   - component: {fileID: 851029956}
   - component: {fileID: 851029955}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9538,7 +9755,7 @@ GameObject:
   - component: {fileID: 853696394}
   - component: {fileID: 853696396}
   - component: {fileID: 853696395}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9617,7 +9834,7 @@ GameObject:
   - component: {fileID: 864778874}
   - component: {fileID: 864778876}
   - component: {fileID: 864778875}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9869,6 +10086,7 @@ MonoBehaviour:
   - {fileID: 1707118441838264, guid: f84d9416dcd3738438165698bf8680d6, type: 3}
   - {fileID: 1058721638738068, guid: ac011db905f6dcc47a0fe44f02b5b8fc, type: 3}
   speechbubbles:
+  - {fileID: 670719464}
   - {fileID: 1402995879}
   - {fileID: 1959822300}
   - {fileID: 113576922}
@@ -9880,8 +10098,8 @@ MonoBehaviour:
   - {fileID: 831424817}
   - {fileID: 1234162791}
   - {fileID: 569582084}
-  - {fileID: 155554435}
   - {fileID: 1185038040}
+  - {fileID: 155554435}
   - {fileID: 1070307858}
   - {fileID: 30143724}
   - {fileID: 823838909}
@@ -9890,11 +10108,10 @@ MonoBehaviour:
   - {fileID: 1593129080}
   - {fileID: 1802623239}
   - {fileID: 721413644}
+  - {fileID: 10987714}
   - {fileID: 2082405741}
   - {fileID: 10987714}
   - {fileID: 802425571}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -10081,7 +10298,7 @@ GameObject:
   - component: {fileID: 924633312}
   - component: {fileID: 924633311}
   - component: {fileID: 924633310}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10312,7 +10529,7 @@ GameObject:
   - component: {fileID: 931344835}
   - component: {fileID: 931344837}
   - component: {fileID: 931344836}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10334,11 +10551,11 @@ RectTransform:
   - {fileID: 640007801}
   - {fileID: 355473405}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181.00003, y: -115.000015}
+  m_AnchoredPosition: {x: -99, y: -41}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931344836
@@ -10377,6 +10594,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931344834}
+  m_CullTransparentMesh: 0
+--- !u!1 &933378842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 933378843}
+  - component: {fileID: 933378845}
+  - component: {fileID: 933378844}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &933378843
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933378842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 415379962}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &933378844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933378842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: NEXT
+--- !u!222 &933378845
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933378842}
   m_CullTransparentMesh: 0
 --- !u!1 &934940103
 GameObject:
@@ -10468,7 +10764,7 @@ GameObject:
   - component: {fileID: 955104307}
   - component: {fileID: 955104309}
   - component: {fileID: 955104308}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10578,7 +10874,7 @@ GameObject:
   - component: {fileID: 983822994}
   - component: {fileID: 983822996}
   - component: {fileID: 983822995}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10592,16 +10888,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983822993}
-  m_LocalRotation: {x: -0, y: -0, z: 0.31500325, w: 0.94909066}
+  m_LocalRotation: {x: -0, y: -0, z: 0.017878396, w: 0.9998402}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1827737345}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 36.722}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.049}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 197, y: -70}
+  m_AnchoredPosition: {x: 150, y: -114}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983822995
@@ -10652,7 +10948,7 @@ GameObject:
   - component: {fileID: 991782982}
   - component: {fileID: 991782984}
   - component: {fileID: 991782983}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10731,7 +11027,7 @@ GameObject:
   - component: {fileID: 1002955584}
   - component: {fileID: 1002955586}
   - component: {fileID: 1002955585}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10753,11 +11049,11 @@ RectTransform:
   - {fileID: 529273974}
   - {fileID: 1214513041}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14.000038, y: -79}
+  m_AnchoredPosition: {x: 28, y: -79}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002955585
@@ -10809,7 +11105,7 @@ GameObject:
   - component: {fileID: 1010058340}
   - component: {fileID: 1010058339}
   - component: {fileID: 1010058338}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11065,7 +11361,7 @@ GameObject:
   - component: {fileID: 1024020345}
   - component: {fileID: 1024020347}
   - component: {fileID: 1024020346}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11124,7 +11420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: The scythe tool ican only be used when a crop is ready for harvest.
 --- !u!222 &1024020347
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11230,7 +11526,7 @@ GameObject:
   - component: {fileID: 1045932829}
   - component: {fileID: 1045932831}
   - component: {fileID: 1045932830}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11383,7 +11679,7 @@ GameObject:
   - component: {fileID: 1070307859}
   - component: {fileID: 1070307861}
   - component: {fileID: 1070307860}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11405,11 +11701,11 @@ RectTransform:
   - {fileID: 1545825305}
   - {fileID: 1136533754}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103.000015, y: -115.00003}
+  m_AnchoredPosition: {x: 136, y: -48}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1070307860
@@ -11460,7 +11756,7 @@ GameObject:
   - component: {fileID: 1080413978}
   - component: {fileID: 1080413980}
   - component: {fileID: 1080413979}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11519,7 +11815,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: a radish crop
 --- !u!222 &1080413980
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11539,7 +11835,7 @@ GameObject:
   - component: {fileID: 1084662981}
   - component: {fileID: 1084662983}
   - component: {fileID: 1084662982}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11976,7 +12272,7 @@ GameObject:
   - component: {fileID: 1128672129}
   - component: {fileID: 1128672131}
   - component: {fileID: 1128672130}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12055,7 +12351,7 @@ GameObject:
   - component: {fileID: 1130640913}
   - component: {fileID: 1130640915}
   - component: {fileID: 1130640914}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12134,7 +12430,7 @@ GameObject:
   - component: {fileID: 1136533754}
   - component: {fileID: 1136533756}
   - component: {fileID: 1136533755}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12157,7 +12453,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.501003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 149, y: 55}
+  m_AnchoredPosition: {x: 138, y: 76}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1136533755
@@ -12560,7 +12856,7 @@ GameObject:
   - component: {fileID: 1146822208}
   - component: {fileID: 1146822210}
   - component: {fileID: 1146822209}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12582,11 +12878,11 @@ RectTransform:
   - {fileID: 242330625}
   - {fileID: 1250407563}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000076, y: -115.00003}
+  m_AnchoredPosition: {x: 89, y: -3}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1146822209
@@ -12637,7 +12933,7 @@ GameObject:
   - component: {fileID: 1185038041}
   - component: {fileID: 1185038043}
   - component: {fileID: 1185038042}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12659,11 +12955,11 @@ RectTransform:
   - {fileID: 1265937592}
   - {fileID: 1598209118}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 197.00005, y: -79.000015}
+  m_AnchoredPosition: {x: 198, y: -82}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1185038042
@@ -12714,7 +13010,7 @@ GameObject:
   - component: {fileID: 1203199264}
   - component: {fileID: 1203199266}
   - component: {fileID: 1203199265}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12737,7 +13033,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 201, y: 11}
+  m_AnchoredPosition: {x: 137, y: 25}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1203199265
@@ -12944,7 +13240,7 @@ GameObject:
   - component: {fileID: 1214513041}
   - component: {fileID: 1214513043}
   - component: {fileID: 1214513042}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13054,7 +13350,7 @@ GameObject:
   - component: {fileID: 1234162792}
   - component: {fileID: 1234162794}
   - component: {fileID: 1234162793}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13076,11 +13372,11 @@ RectTransform:
   - {fileID: 1024020345}
   - {fileID: 34082816}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -181, y: -115.000015}
+  m_AnchoredPosition: {x: -88, y: -64}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1234162793
@@ -13205,7 +13501,7 @@ GameObject:
   - component: {fileID: 1250407563}
   - component: {fileID: 1250407565}
   - component: {fileID: 1250407564}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13228,7 +13524,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -49}
+  m_AnchoredPosition: {x: 190, y: -104}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1250407564
@@ -13407,7 +13703,7 @@ GameObject:
   - component: {fileID: 1265937592}
   - component: {fileID: 1265937594}
   - component: {fileID: 1265937593}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13430,8 +13726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3, y: 11.924996}
-  m_SizeDelta: {x: 291.9, y: 111.85}
+  m_AnchoredPosition: {x: 4.3, y: 3}
+  m_SizeDelta: {x: 291.9, y: 42.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1265937593
 MonoBehaviour:
@@ -13466,7 +13762,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: Next are the available crops for you to plant on this game.
 --- !u!222 &1265937594
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13486,7 +13782,7 @@ GameObject:
   - component: {fileID: 1337479398}
   - component: {fileID: 1337479400}
   - component: {fileID: 1337479399}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13716,7 +14012,7 @@ GameObject:
   - component: {fileID: 1356031210}
   - component: {fileID: 1356031212}
   - component: {fileID: 1356031211}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13790,7 +14086,7 @@ GameObject:
   - component: {fileID: 1359129428}
   - component: {fileID: 1359129430}
   - component: {fileID: 1359129429}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13813,7 +14109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 51.501003}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 149, y: 55}
+  m_AnchoredPosition: {x: 195, y: 50}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1359129429
@@ -13864,7 +14160,7 @@ GameObject:
   - component: {fileID: 1367521721}
   - component: {fileID: 1367521723}
   - component: {fileID: 1367521722}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14018,7 +14314,7 @@ GameObject:
   - component: {fileID: 1380401615}
   - component: {fileID: 1380401614}
   - component: {fileID: 1380401613}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14195,7 +14491,7 @@ GameObject:
   - component: {fileID: 1386524461}
   - component: {fileID: 1386524463}
   - component: {fileID: 1386524462}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14218,7 +14514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -5}
+  m_AnchoredPosition: {x: 140, y: 7}
   m_SizeDelta: {x: 71.2, y: 65.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386524462
@@ -14269,7 +14565,7 @@ GameObject:
   - component: {fileID: 1395568126}
   - component: {fileID: 1395568128}
   - component: {fileID: 1395568127}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14427,7 +14723,7 @@ GameObject:
   - component: {fileID: 1402995880}
   - component: {fileID: 1402995882}
   - component: {fileID: 1402995881}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: GOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14449,7 +14745,7 @@ RectTransform:
   - {fileID: 1906110602}
   - {fileID: 196375164}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14504,7 +14800,7 @@ GameObject:
   - component: {fileID: 1412687965}
   - component: {fileID: 1412687967}
   - component: {fileID: 1412687966}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15068,7 +15364,7 @@ GameObject:
   - component: {fileID: 1468811564}
   - component: {fileID: 1468811563}
   - component: {fileID: 1468811562}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15196,7 +15492,7 @@ GameObject:
   - component: {fileID: 1481686228}
   - component: {fileID: 1481686230}
   - component: {fileID: 1481686229}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: SETTINGS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15218,7 +15514,7 @@ RectTransform:
   - {fileID: 1662326935}
   - {fileID: 864778874}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15391,6 +15687,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482252012}
   m_CullTransparentMesh: 0
+--- !u!1 &1484265545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1484265546}
+  - component: {fileID: 1484265548}
+  - component: {fileID: 1484265547}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1484265546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484265545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 670719465}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3.1249, y: 23.3}
+  m_SizeDelta: {x: 742.2, y: 356.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1484265547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484265545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fe9c08270dd77b34aa7f5560b961fe60, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '                                                       WELCOME!
+
+
+    This is a farming simulator game made for our thesis. In here you may learn about
+    planting and taking care of crops inside the game. Pests and the weather will
+    try to hinder your progress, so good luck!
+
+
+    Note: This is not a fully realistic farming simulator yet. Crops growth and health
+    is only affected by how you water and fertilize them, the weather and the pest.  There
+    will be 3 kinds of weather type, sunny, rainy and cold which gives only gives
+    out the sun intensity, rain intensity, rain duration and temperature.
+
+
+    Objective of the game itself is just to earn as much as you can and compete against
+    other players in racing against each other of who earned the most score.'
+--- !u!222 &1484265548
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484265545}
+  m_CullTransparentMesh: 0
 --- !u!1 &1498979751
 GameObject:
   m_ObjectHideFlags: 0
@@ -15403,7 +15793,7 @@ GameObject:
   - component: {fileID: 1498979755}
   - component: {fileID: 1498979754}
   - component: {fileID: 1498979753}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15923,7 +16313,7 @@ GameObject:
   - component: {fileID: 1522820670}
   - component: {fileID: 1522820672}
   - component: {fileID: 1522820671}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: LOGOUT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15945,7 +16335,7 @@ RectTransform:
   - {fileID: 1739004376}
   - {fileID: 1599637321}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16053,7 +16443,7 @@ GameObject:
   - component: {fileID: 1528230903}
   - component: {fileID: 1528230905}
   - component: {fileID: 1528230904}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16112,7 +16502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: a pumpkin crop
 --- !u!222 &1528230905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16132,7 +16522,7 @@ GameObject:
   - component: {fileID: 1531490219}
   - component: {fileID: 1531490221}
   - component: {fileID: 1531490220}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16212,7 +16602,7 @@ GameObject:
   - component: {fileID: 1533065977}
   - component: {fileID: 1533065976}
   - component: {fileID: 1533065975}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16340,7 +16730,7 @@ GameObject:
   - component: {fileID: 1538980982}
   - component: {fileID: 1538980984}
   - component: {fileID: 1538980983}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16399,7 +16789,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: The rake tool is used to cultivate the land and make it ready for crops
+    to be planted
 --- !u!222 &1538980984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16420,7 +16811,7 @@ GameObject:
   - component: {fileID: 1539816684}
   - component: {fileID: 1539816683}
   - component: {fileID: 1539816682}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16548,7 +16939,7 @@ GameObject:
   - component: {fileID: 1545825305}
   - component: {fileID: 1545825307}
   - component: {fileID: 1545825306}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16607,7 +16998,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Let's get started with the tools you can use in the game.
+  m_Text: an onion crop
 --- !u!222 &1545825307
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16959,7 +17350,7 @@ GameObject:
   - component: {fileID: 1579389146}
   - component: {fileID: 1579389148}
   - component: {fileID: 1579389147}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TEMPERATURE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16981,12 +17372,12 @@ RectTransform:
   - {fileID: 717450071}
   - {fileID: 1084662981}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 28.8, y: 6.2}
-  m_SizeDelta: {x: 301.8, y: 158.3}
+  m_AnchoredPosition: {x: 28.8, y: -2.9}
+  m_SizeDelta: {x: 301.8, y: 176.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579389147
 MonoBehaviour:
@@ -17115,7 +17506,7 @@ GameObject:
   - component: {fileID: 1593129081}
   - component: {fileID: 1593129083}
   - component: {fileID: 1593129082}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17136,7 +17527,7 @@ RectTransform:
   - {fileID: 1498979752}
   - {fileID: 1744925809}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17191,7 +17582,7 @@ GameObject:
   - component: {fileID: 1598209118}
   - component: {fileID: 1598209120}
   - component: {fileID: 1598209119}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17265,7 +17656,7 @@ GameObject:
   - component: {fileID: 1599637321}
   - component: {fileID: 1599637323}
   - component: {fileID: 1599637322}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17415,7 +17806,7 @@ GameObject:
   - component: {fileID: 1644854618}
   - component: {fileID: 1644854617}
   - component: {fileID: 1644854616}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17543,7 +17934,7 @@ GameObject:
   - component: {fileID: 1648843002}
   - component: {fileID: 1648843004}
   - component: {fileID: 1648843003}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17623,7 +18014,7 @@ GameObject:
   - component: {fileID: 1662326935}
   - component: {fileID: 1662326937}
   - component: {fileID: 1662326936}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17703,7 +18094,7 @@ GameObject:
   - component: {fileID: 1663226900}
   - component: {fileID: 1663226899}
   - component: {fileID: 1663226898}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18112,7 +18503,7 @@ GameObject:
   - component: {fileID: 1698018650}
   - component: {fileID: 1698018652}
   - component: {fileID: 1698018651}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18191,7 +18582,7 @@ GameObject:
   - component: {fileID: 1739004376}
   - component: {fileID: 1739004378}
   - component: {fileID: 1739004377}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18270,7 +18661,7 @@ GameObject:
   - component: {fileID: 1744925809}
   - component: {fileID: 1744925811}
   - component: {fileID: 1744925810}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18686,7 +19077,7 @@ GameObject:
   - component: {fileID: 1801754966}
   - component: {fileID: 1801754965}
   - component: {fileID: 1801754964}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18814,7 +19205,7 @@ GameObject:
   - component: {fileID: 1802623240}
   - component: {fileID: 1802623242}
   - component: {fileID: 1802623241}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18835,7 +19226,7 @@ RectTransform:
   - {fileID: 1820044194}
   - {fileID: 850847867}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -19175,7 +19566,7 @@ GameObject:
   - component: {fileID: 1811824857}
   - component: {fileID: 1811824856}
   - component: {fileID: 1811824855}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19386,7 +19777,7 @@ GameObject:
   - component: {fileID: 1820044197}
   - component: {fileID: 1820044196}
   - component: {fileID: 1820044195}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19514,7 +19905,7 @@ GameObject:
   - component: {fileID: 1827737345}
   - component: {fileID: 1827737347}
   - component: {fileID: 1827737346}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19536,11 +19927,11 @@ RectTransform:
   - {fileID: 543411675}
   - {fileID: 983822994}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.000076, y: -115.00003}
+  m_AnchoredPosition: {x: 136, y: -48}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827737346
@@ -19627,7 +20018,7 @@ GameObject:
   - component: {fileID: 1840229622}
   - component: {fileID: 1840229624}
   - component: {fileID: 1840229623}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19957,7 +20348,7 @@ GameObject:
   - component: {fileID: 1869116780}
   - component: {fileID: 1869116782}
   - component: {fileID: 1869116781}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20073,7 +20464,7 @@ GameObject:
   - component: {fileID: 1889409223}
   - component: {fileID: 1889409225}
   - component: {fileID: 1889409224}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20184,7 +20575,7 @@ GameObject:
   - component: {fileID: 1906110602}
   - component: {fileID: 1906110604}
   - component: {fileID: 1906110603}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20265,7 +20656,7 @@ GameObject:
   - component: {fileID: 1906892110}
   - component: {fileID: 1906892109}
   - component: {fileID: 1906892108}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20760,7 +21151,7 @@ GameObject:
   - component: {fileID: 1959822301}
   - component: {fileID: 1959822303}
   - component: {fileID: 1959822302}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: SCORE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20782,7 +21173,7 @@ RectTransform:
   - {fileID: 549571245}
   - {fileID: 643776323}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20916,7 +21307,7 @@ GameObject:
   - component: {fileID: 1985870829}
   - component: {fileID: 1985870831}
   - component: {fileID: 1985870830}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21074,7 +21465,7 @@ GameObject:
   - component: {fileID: 2025632158}
   - component: {fileID: 2025632160}
   - component: {fileID: 2025632159}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21314,7 +21705,7 @@ GameObject:
   - component: {fileID: 2070509585}
   - component: {fileID: 2070509587}
   - component: {fileID: 2070509586}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21393,7 +21784,7 @@ GameObject:
   - component: {fileID: 2075647326}
   - component: {fileID: 2075647328}
   - component: {fileID: 2075647327}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21472,7 +21863,7 @@ GameObject:
   - component: {fileID: 2082405742}
   - component: {fileID: 2082405744}
   - component: {fileID: 2082405743}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: MECHANICS (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21493,7 +21884,7 @@ RectTransform:
   - {fileID: 593087152}
   - {fileID: 1395568126}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -21665,7 +22056,7 @@ GameObject:
   - component: {fileID: 2101033007}
   - component: {fileID: 2101033009}
   - component: {fileID: 2101033008}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: TOOLS_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21687,11 +22078,11 @@ RectTransform:
   - {fileID: 218150770}
   - {fileID: 623177382}
   m_Father: {fileID: 819827473}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.00004, y: -115}
+  m_AnchoredPosition: {x: -68, y: -52}
   m_SizeDelta: {x: 301.8, y: 158.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2101033008
@@ -21919,7 +22310,7 @@ GameObject:
   - component: {fileID: 2122632179}
   - component: {fileID: 2122632181}
   - component: {fileID: 2122632180}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22036,7 +22427,7 @@ GameObject:
   - component: {fileID: 2144759722}
   - component: {fileID: 2144759721}
   - component: {fileID: 2144759720}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
