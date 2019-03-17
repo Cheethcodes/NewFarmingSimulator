@@ -273,7 +273,8 @@ public class authenticate : MonoBehaviour {
 
                 if(IGtime > (float)0)
                 {
-                    tutorial = false;
+                    //tutorial = false;
+                    tutorial = true;
                 }
                 else
                 {

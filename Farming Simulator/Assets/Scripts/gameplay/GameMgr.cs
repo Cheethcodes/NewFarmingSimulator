@@ -539,6 +539,26 @@ public class GameMgr : MonoBehaviour
         if (authenticate.tutorial == true) {
             switch (buttonFunctions.tutorialCT)
             {
+                case 201:
+                    speechbubbles[0].SetActive(false);
+                    GameObject.Find("playTool").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Default").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Fertilizer").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Water").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Cultivate").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Harvest").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Tool_Recycle").GetComponent<Button>().interactable = true;
+                    GameObject.Find("playPlant").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Carrot").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Onion").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Pumpkin").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Radish").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Tomato").GetComponent<Button>().interactable = true;
+                    GameObject.Find("play-Plant_Watermelon").GetComponent<Button>().interactable = true;
+                    GameObject.Find("icon-options").GetComponent<Button>().interactable = true;
+                    GameObject.Find("icon-help").GetComponent<Button>().interactable = true;
+                    GameObject.Find("icon-logout").GetComponent<Button>().interactable = true;
+                    break;
                 case 200:
                     speechbubbles[0].SetActive(true);
                     break;
@@ -658,15 +678,22 @@ public class GameMgr : MonoBehaviour
                     break;
                 case 174:
                     GameObject.Find("icon-options").GetComponent<Button>().interactable = true;
-                    speechbubbles[199].SetActive(true);
+                    speechbubbles[198].SetActive(true);
                     speechbubbles[25].SetActive(false);
                     break;
+                /*
                 case 173:
                     GameObject.Find("icon-help").GetComponent<Button>().interactable = true;
-                    speechbubbles[199].SetActive(false);
+                    speechbubbles[198].SetActive(false);
+                    break;
+                */
+                case 173:
+                    GameObject.Find("icon-logout").GetComponent<Button>().interactable = true;
+                    speechbubbles[199].SetActive(true);
+                    speechbubbles[198].SetActive(false);
                     break;
                 case 172:
-                    GameObject.Find("icon-logout").GetComponent<Button>().interactable = true;
+                    speechbubbles[199].SetActive(false);
                     authenticate.tutorial = false;
                     break;
                 default:
@@ -676,7 +703,6 @@ public class GameMgr : MonoBehaviour
         else { }
 
         Debug.Log(buttonFunctions.tutorialCT);
-        Debug.Log(authenticate.tutorial);
     }
 
     void Update()

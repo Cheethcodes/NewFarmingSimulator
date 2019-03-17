@@ -623,4 +623,25 @@ public class buttonFunctions : MonoBehaviour {
             return;
     }
 
+    public void addTutorial(GameObject x)
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            x.SetActive(false);
+            tutorialCT += 1;
+        }
+        else
+            return;
+    }
+
+    public void skpTutorial()
+    {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            tutorialCT = 201;
+        }
+        else
+            return;
+    }
+
 }
